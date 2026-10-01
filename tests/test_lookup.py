@@ -41,7 +41,7 @@ def default_cells():
     return {**filler, **named}
 
 
-def make_env(tmp_path, cells=None, missing_rows=None, unverified=None):
+def make_sandbox(tmp_path, cells=None, missing_rows=None, unverified=None):
     """Copy the script into tmp_path/scripts and create tmp_path/data."""
     (tmp_path / "scripts").mkdir()
     (tmp_path / "data").mkdir()
@@ -89,14 +89,14 @@ def make_env(tmp_path, cells=None, missing_rows=None, unverified=None):
 
 
 @pytest.fixture
-def env(tmp_path):
-    return make_env(tmp_path)
+def sandbox(tmp_path):
+    return make_sandbox(tmp_path)
 
 
 # ---------------------------------------------------------------- matrix ---
 
-def test_matrix_pairs_in_input_order(env):
-    code, out, err = run(env, "matrix", "--improve", "1,4", "--worsen", "2,3")
+def test_matrix_pairs_in_input_order(sandbox):
+    code, out, err = run(sandbox, "matrix", "--improve", "1,4", "--worsen", "2,3")
     assert code == 0 and err is None
     assert out["pairs"] == [
         {"improve": 1, "worsen": 2, "principles": [5, 3, 7]},
@@ -105,58 +105,58 @@ def test_matrix_pairs_in_input_order(env):
     ]
 
 
-def test_matrix_empty_pairs_not_an_error(env):
-    code, out, _ = run(env, "matrix", "--improve", "4", "--worsen", "3")
+def test_matrix_empty_pairs_not_an_error(sandbox):
+    code, out, _ = run(sandbox, "matrix", "--improve", "4", "--worsen", "3")
     assert code == 0
     assert out["pairs"] == []
     assert out["empty_pairs"] == [{"improve": 4, "worsen": 3}]
     assert out["ranking"] == []
 
 
-def test_matrix_ranking_count_desc(env):
-    _, out, _ = run(env, "matrix", "--improve", "1,4", "--worsen", "2,3")
+def test_matrix_ranking_count_desc(sandbox):
+    _, out, _ = run(sandbox, "matrix", "--improve", "1,4", "--worsen", "2,3")
     # cells [5,3,7], [3,9], [9,5]: 5, 3, 9 twice each, 7 once
     assert [(r["id"], r["count"]) for r in out["ranking"]] == [
         (5, 2), (3, 2), (9, 2), (7, 1),
     ]
 
 
-def test_matrix_ranking_ties_go_by_position_within_cell(env):
-    _, out, _ = run(env, "matrix", "--improve", "1", "--worsen", "2,3")
+def test_matrix_ranking_ties_go_by_position_within_cell(sandbox):
+    _, out, _ = run(sandbox, "matrix", "--improve", "1", "--worsen", "2,3")
     # cells [5,3,7], [3,9]: 3 twice; among ties 5 (1st in a cell) and 9 (2nd)
     # come before 7 (3rd), even though 7 appears earlier in the output
     assert [(r["id"], r["count"]) for r in out["ranking"]] == [(3, 2), (5, 1), (9, 1), (7, 1)]
 
 
-def test_matrix_ranking_name_follows_lang(env):
-    _, ko, _ = run(env, "matrix", "--improve", "9", "--worsen", "2")
-    _, en, _ = run(env, "matrix", "--improve", "9", "--worsen", "2", "--lang", "en")
+def test_matrix_ranking_name_follows_lang(sandbox):
+    _, ko, _ = run(sandbox, "matrix", "--improve", "9", "--worsen", "2")
+    _, en, _ = run(sandbox, "matrix", "--improve", "9", "--worsen", "2", "--lang", "en")
     assert ko["ranking"][0]["name"] == "원리2"
     assert en["ranking"][0]["name"] == "Prin2"
 
 
-def test_matrix_duplicate_ids_are_deduplicated(env):
-    _, out, _ = run(env, "matrix", "--improve", "9,9", "--worsen", "2,2")
+def test_matrix_duplicate_ids_are_deduplicated(sandbox):
+    _, out, _ = run(sandbox, "matrix", "--improve", "9,9", "--worsen", "2,2")
     assert len(out["pairs"]) == 1
     assert out["ranking"][0]["count"] == 1
 
 
-def test_matrix_missing_row_reported_not_silent(env):
-    code, out, _ = run(env, "matrix", "--improve", "16", "--worsen", "1")
+def test_matrix_missing_row_reported_not_silent(sandbox):
+    code, out, _ = run(sandbox, "matrix", "--improve", "16", "--worsen", "1")
     assert code == 0
     assert out["empty_pairs"] == [{"improve": 16, "worsen": 1}]
     assert out["warnings"] == [{"code": "missing_row", "improve": 16}]
 
 
-def test_matrix_no_warnings_for_normal_pairs(env):
-    _, out, _ = run(env, "matrix", "--improve", "1", "--worsen", "2")
+def test_matrix_no_warnings_for_normal_pairs(sandbox):
+    _, out, _ = run(sandbox, "matrix", "--improve", "1", "--worsen", "2")
     assert out["warnings"] == []
 
 
-def test_matrix_direction_matters(env):
-    _, out, _ = run(env, "matrix", "--improve", "17", "--worsen", "1")
+def test_matrix_direction_matters(sandbox):
+    _, out, _ = run(sandbox, "matrix", "--improve", "17", "--worsen", "1")
     assert out["pairs"] == [{"improve": 17, "worsen": 1, "principles": [1]}]
-    _, out, _ = run(env, "matrix", "--improve", "1", "--worsen", "17")
+    _, out, _ = run(sandbox, "matrix", "--improve", "1", "--worsen", "17")
     assert out["pairs"] == []
 
 
@@ -178,8 +178,8 @@ def test_matrix_direction_matters(env):
     ["nonexistent"],
     [],
 ])
-def test_invalid_argument_exit_2(env, args):
-    code, out, err = run(env, *args)
+def test_invalid_argument_exit_2(sandbox, args):
+    code, out, err = run(sandbox, *args)
     assert code == 2
     assert out is None
     assert err["error"]["code"] == "invalid_argument"
@@ -194,28 +194,28 @@ def test_invalid_argument_exit_2(env, args):
     ["principle", "--id", "0"],
     ["param", "--id", "40"],
 ])
-def test_out_of_range_exit_3(env, args):
-    code, out, err = run(env, *args)
+def test_out_of_range_exit_3(sandbox, args):
+    code, out, err = run(sandbox, *args)
     assert code == 3
     assert out is None
     assert err["error"]["code"] == "out_of_range"
 
 
-def test_same_parameter_exit_4(env):
-    code, out, err = run(env, "matrix", "--improve", "9", "--worsen", "9")
+def test_same_parameter_exit_4(sandbox):
+    code, out, err = run(sandbox, "matrix", "--improve", "9", "--worsen", "9")
     assert code == 4
     assert out is None
     assert err["error"]["code"] == "same_parameter"
 
 
-def test_same_parameter_anywhere_in_lists_exit_4(env):
-    code, _, err = run(env, "matrix", "--improve", "1,9", "--worsen", "2,9")
+def test_same_parameter_anywhere_in_lists_exit_4(sandbox):
+    code, _, err = run(sandbox, "matrix", "--improve", "1,9", "--worsen", "2,9")
     assert code == 4
     assert err["error"]["code"] == "same_parameter"
 
 
-def test_out_of_range_takes_precedence_over_same_parameter(env):
-    code, _, err = run(env, "matrix", "--improve", "50", "--worsen", "50")
+def test_out_of_range_takes_precedence_over_same_parameter(sandbox):
+    code, _, err = run(sandbox, "matrix", "--improve", "50", "--worsen", "50")
     assert code == 3
 
 
@@ -223,7 +223,7 @@ def test_out_of_range_takes_precedence_over_same_parameter(env):
     "parameters.json", "contradiction-matrix.json", "inventive-principles.json",
 ])
 def test_missing_data_file_exit_5(tmp_path, victim):
-    script = make_env(tmp_path)
+    script = make_sandbox(tmp_path)
     (tmp_path / "data" / victim).unlink()
     args = {
         "parameters.json": ["param", "--id", "1"],
@@ -237,7 +237,7 @@ def test_missing_data_file_exit_5(tmp_path, victim):
 
 
 def test_corrupt_data_file_exit_5(tmp_path):
-    script = make_env(tmp_path)
+    script = make_sandbox(tmp_path)
     (tmp_path / "data" / "contradiction-matrix.json").write_text("{not json", encoding="utf-8")
     code, _, err = run(script, "matrix", "--improve", "1", "--worsen", "2")
     assert code == 5
@@ -246,7 +246,7 @@ def test_corrupt_data_file_exit_5(tmp_path):
 
 def test_matrix_with_unrelated_data_missing_still_works(tmp_path):
     """matrix needs the matrix + principle names; parameters.json is not required."""
-    script = make_env(tmp_path)
+    script = make_sandbox(tmp_path)
     (tmp_path / "data" / "parameters.json").unlink()
     code, _, _ = run(script, "matrix", "--improve", "1", "--worsen", "2")
     assert code == 0
@@ -254,8 +254,8 @@ def test_matrix_with_unrelated_data_missing_still_works(tmp_path):
 
 # ------------------------------------------------------------- principle ---
 
-def test_principle_lookup_ko(env):
-    code, out, _ = run(env, "principle", "--id", "1,15,35")
+def test_principle_lookup_ko(sandbox):
+    code, out, _ = run(sandbox, "principle", "--id", "1,15,35")
     assert code == 0
     assert [p["id"] for p in out["principles"]] == [1, 15, 35]
     p = out["principles"][0]
@@ -264,22 +264,22 @@ def test_principle_lookup_ko(env):
     assert p["examples"] == ["예1"]
 
 
-def test_principle_lookup_en(env):
-    _, out, _ = run(env, "principle", "--id", "2", "--lang", "en")
+def test_principle_lookup_en(sandbox):
+    _, out, _ = run(sandbox, "principle", "--id", "2", "--lang", "en")
     p = out["principles"][0]
     assert p["name"] == "Prin2"
     assert p["sub_principles"] == ["sub2a"]
     assert p["examples"] == ["ex2"]
 
 
-def test_principle_omits_cases_by_default(env):
-    _, out, _ = run(env, "principle", "--id", "1")
+def test_principle_omits_cases_by_default(sandbox):
+    _, out, _ = run(sandbox, "principle", "--id", "1")
     assert "cases" not in out["principles"][0]
 
 
-def test_principle_cases_on_request(env):
-    _, ko, _ = run(env, "principle", "--id", "1", "--cases")
-    _, en, _ = run(env, "principle", "--id", "1", "--cases", "--lang", "en")
+def test_principle_cases_on_request(sandbox):
+    _, ko, _ = run(sandbox, "principle", "--id", "1", "--cases")
+    _, en, _ = run(sandbox, "principle", "--id", "1", "--cases", "--lang", "en")
     assert ko["principles"][0]["cases"][0] == {"domain": "mechanical", "domain_name": "기계",
                                                "sub_principle": 1, "text": "사례1mechanical"}
     assert en["principles"][0]["cases"][2]["domain_name"] == "software/IT"
@@ -288,7 +288,7 @@ def test_principle_cases_on_request(env):
 
 
 def test_principle_cases_empty_list_when_not_written(tmp_path):
-    script = make_env(tmp_path)
+    script = make_sandbox(tmp_path)
     p = tmp_path / "data" / "inventive-principles.json"
     d = json.loads(p.read_text(encoding="utf-8"))
     del d["principles"][4]["cases"]
@@ -316,7 +316,7 @@ def _bad_case(case):
     (_bad_case({"ko": "원리 #15처럼 바꾼다"}), "must not cite a principle number"),
 ])
 def test_validate_rejects_bad_cases(tmp_path, mutate, message):
-    script = make_env(tmp_path)
+    script = make_sandbox(tmp_path)
     p = tmp_path / "data" / "inventive-principles.json"
     d = json.loads(p.read_text(encoding="utf-8"))
     mutate(d["principles"][0]["cases"])
@@ -326,15 +326,15 @@ def test_validate_rejects_bad_cases(tmp_path, mutate, message):
     assert message in json.dumps(err, ensure_ascii=False)
 
 
-def test_principle_duplicates_deduplicated(env):
-    _, out, _ = run(env, "principle", "--id", "3,3")
+def test_principle_duplicates_deduplicated(sandbox):
+    _, out, _ = run(sandbox, "principle", "--id", "3,3")
     assert [p["id"] for p in out["principles"]] == [3]
 
 
 # ----------------------------------------------------------------- param ---
 
-def test_param_by_id(env):
-    code, out, _ = run(env, "param", "--id", "9")
+def test_param_by_id(sandbox):
+    code, out, _ = run(sandbox, "param", "--id", "9")
     assert code == 0
     p = out["parameters"][0]
     assert p["id"] == 9
@@ -343,36 +343,36 @@ def test_param_by_id(env):
     assert p["keywords"] == ["속도", "speed"]
 
 
-def test_param_by_id_en(env):
-    _, out, _ = run(env, "param", "--id", "9", "--lang", "en")
+def test_param_by_id_en(sandbox):
+    _, out, _ = run(sandbox, "param", "--id", "9", "--lang", "en")
     assert out["parameters"][0]["name"] == "Param9"
     assert out["parameters"][0]["definition"] == "def9"
 
 
-def test_param_search_keyword(env):
-    code, out, _ = run(env, "param", "--search", "속도")
+def test_param_search_keyword(sandbox):
+    code, out, _ = run(sandbox, "param", "--search", "속도")
     assert code == 0
     assert out["query"] == "속도"
     assert [m["id"] for m in out["matches"]] == [9]
 
 
-def test_param_search_is_case_insensitive_and_matches_names(env):
-    _, out, _ = run(env, "param", "--search", "SPEED")
+def test_param_search_is_case_insensitive_and_matches_names(sandbox):
+    _, out, _ = run(sandbox, "param", "--search", "SPEED")
     assert [m["id"] for m in out["matches"]] == [9]
-    _, out, _ = run(env, "param", "--search", "param12")
+    _, out, _ = run(sandbox, "param", "--search", "param12")
     assert [m["id"] for m in out["matches"]] == [12]
 
 
-def test_param_search_no_match_is_not_an_error(env):
-    code, out, _ = run(env, "param", "--search", "zzzz")
+def test_param_search_no_match_is_not_an_error(sandbox):
+    code, out, _ = run(sandbox, "param", "--search", "zzzz")
     assert code == 0
     assert out["matches"] == []
 
 
 # -------------------------------------------------------------- validate ---
 
-def test_validate_ok_with_warning_for_missing_rows(env):
-    code, out, err = run(env, "validate")
+def test_validate_ok_with_warning_for_missing_rows(sandbox):
+    code, out, err = run(sandbox, "validate")
     assert code == 0 and err is None
     assert out["ok"] is True
     assert out["errors"] == []
@@ -381,7 +381,7 @@ def test_validate_ok_with_warning_for_missing_rows(env):
 
 def test_validate_no_warning_when_rows_complete(tmp_path):
     cells = {f"{r}-{1 if r != 1 else 2}": [1] for r in range(1, 40)}
-    script = make_env(tmp_path, cells=cells, missing_rows=[])
+    script = make_sandbox(tmp_path, cells=cells, missing_rows=[])
     code, out, _ = run(script, "validate")
     assert code == 0
     assert out["warnings"] == []
@@ -398,7 +398,7 @@ def test_validate_no_warning_when_rows_complete(tmp_path):
     ({"bad": [1]}, "key"),
 ])
 def test_validate_detects_violations(tmp_path, cells, needle):
-    script = make_env(tmp_path, cells=cells)
+    script = make_sandbox(tmp_path, cells=cells)
     code, out, err = run(script, "validate")
     assert code == 5
     assert err["error"]["code"] == "data_error"
@@ -407,14 +407,14 @@ def test_validate_detects_violations(tmp_path, cells, needle):
 
 def test_validate_detects_silent_missing_row(tmp_path):
     """A row with no cells that is not declared in missing_rows is an error."""
-    script = make_env(tmp_path, cells={"1-2": [1]}, missing_rows=[])
+    script = make_sandbox(tmp_path, cells={"1-2": [1]}, missing_rows=[])
     code, _, err = run(script, "validate")
     assert code == 5
     assert "missing_rows" in json.dumps(err, ensure_ascii=False)
 
 
 def test_validate_detects_missing_name(tmp_path):
-    script = make_env(tmp_path)
+    script = make_sandbox(tmp_path)
     p = tmp_path / "data" / "parameters.json"
     d = json.loads(p.read_text(encoding="utf-8"))
     d["parameters"][3]["name"]["ko"] = ""
@@ -424,7 +424,7 @@ def test_validate_detects_missing_name(tmp_path):
 
 
 def test_validate_detects_wrong_principle_count(tmp_path):
-    script = make_env(tmp_path)
+    script = make_sandbox(tmp_path)
     p = tmp_path / "data" / "inventive-principles.json"
     d = json.loads(p.read_text(encoding="utf-8"))
     d["principles"].pop()
@@ -434,7 +434,7 @@ def test_validate_detects_wrong_principle_count(tmp_path):
 
 
 def test_validate_missing_file_exit_5(tmp_path):
-    script = make_env(tmp_path)
+    script = make_sandbox(tmp_path)
     (tmp_path / "data" / "parameters.json").unlink()
     code, _, err = run(script, "validate")
     assert code == 5
@@ -444,7 +444,7 @@ def test_validate_missing_file_exit_5(tmp_path):
 # ------------------------------------------------------ unverified cells ---
 
 def test_matrix_unverified_cell_reported_as_empty_with_warning(tmp_path):
-    script = make_env(tmp_path, unverified=["1-17"])
+    script = make_sandbox(tmp_path, unverified=["1-17"])
     code, out, _ = run(script, "matrix", "--improve", "1", "--worsen", "17")
     assert code == 0
     assert out["pairs"] == []
@@ -453,21 +453,21 @@ def test_matrix_unverified_cell_reported_as_empty_with_warning(tmp_path):
 
 
 def test_matrix_unverified_cell_does_not_affect_other_pairs(tmp_path):
-    script = make_env(tmp_path, unverified=["1-17"])
+    script = make_sandbox(tmp_path, unverified=["1-17"])
     _, out, _ = run(script, "matrix", "--improve", "1", "--worsen", "2,17")
     assert [p["worsen"] for p in out["pairs"]] == [2]
     assert out["warnings"] == [{"code": "unverified_cell", "improve": 1, "worsen": 17}]
 
 
 def test_validate_warns_about_unverified_cells(tmp_path):
-    script = make_env(tmp_path, unverified=["1-17"])
+    script = make_sandbox(tmp_path, unverified=["1-17"])
     code, out, _ = run(script, "validate")
     assert code == 0
     assert {"code": "unverified_cell", "improve": 1, "worsen": 17} in out["warnings"]
 
 
 def test_validate_rejects_unverified_cell_that_also_has_a_value(tmp_path):
-    script = make_env(tmp_path, unverified=["1-2"])  # 1-2 exists in default cells
+    script = make_sandbox(tmp_path, unverified=["1-2"])  # 1-2 exists in default cells
     code, _, err = run(script, "validate")
     assert code == 5
     assert "unverified_cells" in json.dumps(err, ensure_ascii=False)
@@ -475,7 +475,7 @@ def test_validate_rejects_unverified_cell_that_also_has_a_value(tmp_path):
 
 @pytest.mark.parametrize("bad", ["x", "5-5", "0-3", "1-40"])
 def test_validate_rejects_malformed_unverified_key(tmp_path, bad):
-    script = make_env(tmp_path, unverified=[bad])
+    script = make_sandbox(tmp_path, unverified=[bad])
     code, _, err = run(script, "validate")
     assert code == 5
     assert "unverified_cells" in json.dumps(err, ensure_ascii=False)
@@ -546,54 +546,54 @@ def test_output_is_utf8_json_not_escaped():
 
 # ------------------------------------------------------------ separation ---
 
-def test_separation_all_types_in_data_order(env):
-    code, out, err = run(env, "separation")
+def test_separation_all_types_in_data_order(sandbox):
+    code, out, err = run(sandbox, "separation")
     assert code == 0 and err is None
     assert [s["id"] for s in out["separations"]] == ["space", "time", "condition", "direction", "system"]
 
 
-def test_separation_selected_types_with_names_and_lang(env):
-    code, out, _ = run(env, "separation", "--type", "time,space", "--lang", "en")
+def test_separation_selected_types_with_names_and_lang(sandbox):
+    code, out, _ = run(sandbox, "separation", "--type", "time,space", "--lang", "en")
     assert code == 0
     time, space = out["separations"]
     assert time["id"] == "time" and space["id"] == "space"
     assert time["name"] == "Sep time" and time["question"] == "q time?"
     assert time["related_principles"] == [{"id": 10, "name": "Prin10"}, {"id": 15, "name": "Prin15"}]
     assert time["examples"] == ["ex time"]
-    _, ko, _ = run(env, "separation", "--type", "time")
+    _, ko, _ = run(sandbox, "separation", "--type", "time")
     assert ko["separations"][0]["question"] == "time 질문?"
     assert ko["separations"][0]["related_principles"][0]["name"] == "원리10"
 
 
-def test_separation_ranking_counts_shared_principles(env):
-    _, out, _ = run(env, "separation", "--type", "space,system,condition")
+def test_separation_ranking_counts_shared_principles(sandbox):
+    _, out, _ = run(sandbox, "separation", "--type", "space,system,condition")
     # space [1,2], system [1,5], condition [3,40]: 1 appears twice; ties go
     # round-robin by position, then by --type order
     assert [(r["id"], r["count"]) for r in out["ranking"]] == [(1, 2), (3, 1), (2, 1), (5, 1), (40, 1)]
 
 
-def test_separation_ties_interleave_types_in_given_order(env):
-    _, out, _ = run(env, "separation", "--type", "time,direction")
+def test_separation_ties_interleave_types_in_given_order(sandbox):
+    _, out, _ = run(sandbox, "separation", "--type", "time,direction")
     # time [10,15], direction [4,14]: all count 1
     assert [r["id"] for r in out["ranking"]] == [10, 4, 15, 14]
-    _, out, _ = run(env, "separation", "--type", "direction,time")
+    _, out, _ = run(sandbox, "separation", "--type", "direction,time")
     assert [r["id"] for r in out["ranking"]] == [4, 10, 14, 15]
 
 
-def test_separation_duplicate_type_is_collapsed(env):
-    _, out, _ = run(env, "separation", "--type", "time,time")
+def test_separation_duplicate_type_is_collapsed(sandbox):
+    _, out, _ = run(sandbox, "separation", "--type", "time,time")
     assert len(out["separations"]) == 1
 
 
 @pytest.mark.parametrize("raw", ["foo", "time,", "Time", ""])
-def test_separation_rejects_unknown_type(env, raw):
-    code, out, err = run(env, "separation", "--type", raw)
+def test_separation_rejects_unknown_type(sandbox, raw):
+    code, out, err = run(sandbox, "separation", "--type", raw)
     assert code == 2 and out is None
     assert err["error"]["code"] == "invalid_argument"
 
 
 def test_separation_missing_data_file(tmp_path):
-    script = make_env(tmp_path)
+    script = make_sandbox(tmp_path)
     (tmp_path / "data" / "separation-principles.json").unlink()
     code, _, err = run(script, "separation")
     assert code == 5 and err["error"]["code"] == "data_error"
@@ -618,7 +618,7 @@ def test_separation_real_data_matches_json():
     (lambda seps: seps[3].update(examples=[{"ko": "예"}]), "examples need ko and en"),
 ])
 def test_validate_rejects_bad_separation_data(tmp_path, mutate, message):
-    script = make_env(tmp_path)
+    script = make_sandbox(tmp_path)
     path = tmp_path / "data" / "separation-principles.json"
     data = json.loads(path.read_text(encoding="utf-8"))
     mutate(data["separations"])
