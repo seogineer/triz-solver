@@ -3,6 +3,6 @@
   "description": "TRIZ contradiction analysis plugin",
   "owner": { "name": "DoGyeong Seo" },
   "plugins": [
-    { "name": "triz-solver", "source": "./", "description": "TRIZ contradiction analysis" }
+    { "name": "triz-solver", "source": "./", "description": "Resolve engineering contradictions with TRIZ: the contradiction matrix and 40 inventive principles for trade-offs, separation principles for physical contradictions" }
   ]
 }
