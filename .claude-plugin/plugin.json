@@ -4,6 +4,7 @@
   "version": "0.3.1",
   "description": "Resolve engineering contradictions with TRIZ: the contradiction matrix and 40 inventive principles for trade-offs, separation principles for physical contradictions",
   "author": { "name": "DoGyeong Seo" },
+  "repository": "https://github.com/seogineer/triz-solver",
   "license": "MIT",
   "keywords": ["triz", "innovation", "problem-solving", "engineering"]
 }
