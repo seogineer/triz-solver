@@ -1,6 +1,7 @@
 ---
 name: triz-analysis
-description: Analyze engineering or product problems with TRIZ. Use when the user
+description: >-
+  Analyze engineering or product problems with TRIZ. Use when the user
   describes a trade-off (improving one property worsens another), a conflicting
   requirement (one property must be both high and low), or asks for TRIZ, the
   contradiction matrix, inventive principles, physical contradictions or separation
