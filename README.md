@@ -102,6 +102,14 @@ Errors are JSON on stderr with exit codes 2 (bad argument or unknown separation 
 
 The skill folder is self-contained (`data/` and `scripts/` live inside it), so it can also be uploaded on its own to Claude.ai.
 
+## Data handling
+
+- **What you type.** The problem you describe is handled by Claude in your session, like any other message, under your own Claude account terms. The plugin does not collect, store or forward it anywhere else.
+- **What the script does.** `lookup.py` only reads the bundled `data/*.json` files and prints JSON to your terminal. It makes no network calls, reads no environment variables or credentials, and writes no files.
+- **What the plugin does not have.** No hooks, no MCP servers, no background processes, no telemetry, and no accounts or API keys.
+- **Files it writes.** Only when you ask for a saved report (`/triz ... --save`, or "save it"): one Markdown file in the current directory (or the path you give), never overwriting an existing file.
+- **Personal data.** The plugin is not designed to read or keep personal data. Avoid putting personal or confidential information into the problem description; it is sent to Claude like any other prompt.
+
 ## What it does not cover
 
 TRIZ is much broader than this plugin. It covers technical contradictions (contradiction matrix, 40 inventive principles) and physical contradictions (separation principles). It does **not** do:
