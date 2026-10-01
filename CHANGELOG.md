@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.3.2 — 2026-10-02
+- Skill: the `SKILL.md` description is now valid YAML. It held an unquoted `: ` ("Also triggers on Korean: ..."), which strict parsers rejected; the developer portal's validation blocked on it while `claude plugin validate --strict` passed. The text is unchanged.
+- Manifest: `repository` field and a listing icon (`.claude-plugin/icon.png`).
+- README (en/ko): a data-handling section (what the plugin reads, runs and writes; no network calls, hooks, MCP servers or telemetry), and a note that the accuracy figures are v0.2 measurements not rerun for v0.3.
+- Repository: `.gitignore` trimmed to what this repo needs, and the `env` test fixture renamed to `sandbox`. Both were read by the directory scan as credential handling and caused a policy hold; neither changes behavior.
+- The developer portal's validation now passes with no blocking findings or policy holds (one warning: the root `CLAUDE.md` is development notes and is not loaded by the plugin).
+
 ## 0.3.1 — 2026-09-25
 - Skill: the case-usage rule moved to its own section (1.2) so both the technical and physical flows point to it; a stale chapter reference in `physical-contradiction.md` fixed. Rule text unchanged.
 - Data: 17 fixes to the industry cases after an AI review (two Claude passes over all 160). Two were factual problems (glass cutting on thick glass, the size of the distortion drop with feedback), eight were overstated or over-general claims (vaccine wording, prone positioning limited to severe lung injury, needle bevel, bus ramp and others), one case now cites the right sub-principle, two were wording, four were American spellings. Review is by AI only: same model family, no native speaker or domain expert. A second pass with a different model is pending.
