@@ -130,6 +130,8 @@ The 40 principles are a checklist for generating ideas, not a guarantee. If the 
 | Mapping accuracy | 32 blind-run cases: Top-3 hit rate 96-100% across runs (91/93 overall after the expected values were revised), 0 hallucinated principle numbers, and 9/9 disclosures when a withheld cell was hit. Small set with author-written expected values and some run-to-run variation, so treat it as a smoke test. **On an independent patent benchmark (TRIZBench) the plugin scored Hit@3 = 10% on the first 30 patents and 13% on 75 held-out patents, about the level of always guessing the three most common answers (9-16%)**: it works best when you state the trade-off yourself, not when the input only describes a solution (see `tests/eval/results-v0.1.md`). The technical cases still hit 30/32 after the v0.2 changes |
 | Physical contradictions | 10 blind-run cases: the separation type looked up matched the expected one in 9/10 (command) and 8/10 (plain language) runs, 10/10 counting the type the answer states; 0 hallucinated principles. Author-written cases with clearly stated demands, so treat it as a smoke test (`tests/eval/results-v0.2.md`) |
 
+The accuracy figures above are v0.2 measurements. They were not rerun for v0.3, which added industry cases that enter only after parameter mapping and carry no principle numbers; no change in idea quality is claimed.
+
 Sources, method and the disputed cells are listed in [DATA_SOURCES.md](DATA_SOURCES.md). TRIZ output is a source of ideas, not a verdict: check the mapping and validate ideas before acting on them.
 
 ## Development
