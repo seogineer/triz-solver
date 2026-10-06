@@ -110,7 +110,7 @@
           "domain": "everyday",
           "sub_principle": 1,
           "ko": "조리할 때 생기는 연기와 기름 냄새가 집 안 전체로 퍼진다. 연기가 생기는 자리 바로 위에서 후드로 빨아들여 밖으로 내보낸다.",
-          "en": "Cooking smoke and grease odour spread through the whole home. A hood right above the stove draws them off where they form and sends them outside."
+          "en": "Cooking smoke and grease odor spread through the whole home. A hood right above the stove draws them off where they form and sends them outside."
         }
       ]
     },
@@ -271,7 +271,7 @@
           "domain": "medical",
           "sub_principle": 2,
           "ko": "혈액 검사를 항목마다 따로 하면 피를 여러 번 뽑아야 한다. 한 번 뽑은 피로 여러 항목을 동시에 재는 분석기를 쓰면 채혈이 한 번으로 준다.",
-          "en": "Testing blood item by item means drawing blood several times. An analyser that measures many items at once from one sample cuts it to a single draw."
+          "en": "Testing blood item by item means drawing blood several times. An analyzer that measures many items at once from one sample cuts it to a single draw."
         },
         {
           "domain": "everyday",
@@ -371,7 +371,7 @@
           "domain": "mechanical",
           "sub_principle": 3,
           "ko": "케이블을 기계 바깥으로 돌리면 걸리고 닳는다. 회전축 가운데를 비워 그 속으로 케이블을 지나가게 한다.",
-          "en": "Cables routed outside a machine snag and wear. A hollow rotating shaft lets them run through its centre."
+          "en": "Cables routed outside a machine snag and wear. A hollow rotating shaft lets them run through its center."
         },
         {
           "domain": "electronics",
@@ -483,7 +483,7 @@
           "domain": "mechanical",
           "sub_principle": 2,
           "ko": "높은 압력을 받는 두꺼운 관은 안쪽 벽부터 터진다. 만들 때 한 번 더 높은 압력을 걸어 안쪽에 압축 응력을 남겨 두면, 실제 압력이 걸릴 때 그만큼 더 버틴다.",
-          "en": "A thick tube under high pressure fails from the inner wall first. Pressurising it once beyond its working level during manufacture leaves compressive stress inside, so it holds more in service."
+          "en": "A thick tube under high pressure fails from the inner wall first. Pressurizing it once beyond its working level during manufacture leaves compressive stress inside, so it holds more in service."
         },
         {
           "domain": "electronics",
@@ -549,8 +549,8 @@
         {
           "domain": "medical",
           "sub_principle": 2,
-          "ko": "심장이 멈춘 사람은 몇 분 안에 전기 충격을 받아야 한다. 사람이 많이 오가는 곳에 자동 제세동기를 미리 두어 바로 쓸 수 있게 한다.",
-          "en": "Someone in cardiac arrest needs a shock within minutes. Placing automatic defibrillators in busy public places in advance puts one within reach."
+          "ko": "심장이 멈춘 사람은 몇 분 안에 심폐소생술과 제세동기 분석을 받아야 한다. 사람이 많이 오가는 곳에 자동 제세동기를 미리 두어 바로 쓸 수 있게 한다.",
+          "en": "Someone in cardiac arrest needs CPR and a defibrillator's analysis within minutes. Placing automatic defibrillators in busy public places in advance puts one within reach."
         },
         {
           "domain": "materials",
@@ -662,7 +662,7 @@
           "domain": "everyday",
           "sub_principle": 1,
           "ko": "휠체어나 유모차는 버스 계단을 오르기 어렵다. 바닥이 정류장 턱 높이에 가깝게 낮은 버스는 짧은 경사판만으로 들어갈 수 있다.",
-          "en": "Wheelchairs and pushchairs struggle with bus steps. A bus whose floor sits close to kerb height needs only a short ramp for them to roll in."
+          "en": "Wheelchairs and strollers struggle with bus steps. A bus whose floor sits close to curb height needs only a short ramp for them to roll in."
         }
       ]
     },
@@ -713,7 +713,7 @@
           "domain": "materials",
           "sub_principle": 1,
           "ko": "쇳물을 거푸집 위에서 부으면 거품과 찌꺼기가 함께 섞여 들어간다. 거푸집 아래쪽에서 쇳물을 밀어 올려 채우면 찌꺼기가 위로 떠 빠진다.",
-          "en": "Pouring molten metal in from the top of a mould drags in bubbles and dross. Filling the mould from the bottom upward lets the dross float to the top."
+          "en": "Pouring molten metal in from the top of a mold drags in bubbles and dross. Filling the mold from the bottom upward lets the dross float to the top."
         },
         {
           "domain": "everyday",
@@ -764,7 +764,7 @@
           "domain": "electronics",
           "sub_principle": 1,
           "ko": "직각으로 꺾인 기판 배선에서는 빠른 신호가 모서리에서 반사된다. 배선 모서리를 둥글게 또는 비스듬히 꺾으면 반사가 줄어든다.",
-          "en": "Fast signals reflect at right-angle corners in circuit-board traces. Rounding or mitring the corners reduces the reflections."
+          "en": "Fast signals reflect at right-angle corners in circuit-board traces. Rounding or mitering the corners reduces the reflections."
         },
         {
           "domain": "medical",
@@ -1144,7 +1144,7 @@
         ],
         "en": [
           "A high-speed dental drill",
-          "High-temperature short-time pasteurised milk",
+          "High-temperature short-time pasteurized milk",
           "Cutting plastic so fast that heat does not spread"
         ]
       },
@@ -1171,7 +1171,7 @@
           "domain": "everyday",
           "sub_principle": 1,
           "ko": "채소를 끓는 물에 오래 두면 물러지고 색이 빠진다. 아주 잠깐 넣었다가 곧바로 찬물에 식힌다.",
-          "en": "Vegetables left in boiling water go soft and lose colour. A few seconds in the pot and straight into cold water avoids it."
+          "en": "Vegetables left in boiling water go soft and lose color. A few seconds in the pot and straight into cold water avoids it."
         }
       ]
     },
@@ -1222,7 +1222,7 @@
           "domain": "materials",
           "sub_principle": 2,
           "ko": "산성 폐수와 알칼리성 폐수를 따로 처리하면 중화 약품이 많이 든다. 둘을 섞어 서로 중화시키면 약품이 크게 준다.",
-          "en": "Treating acidic and alkaline waste water separately takes a lot of neutralising chemicals. Mixing the two so they neutralise each other cuts the chemicals sharply."
+          "en": "Treating acidic and alkaline waste water separately takes a lot of neutralizing chemicals. Mixing the two so they neutralize each other cuts the chemicals sharply."
         },
         {
           "domain": "medical",
@@ -1276,8 +1276,8 @@
         {
           "domain": "medical",
           "sub_principle": 1,
-          "ko": "정해진 시간에 정해진 양의 인슐린을 넣으면 혈당이 들쭉날쭉하다. 혈당을 계속 재서 주입량을 자동으로 맞추는 펌프를 쓴다.",
-          "en": "Fixed insulin doses at fixed times leave blood sugar swinging. A pump that measures glucose continuously adjusts the dose on its own."
+          "ko": "정해진 시간에 정해진 양의 인슐린을 넣으면 혈당이 들쭉날쭉하다. 연속 혈당 측정 센서와 연동해 주입량을 자동으로 맞추는 펌프를 쓴다.",
+          "en": "Fixed insulin doses at fixed times leave blood sugar swinging. A pump linked to a continuous glucose sensor adjusts the dose on its own."
         },
         {
           "domain": "electronics",
@@ -1374,8 +1374,8 @@
         {
           "domain": "software",
           "sub_principle": 1,
-          "ko": "서버 프로그램이 멈추면 사람이 알아채 다시 켤 때까지 서비스가 끊긴다. 프로그램이 제 상태를 스스로 점검해 이상하면 스스로 다시 시작하게 한다.",
-          "en": "When a server program hangs, the service is down until someone notices and restarts it. A program that checks its own health restarts itself when something is wrong."
+          "ko": "서버 프로그램이 멈추면 사람이 알아채 다시 켤 때까지 서비스가 끊긴다. 별도의 감시 프로세스가 프로그램의 상태를 계속 점검해 이상하면 자동으로 다시 시작하게 한다.",
+          "en": "When a server program hangs, the service is down until someone notices and restarts it. A separate watchdog process that keeps checking the program's health restarts it automatically when something is wrong."
         },
         {
           "domain": "mechanical",
@@ -1449,8 +1449,8 @@
         {
           "domain": "materials",
           "sub_principle": 3,
-          "ko": "그림 위에 칠한 물감 때문에 밑그림이 보이지 않는다. 적외선으로 찍으면 물감층을 지나 밑그림이 드러난다.",
-          "en": "Paint layers hide the underdrawing of a painting. An infrared image sees through the paint and reveals it."
+          "ko": "그림 위에 칠한 물감 때문에 밑그림이 보이지 않는다. 일부 물감층은 적외선을 투과하므로, 적외선으로 찍으면 그 층을 지나 밑그림이 드러난다.",
+          "en": "Paint layers hide the underdrawing of a painting. Some paint layers are transparent to infrared, so an infrared image sees through them and reveals it."
         }
       ]
     },
@@ -1485,7 +1485,7 @@
           "domain": "medical",
           "sub_principle": 1,
           "ko": "체온계 끝을 환자마다 소독하면 시간이 들고 감염 위험이 남는다. 한 번 쓰고 버리는 얇은 덮개를 씌워 잰다.",
-          "en": "Disinfecting a thermometre tip between patients takes time and still leaves a risk. A thin single-use cover goes over the tip for each reading."
+          "en": "Disinfecting a thermometer tip between patients takes time and still leaves a risk. A thin single-use cover goes over the tip for each reading."
         },
         {
           "domain": "mechanical",
@@ -1536,7 +1536,7 @@
         "en": [
           "A smart door lock opened by a radio signal instead of a key",
           "A wireless charger with no contact",
-          "Town gas odorised so leaks can be smelled"
+          "Town gas odorized so leaks can be smelled"
         ]
       },
       "cases": [
@@ -1615,7 +1615,7 @@
           "domain": "materials",
           "sub_principle": 1,
           "ko": "금형에서 플라스틱 제품을 핀으로 밀어내면 표면에 자국이 남는다. 압축 공기를 불어 넣어 제품을 떼어 낸다.",
-          "en": "Pushing a plastic part out of a mould with ejector pins leaves marks. A blast of compressed air releases it instead."
+          "en": "Pushing a plastic part out of a mold with ejector pins leaves marks. A blast of compressed air releases it instead."
         }
       ]
     },
@@ -1698,7 +1698,7 @@
         ],
         "en": [
           "Lightweight, stiff metal foam",
-          "An activated-carbon filter trapping odour in its pores",
+          "An activated-carbon filter trapping odor in its pores",
           "A porous implant filled with medication"
         ]
       },
@@ -1743,7 +1743,7 @@
           "형광 표지 등으로 대상에 표시를 남긴다"
         ],
         "en": [
-          "Change the colour of the object or its surroundings",
+          "Change the color of the object or its surroundings",
           "Change how transparent the object is",
           "Add dyes or additives to make a hard-to-see object visible",
           "Mark the object with luminescent or fluorescent tags"
@@ -1756,7 +1756,7 @@
           "누출 위치를 찾기 위한 형광 염료"
         ],
         "en": [
-          "A baby bottle that changes colour when too hot",
+          "A baby bottle that changes color when too hot",
           "Lenses that darken in sunlight",
           "Fluorescent dye for locating a leak"
         ]
@@ -1766,25 +1766,25 @@
           "domain": "software",
           "sub_principle": 1,
           "ko": "경고 메시지가 다른 기록과 섞여 눈에 띄지 않는다. 심각도에 따라 색을 달리해 한눈에 구분하게 한다.",
-          "en": "Warnings get lost among other log lines. Colouring them by severity makes them stand out at a glance."
+          "en": "Warnings get lost among other log lines. Coloring them by severity makes them stand out at a glance."
         },
         {
           "domain": "medical",
           "sub_principle": 4,
           "ko": "수술 중 암 조직과 정상 조직의 경계가 잘 보이지 않는다. 암 조직에 붙는 형광 물질을 넣고 특수한 빛을 비추면 경계가 드러난다.",
-          "en": "During surgery, the border between tumour and healthy tissue is hard to see. A fluorescent agent that binds to the tumour lights it up under a special light."
+          "en": "During surgery, the border between tumor and healthy tissue is hard to see. A fluorescent agent that binds to the tumor lights it up under a special light."
         },
         {
           "domain": "mechanical",
           "sub_principle": 3,
           "ko": "금속 표면의 미세한 균열은 눈으로 찾기 어렵다. 스며드는 색소를 바르고 닦아 낸 뒤 현상액을 뿌리면 균열 자리만 색이 드러난다.",
-          "en": "Fine cracks in a metal surface are hard to see. A penetrating dye is applied and wiped off, and a developer then shows colour only where the cracks are."
+          "en": "Fine cracks in a metal surface are hard to see. A penetrating dye is applied and wiped off, and a developer then shows color only where the cracks are."
         },
         {
           "domain": "everyday",
           "sub_principle": 2,
-          "ko": "창문을 가리려면 커튼이나 블라인드를 달아야 한다. 전기를 걸면 불투명해지는 유리를 쓰면 스위치 하나로 가린다.",
-          "en": "Covering a window needs curtains or blinds. Glass that turns opaque when switched gives privacy at the flick of a switch."
+          "ko": "창문을 가리려면 커튼이나 블라인드를 달아야 한다. 스위치로 투명도를 바꾸는 유리를 쓰면 스위치 하나로 가린다.",
+          "en": "Covering a window needs curtains or blinds. Glass whose transparency changes with a switch gives privacy at the flick of a switch."
         }
       ]
     },
@@ -1998,7 +1998,7 @@
           "domain": "everyday",
           "sub_principle": 1,
           "ko": "주머니 손난로는 불을 쓰면 위험하다. 과포화 용액 속 금속판을 딸깍 눌러 결정이 생기게 하면 굳으면서 열을 낸다.",
-          "en": "Pocket warmers that burn fuel are risky. Clicking a metal disc in a supersaturated solution starts crystallisation, which gives off heat as it sets."
+          "en": "Pocket warmers that burn fuel are risky. Clicking a metal disc in a supersaturated solution starts crystallization, which gives off heat as it sets."
         },
         {
           "domain": "materials",
@@ -2078,7 +2078,7 @@
         "en": [
           "Replace ordinary air with oxygen-enriched air",
           "Go further and use pure oxygen",
-          "Use ionised or otherwise activated oxygen"
+          "Use ionized or otherwise activated oxygen"
         ]
       },
       "examples": {
@@ -2090,7 +2090,7 @@
         "en": [
           "An oxygen cutting torch",
           "Oxygen therapy in a hospital",
-          "Ozone sterilisation"
+          "Ozone sterilization"
         ]
       },
       "cases": [
@@ -2098,7 +2098,7 @@
           "domain": "medical",
           "sub_principle": 3,
           "ko": "열로 소독하면 녹거나 망가지는 수술 도구가 있다. 활성화한 산소를 쓰는 저온 소독으로 도구를 상하지 않게 한다.",
-          "en": "Some surgical instruments melt or degrade under heat sterilisation. Low-temperature sterilisation with activated oxygen species spares them."
+          "en": "Some surgical instruments melt or degrade under heat sterilization. Low-temperature sterilization with activated oxygen species spares them."
         },
         {
           "domain": "materials",
@@ -2153,7 +2153,7 @@
           "domain": "electronics",
           "sub_principle": 1,
           "ko": "납땜할 때 뜨거운 금속 표면이 공기와 만나 산화돼 잘 붙지 않는다. 질소를 채운 환경에서 납땜하면 산화가 줄어든다.",
-          "en": "Hot metal surfaces oxidise in air during soldering and wet poorly. Soldering in a nitrogen atmosphere cuts the oxidation."
+          "en": "Hot metal surfaces oxidize in air during soldering and wet poorly. Soldering in a nitrogen atmosphere cuts the oxidation."
         },
         {
           "domain": "materials",
@@ -2196,7 +2196,7 @@
           "여러 겹을 붙인 합판"
         ],
         "en": [
-          "Carbon-fibre reinforced plastic",
+          "Carbon-fiber reinforced plastic",
           "Reinforced concrete",
           "Plywood made of glued layers"
         ]
@@ -2205,14 +2205,14 @@
         {
           "domain": "mechanical",
           "sub_principle": 1,
-          "ko": "금속 브레이크 원판은 뜨거워지면 제동력이 떨어지고 무겁다. 탄소 섬유와 세라믹을 합친 원판은 고온에서도 버티고 가볍다.",
-          "en": "Metal brake discs lose grip when hot and are heavy. Discs of carbon fibre combined with ceramic hold up at high temperature and weigh less."
+          "ko": "금속 브레이크 원판은 무겁고 고온에서 버티는 데 한계가 있다. 탄소 섬유와 세라믹을 합친 원판은 고온에서도 버티고 가볍다.",
+          "en": "Metal brake discs are heavy and limited at high temperature. Discs of carbon fiber combined with ceramic hold up at high temperature and weigh less."
         },
         {
           "domain": "medical",
           "sub_principle": 1,
           "ko": "금속 인공 관절은 뼈보다 훨씬 단단해 하중을 대신 받는 바람에 주변 뼈가 약해진다. 뼈와 굳기가 비슷한 섬유 강화 복합재를 쓴다.",
-          "en": "A metal implant is so much stiffer than bone that it takes the load and the surrounding bone weakens. A fibre-reinforced composite with bone-like stiffness is used instead."
+          "en": "A metal implant is so much stiffer than bone that it takes the load and the surrounding bone weakens. A fiber-reinforced composite with bone-like stiffness is used instead."
         },
         {
           "domain": "electronics",
@@ -2224,7 +2224,7 @@
           "domain": "everyday",
           "sub_principle": 1,
           "ko": "종이 우유팩은 물기에 약하고 빛과 공기를 막지 못한다. 종이에 얇은 플라스틱과 알루미늄 층을 겹친 재료로 만든다.",
-          "en": "Plain paper cartons go soggy and let in light and air. Cartons made of paper laminated with thin plastic and aluminium layers keep them out."
+          "en": "Plain paper cartons go soggy and let in light and air. Cartons made of paper laminated with thin plastic and aluminum layers keep them out."
         }
       ]
     }
