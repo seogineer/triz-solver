@@ -1,5 +1,8 @@
 # Changelog
 
+## Unreleased
+- Data: fixes to the industry cases after a second AI review by a different model family (Codex, all 160). Six factual or overstated cases reworded (defibrillator shock only after analysis, insulin pump linked to a separate glucose sensor, hang recovery by an external watchdog, infrared only through IR-transparent paint, switchable glass without a fixed direction, brake-disc wording) and remaining British spellings changed to American. Still AI-reviewed only, not by a human.
+
 ## 0.3.2 — 2026-10-02
 - Skill: the `SKILL.md` description is now valid YAML. It held an unquoted `: ` ("Also triggers on Korean: ..."), which strict parsers rejected; the developer portal's validation blocked on it while `claude plugin validate --strict` passed. The text is unchanged.
 - Manifest: `repository` field and a listing icon (`.claude-plugin/icon.png`).
