@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.3.3 — 2026-10-06
 - Data: fixes to the industry cases after a second AI review by a different model family (Codex, all 160). Six factual or overstated cases reworded (defibrillator shock only after analysis, insulin pump linked to a separate glucose sensor, hang recovery by an external watchdog, infrared only through IR-transparent paint, switchable glass without a fixed direction, brake-disc wording) and remaining British spellings changed to American. Still AI-reviewed only, not by a human.
 
 ## 0.3.2 — 2026-10-02
