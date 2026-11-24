@@ -9,3 +9,7 @@ venv/
 .idea/
 .vscode/
 .DS_Store
+
+# Core dumps and raw evaluation streams
+core.*
+tests/eval/**/raw/*.jsonl
