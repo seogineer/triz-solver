@@ -59,6 +59,8 @@ v0.1은 기술적 모순 흐름 1개만 완성하고, 물리적 모순과 인터
 
 핵심 원칙은 **판단은 LLM, 조회는 스크립트**다. LLM은 39×39 행렬의 개별 셀 값을 자주 틀리게 재현하므로, 행렬 접근은 전부 `lookup.py`를 거친다.
 
+> **v0.4 개정 (12장):** 공식 디렉토리가 Verified 조직이 아니면 스크립트를 받지 않는다. 플러그인에서 `lookup.py`를 뺀다. 원칙은 **판단은 LLM, 조회는 데이터 파일 직접 읽기**로 바뀐다. 기억으로 값을 만들지 않는 규칙은 그대로다. `lookup.py`는 `tools/`로 옮겨 개발용 기준(oracle)으로만 쓴다. 이 장의 `lookup.py` 설명은 v0.3까지의 구조다.
+
 ### 3.1 책임 분리
 
 | 단계 | 담당 | 이유 |
@@ -535,3 +537,88 @@ v0.1은 데이터 확정이 선행 조건이며, 이후 구현은 Claude Code로
 - [x] Markdown 보고서 저장 (FR-08, `/triz ... --save` 또는 저장 요청 시)
 - [x] 물리적 모순 평가 케이스 10건 작성 및 블라인드 실행, 인터뷰 흐름 스모크 확인 (분리 유형 적중 명령 9/10·자연어 8/10, 답안 기준 10/10, 환각 0. 기술적 모순 회귀 30/32: `tests/eval/results-v0.2.md`)
 - [x] README(ko/en), CHANGELOG, 매니페스트 버전(0.2.0), `main` 병합과 `v0.2.0` 태그 (원격에 푸시됨)
+
+## 12. v0.4: 디렉토리 정책 대응
+
+### 12.1 배경
+
+2026-11-08 공식 Plugin Directory 자동 검사가 v0.3.3을 거부했다. 조직이 Verified가 아니어서 허용 목록 밖 파일을 받지 않는다. 허용: Markdown, 텍스트, JSON, YAML, PNG/JPEG/GIF/WebP/ICO. 금지: 스크립트(`#!` 포함), 패키지 매니저 설정, `CLAUDE.md`/`AGENTS.md`. 포털의 Plugin path는 제출 후 바꿀 수 없다. 포털은 "다른 파일이 필요하면 플러그인을 하위 폴더에 두고 그 폴더를 제출"하라고 안내한다.
+
+### 12.2 저장소 구조
+
+```
+triz-solver/
+├── plugin/                      # 디렉토리에 제출하는 폴더. 허용 파일만 둔다
+│   ├── .claude-plugin/{plugin.json, icon.png}
+│   ├── commands/triz.md
+│   ├── skills/triz-analysis/
+│   │   ├── SKILL.md
+│   │   ├── references/*.md
+│   │   └── data/
+│   │       ├── parameters.json
+│   │       ├── separation-principles.json
+│   │       ├── matrix/row-01.json … row-39.json
+│   │       └── principles/p-01.json … p-40.json
+│   ├── LICENSE
+│   └── LICENSE-DATA.md
+├── .claude-plugin/marketplace.json   # source: ./plugin
+├── data/                        # 원본(canonical) JSON. 사람이 고치는 곳
+├── tools/{lookup.py, build_plugin_data.py}
+├── tests/  docs/  .github/  CLAUDE.md  CHANGELOG.md  README*  DATA_SOURCES.md  LICENSE
+```
+
+- 제출 범위는 `plugin/`뿐이다. `tests/`, `tools/`, `CLAUDE.md`, `CHANGELOG.md`는 범위 밖이라 검사에 걸리지 않는다.
+- `data/`가 원본이다. `tools/build_plugin_data.py`가 `plugin/skills/triz-analysis/data/`를 만든다. 사람이 `plugin/` 안 데이터를 직접 고치지 않는다.
+- 슬러그 `triz-solver`는 바꾸지 않는다.
+
+### 12.3 데이터 분할 스키마
+
+LLM이 파일 전체(행렬 67KB, 원리 109KB)를 읽으면 컨텍스트가 크고 오류가 늘어난다. 필요한 조각만 읽도록 나눈다.
+
+- `matrix/row-NN.json`: `{"improve": N, "name": {ko,en}, "cells": {"<악화 번호>": [원리 번호, ...]}}`. 키가 없으면 그 조합은 행렬에 원리가 없다. 같은 파라미터 조합(대각선)도 키가 없다. 추측해서 채우지 않는다.
+- `principles/p-NN.json`: 원본 `inventive-principles.json`의 `principles[]` 원소 1개를 그대로 담는다(`id`, `name`, `sub_principles`, `cases`).
+- `parameters.json`, `separation-principles.json`: 원본을 그대로 복사한다.
+- 원본의 `missing_rows`·`unverified_cells`는 현재 비어 있다. 비어 있지 않게 되면 행 파일에 `"unverified": [악화 번호, ...]`로 싣고 SKILL.md가 그 조합을 비었다고 취급한다. 빌드 스크립트가 이 매핑을 구현하고 테스트한다.
+- 빌드 결과는 결정적이어야 한다(키 정렬, UTF-8, 끝 줄바꿈). 같은 입력은 같은 바이트를 만든다.
+
+### 12.4 SKILL.md 변경
+
+- 원칙: "조회는 `<skill-dir>/data/`의 파일을 Read 도구로 직접 읽는다. 값은 기억으로 만들거나 고치거나 보간하지 않는다."
+- 스크립트 호출 절을 "데이터 조회" 절로 바꾼다. 조회 방법을 표로 적는다: 행렬 셀은 `data/matrix/row-<개선 번호 2자리>.json`의 `cells["<악화 번호>"]`, 원리는 `data/principles/p-<번호 2자리>.json`, 파라미터는 `data/parameters.json`, 분리 원리는 `data/separation-principles.json`.
+- 순위 집계를 단계별 절차로 적는다. 코드나 명령 예시는 넣지 않는다.
+  1. 조합(개선, 악화)마다 셀 목록을 만든다. 조합 순서는 개선 후보 순서, 그 안에서 악화 후보 순서다. 빈 셀은 건너뛴다.
+  2. 원리마다 등장한 셀 수(count)를 센다. 한 셀에 같은 원리는 한 번만 있다.
+  3. count가 큰 원리가 앞선다.
+  4. count가 같으면 "가장 앞선 위치"로 정한다. 위치는 (셀 안 순번, 셀 순서)다. 셀 안 순번이 작은 쪽이 앞서고, 같으면 셀 순서가 앞선 쪽이 앞선다.
+  5. 상위 3~5개를 고른다. 표의 count는 3단계 값을 그대로 쓴다.
+- 분리 원리 순위도 같은 절차다. 목록은 `--type` 순서대로 놓은 분리 유형의 `related_principles`다.
+- "실제로 실행한 명령만 적는다" 규칙은 "실제로 읽은 파일만 출처로 적는다"로 바꾼다.
+- 오류 처리: 종료 코드 표를 지운다. 파일이 없거나 읽을 수 없으면 값을 기억으로 대신하지 않고 사용자에게 알린다. 범위 확인(파라미터 1~39, 원리 1~40)과 개선·악화 번호가 같은 경우(`same_parameter`)는 SKILL.md가 직접 확인한다.
+- `commands/triz.md`, `references/*.md`, README, CLAUDE.md의 `lookup.py` 언급을 모두 새 방식으로 바꾼다. `tools/lookup.py`는 개발 문서에서만 언급한다.
+
+### 12.5 개발용 도구와 테스트
+
+- `tools/lookup.py`는 원본 `data/`를 읽는다(경로 상수만 바꾼다). 동작과 출력은 그대로다.
+- 새 테스트: (a) 빌드 결과가 `plugin/skills/triz-analysis/data/`와 바이트 단위로 같다. (b) 행 파일 39개·원리 파일 40개가 있고, 행 파일의 모든 셀이 원본 행렬과 같다. (c) 12.4의 순위 절차를 테스트 안에서 그대로 구현해 무작위 조합 수백 개에서 `lookup.py matrix`와 `separation`의 `ranking`과 같은지 확인한다. (d) `plugin/` 아래 모든 파일이 허용 형식이고, `#!`로 시작하는 파일과 NUL 바이트가 없다. (e) `plugin/` 안에 `lookup.py`와 `scripts/`가 없다.
+- 평가 하네스(`tests/eval/run_blind.py`)는 `plugin/`을 복사한다. 채점기(`score.py`)는 이제 스크립트 출력 대신 읽은 파일의 내용으로 환각을 판단한다. 이 부분은 하네스를 읽고 최소로 바꾼다.
+- CI: `pytest tests/`, `python tools/lookup.py validate`, 빌드 일치 확인.
+
+### 12.6 위험과 완화
+
+| 위험 | 완화 |
+| --- | --- |
+| 손으로 하는 순위 집계가 틀린다 | 절차를 SKILL.md에 단계별로 쓰고, 평가에서 oracle과 비교한다 |
+| 행 파일을 잘못 고른다(개선·악화 뒤바뀜) | SKILL.md에 파일명 규칙과 확인 예시를 쓴다. 평가로 확인한다 |
+| 평가 점수가 떨어진다 | 완료 조건: 자체 평가 Top-3 70% 이상. 못 미치면 원인을 보고하고 멈춘다 |
+| 새 제출이 필요하다 | 사용자가 포털에서 처리한다. 푸시와 제출은 사용자 승인 후에 한다 |
+
+### 12.7 구현 순서 (v0.4)
+
+- [x] 설계 12장 작성, CLAUDE.md 원칙 문구 개정
+- [ ] 저장소 재구성: `git mv`로 `plugin/`, `tools/` 만들기, 경로 갱신 (동작 변경 없음, 테스트 통과)
+- [ ] `tools/build_plugin_data.py`와 분할 데이터 생성, 동기화 테스트
+- [ ] `SKILL.md`·`commands/triz.md`·`references/` 개정 (`lookup.py` 제거)
+- [ ] 정책 테스트(12.5 d, e), CI 갱신, `plugin/`에서 `lookup.py` 제거
+- [ ] 평가 하네스 수정, 블라인드 평가 재실행(Top-3 70% 이상)
+- [ ] README(ko/en), CHANGELOG, 버전 0.4.0, `claude plugin validate plugin`
+- [ ] (사용자) 푸시, 포털에서 새 제출(경로 `plugin`), 검증 통과 확인
