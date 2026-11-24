@@ -9,6 +9,7 @@ Python 3.9+ standard library only. No network access.
 """
 import argparse
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -20,6 +21,16 @@ COPIED = ("parameters.json", "separation-principles.json")
 
 def dumps(obj):
     return json.dumps(obj, ensure_ascii=False, indent=2, sort_keys=True) + "\n"
+
+
+_INT_LIST = re.compile(r"\[\n\s+(-?\d+(?:,\n\s+-?\d+)*)\n\s*\]")
+
+
+def dumps_compact(obj):
+    """Like dumps, but lists of integers go on one line (fewer tokens to read)."""
+    text = json.dumps(obj, ensure_ascii=False, indent=2, sort_keys=True)
+    text = _INT_LIST.sub(lambda m: "[" + ", ".join(re.findall(r"-?\d+", m.group(1))) + "]", text)
+    return text + "\n"
 
 
 def load(name):
@@ -52,10 +63,10 @@ def build_files():
         row = {"improve": i, "name": names[i], "cells": rows[i]}
         if unverified[i]:
             row["unverified"] = sorted(unverified[i])
-        files[f"matrix/row-{i:02d}.json"] = dumps(row)
+        files[f"matrix/row-{i:02d}.json"] = dumps_compact(row)
 
     for p in load("inventive-principles.json")["principles"]:
-        files[f"principles/p-{p['id']:02d}.json"] = dumps(p)
+        files[f"principles/p-{p['id']:02d}.json"] = dumps_compact(p)
     return files
 
 
