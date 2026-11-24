@@ -13,9 +13,9 @@ from pathlib import Path
 import pytest
 
 ROOT = Path(__file__).resolve().parent.parent
-SKILL = ROOT / "skills" / "triz-analysis"
-REAL_SCRIPT = SKILL / "scripts" / "lookup.py"
-REAL_DATA = SKILL / "data"
+SKILL = ROOT
+REAL_SCRIPT = ROOT / "tools" / "lookup.py"
+REAL_DATA = ROOT / "data"
 
 
 def run(script, *args):

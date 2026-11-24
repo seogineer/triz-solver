@@ -28,7 +28,7 @@ import sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-LOOKUP = HERE.parent.parent / "skills" / "triz-analysis" / "scripts" / "lookup.py"
+LOOKUP = HERE.parent.parent / "tools" / "lookup.py"
 TOP_N = 3
 
 

@@ -94,7 +94,7 @@ def parse_answer(text):
 
 def make_plugin_copy(dest):
     for name in (".claude-plugin", "skills", "commands"):
-        shutil.copytree(ROOT / name, dest / name,
+        shutil.copytree(ROOT / "plugin" / name, dest / name,
                         ignore=shutil.ignore_patterns("__pycache__"))
 
 

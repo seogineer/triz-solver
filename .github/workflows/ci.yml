@@ -9,4 +9,4 @@ jobs:
         with: { python-version: "3.9" }
       - run: pip install pytest
       - run: pytest tests/
-      - run: python skills/triz-analysis/scripts/lookup.py validate
+      - run: python tools/lookup.py validate
