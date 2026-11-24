@@ -4,9 +4,9 @@
 
 A Claude Code plugin that helps you resolve engineering and product trade-offs with **TRIZ**. It turns a problem into a contradiction and proposes ideas: a **technical contradiction** (improving one property worsens another) goes through the classic contradiction matrix and the 40 inventive principles; a **physical contradiction** (one property must be both high and low) goes through the separation principles.
 
-No server, database or API key. Claude does the reasoning; a small standard-library Python script does every lookup, so matrix cells, separation types and principle numbers are never recalled from memory.
+No server, database or API key. Claude does the reasoning; every lookup is read from small JSON data files bundled with the plugin, so matrix cells, separation types and principle numbers are never recalled from memory. The plugin contains no scripts.
 
-> **Status: v0.3 (pre-release).** Technical and physical contradictions, a guided interview for vague inputs, Markdown reports, and 160 industry cases (four per principle) used as analogies. See [Data status](#data-status) before relying on results.
+> **Status: v0.4 (pre-release).** The plugin now lives in the `plugin/` folder and has no scripts (see the [changelog](CHANGELOG.md)). Technical and physical contradictions, a guided interview for vague inputs, Markdown reports, and 160 industry cases (four per principle) used as analogies. See [Data status](#data-status) before relying on results.
 
 ## Install
 
@@ -15,7 +15,7 @@ No server, database or API key. Claude does the reasoning; a small standard-libr
 /plugin install triz-solver@triz-solver
 ```
 
-To try it from a local checkout: `claude --plugin-dir .`
+To try it from a local checkout: `claude --plugin-dir plugin`
 
 ## Use
 
@@ -32,9 +32,9 @@ You can also just describe the problem in plain language (English or Korean); th
 
 1. Restate the problem as "improving X worsens Y" and confirm it with you
 2. Map X and Y to the 39 engineering parameters (1–3 candidates each, with reasons)
-3. Look up every candidate pair in the matrix (`lookup.py matrix`)
-4. Rank principles by how often they appear
-5. Fetch each principle's definition and four industry cases (`lookup.py principle --cases`)
+3. Look up every candidate pair in the matrix (the skill reads `data/matrix/row-NN.json`)
+4. Rank principles by how often they appear, following the step-by-step counting procedure in `SKILL.md`
+5. Fetch each principle's definition and four industry cases (`data/principles/p-NN.json`)
 6. Write ideas tailored to your system, one to three per principle
 
 **Physical contradiction** ("X must be P for one reason and not-P for another"):
@@ -42,7 +42,7 @@ You can also just describe the problem in plain language (English or Korean); th
 1. Restate it as one property with two opposite demands and their reasons
 2. Check where, when, for whom, in which direction and at which level each demand holds (asking you one question at a time when the input does not say)
 3. Pick the separation types where the demands do not overlap: space, time, relation (condition), direction or system level
-4. Look up their related principles (`lookup.py separation`) and write ideas that implement the separation
+4. Look up their related principles (`data/separation-principles.json`) and write ideas that implement the separation
 
 **Vague input, or a text that only describes a solution** (such as a patent abstract): the skill asks up to five questions, one at a time, to find the contradiction instead of guessing it. On an independent patent benchmark, guessing did no better than chance; see Data status.
 
@@ -79,33 +79,21 @@ A trimmed real run (v0.3.0, model `claude-opus-5-5`, contradiction confirmed up 
 >
 > **Next steps**: log Wh/km at 25, 30 and 35 km/h. If consumption grows roughly with the square of speed, air drag dominates and #8/#14 come first; if motor or controller temperature climbs, #35/#19 come first. Check the local speed limit.
 
-Every number in the tables comes from `lookup.py` output in that run. The "case" is one of the industry cases the script returns for a principle (`principle --cases`); the answer uses it as an analogy, not as the idea itself.
+This run is from v0.3.0, where a script did the lookups; from v0.4 the skill reads the same data from files. The "case" is one of the industry cases stored for a principle; the answer uses it as an analogy, not as the idea itself.
 
 ## How it works
 
 | Step | Done by |
 | --- | --- |
 | Understanding the problem, typing the contradiction, mapping to parameters or separation types, writing ideas | Claude |
-| Parameter/principle validation, matrix and separation lookup, ranking | `skills/triz-analysis/scripts/lookup.py` |
+| Matrix, principle, parameter and separation lookup, ranking | The skill reads the `data/` files directly and counts by the procedure in `SKILL.md` |
 
-`lookup.py` (Python 3.9+, standard library only, no network) prints JSON:
-
-```
-python3 skills/triz-analysis/scripts/lookup.py matrix --improve 9 --worsen 19,22
-python3 skills/triz-analysis/scripts/lookup.py principle --id 35,15 --cases
-python3 skills/triz-analysis/scripts/lookup.py param --search speed --lang en
-python3 skills/triz-analysis/scripts/lookup.py separation --type time,space --lang en
-python3 skills/triz-analysis/scripts/lookup.py validate
-```
-
-Errors are JSON on stderr with exit codes 2 (bad argument or unknown separation type), 3 (id out of range), 4 (same parameter), 5 (data error). An empty matrix cell is not an error; it is reported in `empty_pairs`.
-
-The skill folder is self-contained (`data/` and `scripts/` live inside it), so it can also be uploaded on its own to Claude.ai.
+The data is split into small JSON files under `plugin/skills/triz-analysis/data/`: `matrix/row-01.json` to `row-39.json` (one row per improving parameter), `principles/p-01.json` to `p-40.json`, `parameters.json` and `separation-principles.json`. The skill reads only the files it needs. If a file cannot be read, it tells you instead of filling in a value from memory.
 
 ## Data handling
 
 - **What you type.** The problem you describe is handled by Claude in your session, like any other message, under your own Claude account terms. The plugin does not collect, store or forward it anywhere else.
-- **What the script does.** `lookup.py` only reads the bundled `data/*.json` files and prints JSON to your terminal. It makes no network calls, reads no environment variables or credentials, and writes no files.
+- **What the plugin reads.** The bundled `data/*.json` files, with Claude's Read tool. The plugin contains no scripts and runs no commands, so it makes no network calls and reads no environment variables or credentials.
 - **What the plugin does not have.** No hooks, no MCP servers, no background processes, no telemetry, and no accounts or API keys.
 - **Files it writes.** Only when you ask for a saved report (`/triz ... --save`, or "save it"): one Markdown file in the current directory (or the path you give), never overwriting an existing file.
 - **Personal data.** The plugin is not designed to read or keep personal data. Avoid putting personal or confidential information into the problem description; it is sent to Claude like any other prompt.
@@ -127,22 +115,27 @@ The 40 principles are a checklist for generating ideas, not a guarantee. If the 
 | Contradiction matrix | all 1248 cells settled by a 2-of-3 vote of three independently transcribed sources (an English transcription family, the MATRIZ Knowledge Base, a Russian-language table). Nothing is withheld now; the `unverified_cell` warning remains for any future dispute. Not compared with a printed original (no printed copy was available). |
 | 39 parameters, 40 principles | Numbers and names cross-checked; definitions, sub-principles and examples written for this project. 160 industry cases (four per principle, six domains) written for this project as analogies, with no company or product names; reviewed by AI only (two Claude passes and one Codex pass), not yet by a human, a native speaker or a domain expert. Report errors as GitHub issues |
 | Separation principles | Five types and their related principles follow the MATRIZ TRIZ Knowledge Base (CC BY 4.0), taken from a published transcription and checked against the MATRIZ wiki page (all five lists match). Questions and examples written for this project. Literature disagrees on these lists, so treat them as one reputable reading, not the only one |
-| Mapping accuracy | 32 blind-run cases: Top-3 hit rate 96-100% across runs (91/93 overall after the expected values were revised), 0 hallucinated principle numbers, and 9/9 disclosures when a withheld cell was hit. Small set with author-written expected values and some run-to-run variation, so treat it as a smoke test. **On an independent patent benchmark (TRIZBench) the plugin scored Hit@3 = 10% on the first 30 patents and 13% on 75 held-out patents, about the level of always guessing the three most common answers (9-16%)**: it works best when you state the trade-off yourself, not when the input only describes a solution (see `tests/eval/results-v0.1.md`). The technical cases still hit 30/32 after the v0.2 changes |
-| Physical contradictions | 10 blind-run cases: the separation type looked up matched the expected one in 9/10 (command) and 8/10 (plain language) runs, 10/10 counting the type the answer states; 0 hallucinated principles. Author-written cases with clearly stated demands, so treat it as a smoke test (`tests/eval/results-v0.2.md`) |
+| Mapping accuracy | v0.4 blind run (32 cases, the skill reads the data files): Top-3 hit rate 32/32 in command mode and 31/32 in plain-language mode; the hand-counted ranking matched the `lookup.py` reference in 32/32 in both modes; 0 hallucinated principle numbers. Small set with author-written expected values and some run-to-run variation,, so treat it as a smoke test. **On an independent patent benchmark (TRIZBench) the plugin scored Hit@3 = 10% on the first 30 patents and 13% on 75 held-out patents, about the level of always guessing the three most common answers (9-16%)**: it works best when you state the trade-off yourself, not when the input only describes a solution (see `tests/eval/results-v0.1.md`). The TRIZBench figures are from v0.1 and were not rerun |
+| Physical contradictions | v0.4 blind run (10 cases): the separation type matched the expected one in 9/10 (command) and 10/10 (plain language) runs; 0 hallucinated principles. Author-written cases with clearly stated demands, so treat it as a smoke test |
 
-The accuracy figures above are v0.2 measurements. They were not rerun for v0.3, which added industry cases that enter only after parameter mapping and carry no principle numbers; no change in idea quality is claimed.
+The v0.4 figures use the same evaluation cases and the same model as earlier releases, but the way of measuring changed (Bash `lookup.py` calls became file reads), so they are a new measurement, not a continuation of the v0.2 figures. They come from `tests/eval/blind-run-*-v04/results.json`, scored with `tests/eval/score.py`. Industry cases enter only after parameter mapping and carry no principle numbers; no change in idea quality is claimed.
 
 Sources, method and the disputed cells are listed in [DATA_SOURCES.md](DATA_SOURCES.md). TRIZ output is a source of ideas, not a verdict: check the mapping and validate ideas before acting on them.
 
 ## Development
 
+The plugin is the `plugin/` folder. `data/` at the repository root holds the source data; `tools/build_plugin_data.py` generates the split files in `plugin/`. `tools/lookup.py` is a development reference (oracle) for tests and evaluation; it is not part of the plugin.
+
 ```
 pip install pytest
 pytest tests/
-python skills/triz-analysis/scripts/lookup.py validate
-claude plugin validate .
+python3 tools/lookup.py validate
+python3 tools/lookup.py matrix --improve 9 --worsen 19,22
+python3 tools/build_plugin_data.py --check
+claude plugin validate plugin
+claude --plugin-dir plugin
 ```
 
 ## License
 
-Code (scripts, tests, manifests): [MIT](LICENSE). Text written for this project (parameter definitions, principle descriptions, examples): CC BY 4.0, see [LICENSE-DATA.md](LICENSE-DATA.md). Matrix cell values follow the classic Altshuller matrix and are credited in DATA_SOURCES.md.
+Code (development tools, tests, manifests): [MIT](LICENSE). Text written for this project (parameter definitions, principle descriptions, examples): CC BY 4.0, see [LICENSE-DATA.md](LICENSE-DATA.md). Matrix cell values follow the classic Altshuller matrix and are credited in DATA_SOURCES.md.
