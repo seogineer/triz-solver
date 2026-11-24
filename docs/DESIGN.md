@@ -498,6 +498,7 @@ v0.1은 데이터 확정이 선행 조건이며, 이후 구현은 Claude Code로
 | v0.1 | 기술적 모순 흐름, `lookup.py` (matrix/principle/param/validate), `/triz`, CI | 테스트 전체 통과, 평가 Top-3 적중률 70% 이상, GitHub 공개 |
 | v0.2 | 물리적 모순, 구조화 인터뷰, Markdown 보고서 저장 | 물리적 모순 평가 케이스 10건 추가 |
 | v0.3 | 원리별 사례 레퍼런스 확장, 영어 README 사례 보강 | 공식 Plugin Directory 제출 |
+| v0.4 | 디렉토리 정책 대응: 스크립트 제거, plugin/ 하위 폴더 | 정책 검사 통과 |
 | v1.0 이후 | 원격 MCP 노출(Claude.ai 웹·모바일), 특허 검색 연동 검토 | 사용자 피드백 기반 결정 |
 
 ### 11.1 구현 순서 (v0.1)
@@ -615,10 +616,10 @@ LLM이 파일 전체(행렬 67KB, 원리 109KB)를 읽으면 컨텍스트가 크
 ### 12.7 구현 순서 (v0.4)
 
 - [x] 설계 12장 작성, CLAUDE.md 원칙 문구 개정
-- [ ] 저장소 재구성: `git mv`로 `plugin/`, `tools/` 만들기, 경로 갱신 (동작 변경 없음, 테스트 통과)
-- [ ] `tools/build_plugin_data.py`와 분할 데이터 생성, 동기화 테스트
-- [ ] `SKILL.md`·`commands/triz.md`·`references/` 개정 (`lookup.py` 제거)
-- [ ] 정책 테스트(12.5 d, e), CI 갱신, `plugin/`에서 `lookup.py` 제거
-- [ ] 평가 하네스 수정, 블라인드 평가 재실행(Top-3 70% 이상)
-- [ ] README(ko/en), CHANGELOG, 버전 0.4.0, `claude plugin validate plugin`
+- [x] 저장소 재구성: `git mv`로 `plugin/`, `tools/` 만들기, 경로 갱신 (동작 변경 없음, 테스트 통과)
+- [x] `tools/build_plugin_data.py`와 분할 데이터 생성, 동기화 테스트
+- [x] `SKILL.md`·`commands/triz.md`·`references/` 개정 (`lookup.py` 제거)
+- [x] 정책 테스트(12.5 d, e), CI 갱신, `plugin/`에서 `lookup.py` 제거
+- [x] 평가 하네스 수정, 블라인드 평가 재실행(Top-3 70% 이상. 기술적 모순 명령 32/32·자연어 31/32, 손 집계 순위 oracle 일치 32/32 양 모드, 환각 0. 물리적 모순 명령 9/10·자연어 10/10, 환각 0)
+- [x] README(ko/en), CHANGELOG, 버전 0.4.0, `claude plugin validate plugin`
 - [ ] (사용자) 푸시, 포털에서 새 제출(경로 `plugin`), 검증 통과 확인
