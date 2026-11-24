@@ -1,0 +1,57 @@
+{
+  "cases": [
+    {
+      "domain": "software",
+      "en": "Retrying failed requests at a fixed interval keeps an overloaded server from recovering. Growing the gap between retries eases the load and gives it room to recover.",
+      "ko": "실패한 요청을 같은 간격으로 계속 다시 보내면 과부하 걸린 서버가 회복하지 못한다. 재시도 간격을 점점 늘리면 부하가 줄어 회복할 틈이 생긴다.",
+      "sub_principle": 2
+    },
+    {
+      "domain": "mechanical",
+      "en": "Drilling a deep hole in one continuous pass packs chips in and snaps the tool. Drilling a little, withdrawing and repeating clears the chips each time.",
+      "ko": "깊은 구멍을 한 번에 계속 뚫으면 칩이 구멍에 쌓여 공구가 부러진다. 조금 뚫고 뺐다가 다시 뚫기를 반복하면 칩이 그때마다 빠져나간다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "medical",
+      "en": "Patients who lie still for long are at risk of blood pooling and clotting in the leg veins. Cuffs that inflate and deflate in cycles squeeze the legs and keep blood moving.",
+      "ko": "오래 누워 있는 환자는 다리 혈관에 피가 고여 굳을 위험이 있다. 다리에 감은 공기 주머니가 주기적으로 부풀었다 빠지며 눌러 주면 피가 잘 흐른다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "electronics",
+      "en": "Several devices struggle to share one line. Time is split into short slots, and while one device pauses the others take their turns.",
+      "ko": "통신선 하나를 여러 장치가 함께 쓰기 어렵다. 시간을 짧게 나눠 한 장치가 보내고 쉬는 사이에 다른 장치가 차례로 보내게 한다.",
+      "sub_principle": 3
+    }
+  ],
+  "examples": {
+    "en": [
+      "An intermittent windshield wiper",
+      "An LED lamp dimmed with pulse-width modulation",
+      "A flashing warning light"
+    ],
+    "ko": [
+      "간헐 와이퍼",
+      "펄스폭 변조로 밝기를 조절하는 LED 조명",
+      "점멸하는 경고등"
+    ]
+  },
+  "id": 19,
+  "name": {
+    "en": "Periodic Action",
+    "ko": "주기적 조치"
+  },
+  "sub_principles": {
+    "en": [
+      "Replace a continuous action with a periodic pulsed action",
+      "If it is already periodic, change its frequency",
+      "Use the pauses between pulses to do something else"
+    ],
+    "ko": [
+      "연속적인 작용을 주기적인 펄스 작용으로 바꾼다",
+      "이미 주기적이면 주기(주파수)를 바꾼다",
+      "펄스 사이의 쉬는 시간에 다른 작용을 수행한다"
+    ]
+  }
+}

@@ -1,0 +1,890 @@
+{
+  "parameters": [
+    {
+      "definition": {
+        "en": "Mass or weight of an object that moves or can be moved, including the load it puts on its support in a gravity field.",
+        "ko": "이동하거나 움직일 수 있는 물체의 질량 또는 중량. 중력장에서 그 물체가 지지대에 가하는 힘도 포함한다."
+      },
+      "id": 1,
+      "keywords": [
+        "무게",
+        "질량",
+        "중량",
+        "경량화",
+        "이동체",
+        "weight",
+        "mass",
+        "lightweight",
+        "payload"
+      ],
+      "name": {
+        "en": "Weight of moving object",
+        "ko": "움직이는 물체의 무게"
+      }
+    },
+    {
+      "definition": {
+        "en": "Mass or weight of an object that stays fixed in place, such as a frame, housing or structure.",
+        "ko": "고정되어 움직이지 않는 물체(구조물·본체·프레임 등)의 질량 또는 중량."
+      },
+      "id": 2,
+      "keywords": [
+        "자중",
+        "구조물 무게",
+        "고정체",
+        "본체 무게",
+        "static weight",
+        "structure weight",
+        "frame mass"
+      ],
+      "name": {
+        "en": "Weight of stationary object",
+        "ko": "정지된 물체의 무게"
+      }
+    },
+    {
+      "definition": {
+        "en": "A linear dimension of a moving object: length, width, height, thickness or diameter along one direction.",
+        "ko": "움직이는 물체의 한 방향 치수. 길이·폭·높이·두께·지름 중 하나를 대표해서 쓴다."
+      },
+      "id": 3,
+      "keywords": [
+        "길이",
+        "폭",
+        "높이",
+        "두께",
+        "지름",
+        "이동체 치수",
+        "length",
+        "width",
+        "height",
+        "thickness",
+        "diameter"
+      ],
+      "name": {
+        "en": "Length of moving object",
+        "ko": "움직이는 물체의 길이"
+      }
+    },
+    {
+      "definition": {
+        "en": "A linear dimension of a fixed object: length, width, height, thickness or diameter along one direction.",
+        "ko": "고정된 물체의 한 방향 치수(길이·폭·높이·두께·지름)."
+      },
+      "id": 4,
+      "keywords": [
+        "고정체 길이",
+        "치수",
+        "높이",
+        "폭",
+        "두께",
+        "dimension",
+        "static length",
+        "span"
+      ],
+      "name": {
+        "en": "Length of stationary object",
+        "ko": "정지된 물체의 길이"
+      }
+    },
+    {
+      "definition": {
+        "en": "Surface, cross-section or projected area occupied by a moving object.",
+        "ko": "움직이는 물체의 표면, 단면, 투영 등이 차지하는 면적."
+      },
+      "id": 5,
+      "keywords": [
+        "면적",
+        "표면적",
+        "단면적",
+        "접촉 면적",
+        "area",
+        "surface area",
+        "cross-section",
+        "footprint"
+      ],
+      "name": {
+        "en": "Area of moving object",
+        "ko": "움직이는 물체의 면적"
+      }
+    },
+    {
+      "definition": {
+        "en": "Surface, floor or cross-section area occupied by a fixed object.",
+        "ko": "고정된 물체의 표면이나 바닥, 단면이 차지하는 면적."
+      },
+      "id": 6,
+      "keywords": [
+        "설치 면적",
+        "바닥 면적",
+        "점유 면적",
+        "표면적",
+        "floor area",
+        "footprint",
+        "static area"
+      ],
+      "name": {
+        "en": "Area of stationary object",
+        "ko": "정지된 물체의 면적"
+      }
+    },
+    {
+      "definition": {
+        "en": "Volume of space taken by a moving object; also used when size or capacity is expressed as volume.",
+        "ko": "움직이는 물체가 차지하는 공간의 부피. 용량이나 크기를 부피로 표현할 때 쓴다."
+      },
+      "id": 7,
+      "keywords": [
+        "부피",
+        "체적",
+        "용량",
+        "크기",
+        "소형화",
+        "volume",
+        "capacity",
+        "bulk",
+        "compactness"
+      ],
+      "name": {
+        "en": "Volume of moving object",
+        "ko": "움직이는 물체의 부피"
+      }
+    },
+    {
+      "definition": {
+        "en": "Volume of space taken by a fixed object, or its inner capacity.",
+        "ko": "고정된 물체가 차지하는 공간의 부피, 또는 그 내부 용적."
+      },
+      "id": 8,
+      "keywords": [
+        "설치 부피",
+        "내부 용적",
+        "용적",
+        "체적",
+        "공간 점유",
+        "enclosure volume",
+        "installed volume",
+        "static volume"
+      ],
+      "name": {
+        "en": "Volume of stationary object",
+        "ko": "정지된 물체의 부피"
+      }
+    },
+    {
+      "definition": {
+        "en": "How fast an object moves, or how fast a process, action or reaction proceeds.",
+        "ko": "물체가 움직이는 빠르기, 또는 공정·작업·반응이 진행되는 빠르기."
+      },
+      "id": 9,
+      "keywords": [
+        "속도",
+        "빠르기",
+        "속력",
+        "응답 속도",
+        "처리 속도",
+        "가속",
+        "speed",
+        "velocity",
+        "rate",
+        "response speed"
+      ],
+      "name": {
+        "en": "Speed",
+        "ko": "속도"
+      }
+    },
+    {
+      "definition": {
+        "en": "Any push or pull that changes how objects interact, including load, torque and thrust.",
+        "ko": "물체 사이의 상호작용을 바꾸려는 밀거나 당기는 작용. 하중, 토크, 추력 등을 포함한다."
+      },
+      "id": 10,
+      "keywords": [
+        "힘",
+        "하중",
+        "토크",
+        "추력",
+        "압축력",
+        "견인",
+        "force",
+        "load",
+        "torque",
+        "thrust",
+        "pull"
+      ],
+      "name": {
+        "en": "Force",
+        "ko": "힘"
+      }
+    },
+    {
+      "definition": {
+        "en": "Force per unit area, or internal stress in a material: pressure, tensile or compressive stress, fluid pressure.",
+        "ko": "단위 면적에 걸리는 힘 또는 재료 내부에 생기는 응력. 압력, 인장·압축 응력, 유체 압력을 포함한다."
+      },
+      "id": 11,
+      "keywords": [
+        "압력",
+        "응력",
+        "스트레스",
+        "내압",
+        "진공",
+        "pressure",
+        "stress",
+        "tension",
+        "compression"
+      ],
+      "name": {
+        "en": "Stress or pressure",
+        "ko": "응력 또는 압력"
+      }
+    },
+    {
+      "definition": {
+        "en": "Outer form and outline of an object, including its ability to change or keep that form.",
+        "ko": "물체의 외형과 윤곽, 겉모양. 형태를 바꾸거나 유지하는 능력도 포함한다."
+      },
+      "id": 12,
+      "keywords": [
+        "형상",
+        "모양",
+        "형태",
+        "외형",
+        "윤곽",
+        "곡면",
+        "shape",
+        "form",
+        "contour",
+        "geometry"
+      ],
+      "name": {
+        "en": "Shape",
+        "ko": "형상"
+      }
+    },
+    {
+      "definition": {
+        "en": "How well an object's makeup and composition stay intact over time and conditions: resistance to decomposition, deformation, degradation and wear.",
+        "ko": "물체의 구성과 조성이 시간과 조건 변화에도 유지되는 정도. 분해, 변형, 열화, 마모에 대한 저항을 포함한다."
+      },
+      "id": 13,
+      "keywords": [
+        "안정성",
+        "구성 안정",
+        "열화",
+        "변질",
+        "변형",
+        "부식",
+        "안정",
+        "stability",
+        "integrity",
+        "degradation",
+        "corrosion",
+        "deformation"
+      ],
+      "name": {
+        "en": "Stability of composition",
+        "ko": "구성의 안정성"
+      }
+    },
+    {
+      "definition": {
+        "en": "Ability to resist an external force without breaking; toughness against tension, bending or impact.",
+        "ko": "외력이 가해져도 파손되지 않고 버티는 능력. 인장·굽힘·충격에 대한 견고함."
+      },
+      "id": 14,
+      "keywords": [
+        "강도",
+        "견고",
+        "파손",
+        "파단",
+        "충격 저항",
+        "내하중",
+        "strength",
+        "robustness",
+        "breakage",
+        "toughness",
+        "fracture"
+      ],
+      "name": {
+        "en": "Strength",
+        "ko": "강도"
+      }
+    },
+    {
+      "definition": {
+        "en": "Time a moving object can keep performing its function, including lifetime and continuous operating time.",
+        "ko": "움직이는 물체가 기능을 유지하며 작동할 수 있는 시간. 수명과 연속 작동 시간을 포함한다."
+      },
+      "id": 15,
+      "keywords": [
+        "작동 시간",
+        "수명",
+        "내구성",
+        "지속 시간",
+        "연속 작동",
+        "durability",
+        "service life",
+        "runtime",
+        "endurance",
+        "lifetime"
+      ],
+      "name": {
+        "en": "Duration of action (moving)",
+        "ko": "작동 지속 시간 (움직임)"
+      }
+    },
+    {
+      "definition": {
+        "en": "Time a fixed object can keep performing its function, including service life, shelf life and durability.",
+        "ko": "고정된 물체가 기능을 유지하며 작동할 수 있는 시간. 수명, 보존 기간, 내구 연한을 포함한다."
+      },
+      "id": 16,
+      "keywords": [
+        "정지체 수명",
+        "보존 기간",
+        "내구 연한",
+        "지속성",
+        "유효 기간",
+        "shelf life",
+        "static durability",
+        "service life",
+        "longevity"
+      ],
+      "name": {
+        "en": "Duration of action (stationary)",
+        "ko": "작동 지속 시간 (정지)"
+      }
+    },
+    {
+      "definition": {
+        "en": "Thermal state of an object or system, including heating, cooling and heat management issues.",
+        "ko": "물체나 시스템의 열적 상태. 온도 자체와 가열·냉각·열 관리 문제를 포함한다."
+      },
+      "id": 17,
+      "keywords": [
+        "온도",
+        "열",
+        "가열",
+        "냉각",
+        "방열",
+        "발열",
+        "temperature",
+        "heat",
+        "cooling",
+        "thermal",
+        "overheating"
+      ],
+      "name": {
+        "en": "Temperature",
+        "ko": "온도"
+      }
+    },
+    {
+      "definition": {
+        "en": "Amount of light per unit area, or brightness; also lighting, visibility and other optical qualities.",
+        "ko": "단위 면적에 도달하는 빛의 양이나 밝기. 조명, 시인성, 광학적 특성도 포함한다."
+      },
+      "id": 18,
+      "keywords": [
+        "조도",
+        "밝기",
+        "조명",
+        "광량",
+        "시인성",
+        "빛",
+        "illumination",
+        "brightness",
+        "lighting",
+        "luminance",
+        "visibility"
+      ],
+      "name": {
+        "en": "Illumination intensity",
+        "ko": "조명 강도"
+      }
+    },
+    {
+      "definition": {
+        "en": "Energy a moving object consumes to do its work, seen as electricity or fuel use.",
+        "ko": "움직이는 물체가 작업을 하는 데 쓰는 에너지. 전력이나 연료 소비량으로 나타난다."
+      },
+      "id": 19,
+      "keywords": [
+        "에너지 소비",
+        "전력 소비",
+        "연료 소비",
+        "배터리",
+        "이동체 전력",
+        "energy consumption",
+        "power draw",
+        "fuel use",
+        "battery"
+      ],
+      "name": {
+        "en": "Use of energy (moving object)",
+        "ko": "에너지 사용 (움직이는 물체)"
+      }
+    },
+    {
+      "definition": {
+        "en": "Energy a fixed object consumes to do its work, such as the power or fuel use of stationary equipment.",
+        "ko": "고정된 물체가 작업을 하는 데 쓰는 에너지. 상시 가동 설비의 전력·연료 소비 등."
+      },
+      "id": 20,
+      "keywords": [
+        "설비 에너지",
+        "고정 설비 전력",
+        "대기 전력",
+        "전기료",
+        "stationary energy use",
+        "standby power",
+        "energy bill",
+        "plant energy"
+      ],
+      "name": {
+        "en": "Use of energy (stationary)",
+        "ko": "에너지 사용 (정지)"
+      }
+    },
+    {
+      "definition": {
+        "en": "Rate at which energy is used or delivered; output and work rate.",
+        "ko": "단위 시간당 사용하거나 전달하는 에너지의 비율. 출력과 작업률을 뜻한다."
+      },
+      "id": 21,
+      "keywords": [
+        "동력",
+        "출력",
+        "전력",
+        "마력",
+        "파워",
+        "와트",
+        "power",
+        "output",
+        "wattage",
+        "horsepower"
+      ],
+      "name": {
+        "en": "Power",
+        "ko": "동력"
+      }
+    },
+    {
+      "definition": {
+        "en": "Energy that does no useful work and is wasted: heat loss, friction, leakage, lower efficiency.",
+        "ko": "유용한 작업에 기여하지 못하고 낭비되는 에너지. 열 손실, 마찰, 누설, 효율 저하 등."
+      },
+      "id": 22,
+      "keywords": [
+        "에너지 손실",
+        "효율",
+        "열손실",
+        "마찰 손실",
+        "낭비",
+        "energy loss",
+        "efficiency",
+        "waste heat",
+        "friction loss"
+      ],
+      "name": {
+        "en": "Loss of energy",
+        "ko": "에너지 손실"
+      }
+    },
+    {
+      "definition": {
+        "en": "Partial or total loss of material, parts or components from a system: wear, leakage, evaporation, consumption.",
+        "ko": "시스템에서 물질, 재료, 부품, 구성요소가 일부나 전부 사라지는 것. 마모, 누출, 증발, 소모."
+      },
+      "id": 23,
+      "keywords": [
+        "물질 손실",
+        "마모",
+        "누출",
+        "증발",
+        "소모",
+        "소실",
+        "material loss",
+        "wear",
+        "leakage",
+        "evaporation",
+        "consumption"
+      ],
+      "name": {
+        "en": "Loss of substance",
+        "ko": "물질 손실"
+      }
+    },
+    {
+      "definition": {
+        "en": "Partial or total loss of, or loss of access to, data or information, including signal loss and noise.",
+        "ko": "데이터나 정보의 일부 또는 전부가 사라지거나 접근할 수 없게 되는 것. 신호 손실과 노이즈를 포함한다."
+      },
+      "id": 24,
+      "keywords": [
+        "정보 손실",
+        "데이터 손실",
+        "신호 손실",
+        "잡음",
+        "노이즈",
+        "유실",
+        "data loss",
+        "information loss",
+        "signal loss",
+        "noise"
+      ],
+      "name": {
+        "en": "Loss of information",
+        "ko": "정보 손실"
+      }
+    },
+    {
+      "definition": {
+        "en": "Time an activity takes, including waiting, delay, cycle time and lead time.",
+        "ko": "어떤 활동을 하는 데 걸리는 시간. 대기, 지연, 사이클 타임, 리드타임을 포함한다."
+      },
+      "id": 25,
+      "keywords": [
+        "시간 손실",
+        "지연",
+        "대기 시간",
+        "사이클 타임",
+        "리드타임",
+        "소요 시간",
+        "delay",
+        "waiting time",
+        "cycle time",
+        "lead time",
+        "latency"
+      ],
+      "name": {
+        "en": "Loss of time",
+        "ko": "시간 손실"
+      }
+    },
+    {
+      "definition": {
+        "en": "Number or amount of the materials, substances or parts a system is made of; a quantity that can be added or removed.",
+        "ko": "시스템을 이루는 재료, 물질, 부품의 수나 양. 늘거나 줄일 수 있는 자원의 양."
+      },
+      "id": 26,
+      "keywords": [
+        "물질량",
+        "재료량",
+        "부품 수",
+        "사용량",
+        "자재",
+        "quantity",
+        "amount of material",
+        "part count",
+        "material use"
+      ],
+      "name": {
+        "en": "Quantity of substance/matter",
+        "ko": "물질/물체의 양"
+      }
+    },
+    {
+      "definition": {
+        "en": "Ability to perform the required function correctly under stated conditions and time; higher when the failure rate is lower.",
+        "ko": "정해진 조건과 기간 동안 요구된 기능을 정상적으로 수행하는 능력. 고장률이 낮을수록 높다."
+      },
+      "id": 27,
+      "keywords": [
+        "신뢰성",
+        "고장",
+        "고장률",
+        "안정 동작",
+        "가용성",
+        "오작동",
+        "reliability",
+        "failure rate",
+        "fault",
+        "uptime",
+        "dependability"
+      ],
+      "name": {
+        "en": "Reliability",
+        "ko": "신뢰성"
+      }
+    },
+    {
+      "definition": {
+        "en": "How close a measured value is to the true value, including error, resolution and repeatability.",
+        "ko": "측정값이 실제값에 가까운 정도. 오차, 분해능, 재현성을 포함한다."
+      },
+      "id": 28,
+      "keywords": [
+        "측정 정확도",
+        "정확도",
+        "오차",
+        "분해능",
+        "재현성",
+        "정밀 측정",
+        "accuracy",
+        "measurement error",
+        "resolution",
+        "repeatability"
+      ],
+      "name": {
+        "en": "Measurement accuracy",
+        "ko": "측정 정확도"
+      }
+    },
+    {
+      "definition": {
+        "en": "How closely a manufactured result matches the required specification and tolerance; precision of machining or assembly.",
+        "ko": "제작된 결과가 요구한 사양과 공차에 일치하는 정도. 가공·조립의 정밀함."
+      },
+      "id": 29,
+      "keywords": [
+        "제조 정밀도",
+        "가공 정밀도",
+        "공차",
+        "치수 정밀",
+        "조립 정밀",
+        "manufacturing precision",
+        "tolerance",
+        "machining accuracy",
+        "fit"
+      ],
+      "name": {
+        "en": "Manufacturing precision",
+        "ko": "제조 정밀도"
+      }
+    },
+    {
+      "definition": {
+        "en": "Harmful factors from the environment that act on the object and degrade its performance or quality: contamination, outside vibration, heat, moisture, foreign matter.",
+        "ko": "외부에서 물체에 작용해 그 성능이나 품질을 떨어뜨리는 유해 요인. 오염, 외부 진동, 열, 습기, 이물질 등."
+      },
+      "id": 30,
+      "keywords": [
+        "외부 유해 요인",
+        "오염",
+        "외부 진동",
+        "습기",
+        "이물질",
+        "환경 영향",
+        "external harm",
+        "contamination",
+        "moisture",
+        "interference",
+        "environmental damage"
+      ],
+      "name": {
+        "en": "Object-affected harmful factors",
+        "ko": "물체가 받는 유해 요인"
+      }
+    },
+    {
+      "definition": {
+        "en": "Harmful factors the object itself produces while operating and that harm its surroundings, users or system: noise, vibration, emissions, heat, waste.",
+        "ko": "물체가 작동하면서 스스로 만들어 주변이나 사용자, 시스템에 피해를 주는 유해 요인. 소음, 진동, 배기, 발열, 폐기물 등."
+      },
+      "id": 31,
+      "keywords": [
+        "유해한 부작용",
+        "소음",
+        "배출",
+        "배기가스",
+        "부작용",
+        "폐기물",
+        "진동 발생",
+        "side effect",
+        "noise",
+        "emission",
+        "waste",
+        "harmful output"
+      ],
+      "name": {
+        "en": "Object-generated harmful factors",
+        "ko": "물체가 발생시키는 유해 요인"
+      }
+    },
+    {
+      "definition": {
+        "en": "How easy and simple it is to make and assemble the product; higher when there are fewer steps and less difficulty.",
+        "ko": "제품을 만들고 조립하기 쉽고 단순한 정도. 공정 수와 제작 난이도가 낮을수록 높다."
+      },
+      "id": 32,
+      "keywords": [
+        "제조 용이성",
+        "제작 용이",
+        "조립성",
+        "생산 편의",
+        "양산성",
+        "manufacturability",
+        "ease of assembly",
+        "easy to build",
+        "producibility"
+      ],
+      "name": {
+        "en": "Ease of manufacture",
+        "ko": "제조 용이성"
+      }
+    },
+    {
+      "definition": {
+        "en": "How easily a user can handle and operate the system with few steps and little effort; usability.",
+        "ko": "사용자가 적은 단계와 노력으로 시스템을 다루고 조작할 수 있는 정도. 사용 편의성."
+      },
+      "id": 33,
+      "keywords": [
+        "작동 용이성",
+        "사용 편의",
+        "조작성",
+        "사용성",
+        "간편",
+        "usability",
+        "ease of use",
+        "operability",
+        "user-friendly"
+      ],
+      "name": {
+        "en": "Ease of operation",
+        "ko": "작동 용이성"
+      }
+    },
+    {
+      "definition": {
+        "en": "How easy it is to find, fix and service faults or damage; higher when maintenance takes less time and cost.",
+        "ko": "고장이나 손상을 찾고 고치고 정비하는 것이 쉬운 정도. 유지보수의 시간과 비용이 낮을수록 높다."
+      },
+      "id": 34,
+      "keywords": [
+        "수리 용이성",
+        "정비",
+        "유지보수",
+        "서비스성",
+        "교체 용이",
+        "serviceability",
+        "maintainability",
+        "repairability",
+        "ease of repair"
+      ],
+      "name": {
+        "en": "Ease of repair",
+        "ko": "수리 용이성"
+      }
+    },
+    {
+      "definition": {
+        "en": "How well a system adapts, or can be used, for changing external conditions and varied uses; versatility and flexibility.",
+        "ko": "바뀌는 외부 조건이나 다양한 용도, 요구에 맞춰 시스템이 스스로 적응하거나 쓰일 수 있는 정도. 범용성과 유연성."
+      },
+      "id": 35,
+      "keywords": [
+        "적응성",
+        "다용도",
+        "범용성",
+        "유연성",
+        "호환성",
+        "확장성",
+        "adaptability",
+        "versatility",
+        "flexibility",
+        "compatibility",
+        "scalability"
+      ],
+      "name": {
+        "en": "Adaptability or versatility",
+        "ko": "적응성 또는 다용도성"
+      }
+    },
+    {
+      "definition": {
+        "en": "How many elements a system has and how tangled their relations are; higher when structure or use is more complicated.",
+        "ko": "시스템을 이루는 요소의 수와 그 사이 관계가 얽힌 정도. 구조나 사용 방법이 복잡할수록 높다."
+      },
+      "id": 36,
+      "keywords": [
+        "장치 복잡성",
+        "복잡도",
+        "부품 수",
+        "구조 복잡",
+        "상호 의존",
+        "complexity",
+        "number of components",
+        "intricacy",
+        "interdependence"
+      ],
+      "name": {
+        "en": "Device complexity",
+        "ko": "장치 복잡성"
+      }
+    },
+    {
+      "definition": {
+        "en": "How hard or costly it is to detect or measure a system's state, including cases where the instrument itself is complex or expensive.",
+        "ko": "시스템의 상태를 감지하거나 측정하기 어렵고 비용이 많이 드는 정도. 측정기 자체가 복잡하거나 비싼 경우를 포함한다."
+      },
+      "id": 37,
+      "keywords": [
+        "감지 어려움",
+        "측정 난이도",
+        "모니터링",
+        "검사 난이도",
+        "비파괴 검사",
+        "detectability",
+        "difficulty of measuring",
+        "monitoring",
+        "inspection",
+        "sensing"
+      ],
+      "name": {
+        "en": "Difficulty of detecting/measuring",
+        "ko": "감지/측정의 어려움"
+      }
+    },
+    {
+      "definition": {
+        "en": "How far a system works by itself without human involvement; rising from manual to semi-automatic to fully automatic.",
+        "ko": "사람이 개입하지 않고도 시스템이 스스로 동작하는 정도. 수동, 반자동, 완전 자동 순으로 높아진다."
+      },
+      "id": 38,
+      "keywords": [
+        "자동화",
+        "자율",
+        "무인",
+        "자동 제어",
+        "수동 작업 감소",
+        "automation",
+        "autonomy",
+        "unattended",
+        "automatic control",
+        "hands-free"
+      ],
+      "name": {
+        "en": "Extent of automation",
+        "ko": "자동화 정도"
+      }
+    },
+    {
+      "definition": {
+        "en": "Output or amount of work done per unit time; how much result is produced in the same time.",
+        "ko": "단위 시간당 산출량이나 작업 처리량. 같은 시간에 더 많은 결과를 내는 정도."
+      },
+      "id": 39,
+      "keywords": [
+        "생산성",
+        "처리량",
+        "산출량",
+        "효율",
+        "수율",
+        "throughput",
+        "productivity",
+        "output rate",
+        "yield"
+      ],
+      "name": {
+        "en": "Productivity",
+        "ko": "생산성"
+      }
+    }
+  ],
+  "source": "Altshuller 39 engineering parameters; names carried over from legacy data (30/31 corrected, unverified); definitions and keywords authored for this project",
+  "version": "0.2.0"
+}

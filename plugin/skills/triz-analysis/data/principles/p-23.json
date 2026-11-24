@@ -1,0 +1,55 @@
+{
+  "cases": [
+    {
+      "domain": "software",
+      "en": "Recommendations keep missing what the user wants. What the user opens and what they skip is fed back into the recommendations.",
+      "ko": "사용자에게 맞지 않는 추천이 계속 나간다. 사용자가 누른 것과 건너뛴 것을 다시 추천에 반영한다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "mechanical",
+      "en": "As a tool wears, machined dimensions slowly drift. Measuring during machining corrects the tool position automatically.",
+      "ko": "공구가 닳으면서 가공 치수가 조금씩 틀어진다. 가공 중에 치수를 재서 공구 위치를 자동으로 보정한다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "medical",
+      "en": "Fixed insulin doses at fixed times leave blood sugar swinging. A pump linked to a continuous glucose sensor adjusts the dose on its own.",
+      "ko": "정해진 시간에 정해진 양의 인슐린을 넣으면 혈당이 들쭉날쭉하다. 연속 혈당 측정 센서와 연동해 주입량을 자동으로 맞추는 펌프를 쓴다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "electronics",
+      "en": "A high-gain amplifier also distorts more. Feeding back a larger share of the output in opposite phase trades surplus gain for lower, more stable distortion.",
+      "ko": "증폭기는 증폭률을 크게 잡으면 왜곡도 커진다. 출력의 일부를 반대 위상으로 되돌려 넣는 양을 늘리면 남아도는 증폭률을 내주는 대신 왜곡이 줄고 특성이 안정된다.",
+      "sub_principle": 2
+    }
+  ],
+  "examples": {
+    "en": [
+      "A thermostat",
+      "Auto-brightness that follows ambient light",
+      "Cruise control holding a set speed"
+    ],
+    "ko": [
+      "온도조절기",
+      "주변 밝기에 맞춰 화면 밝기를 바꾸는 자동 조광",
+      "속도를 유지하는 크루즈 컨트롤"
+    ]
+  },
+  "id": 23,
+  "name": {
+    "en": "Feedback",
+    "ko": "피드백"
+  },
+  "sub_principles": {
+    "en": [
+      "Introduce feedback",
+      "If feedback already exists, change its size or influence"
+    ],
+    "ko": [
+      "피드백을 도입한다",
+      "이미 피드백이 있다면 그 크기나 영향을 바꾼다"
+    ]
+  }
+}

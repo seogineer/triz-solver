@@ -1,0 +1,59 @@
+{
+  "cases": [
+    {
+      "domain": "mechanical",
+      "en": "Gripping metal parts with mechanical jaws marks their surface. An electromagnet lifts and moves them without scratches.",
+      "ko": "금속 부품을 기계 손으로 집으면 표면에 자국이 남는다. 전자석으로 붙잡아 옮기면 긁히지 않는다.",
+      "sub_principle": 2
+    },
+    {
+      "domain": "medical",
+      "en": "Seeing inside the body used to mean cutting it open. Sound sent into the body and its echoes show what is inside.",
+      "ko": "몸속을 보려면 절개해야 했다. 몸에 소리를 쏘아 돌아오는 메아리로 속을 들여다본다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "materials",
+      "en": "A rubber seal around a rotating shaft wears by rubbing. A liquid loaded with magnetic particles, held around the shaft by magnets, closes the gap with nothing to wear.",
+      "ko": "회전축 둘레를 막는 고무 씰은 닿아서 닳는다. 자성 입자를 섞은 액체를 자석으로 축 둘레에 붙잡아 두면 닳는 부분 없이 틈을 막는다.",
+      "sub_principle": 4
+    },
+    {
+      "domain": "electronics",
+      "en": "A fixed magnet cannot keep pushing metal in one direction. Switching current through a row of coils in sequence makes a travelling magnetic field that drives the metal along.",
+      "ko": "고정된 자석으로는 금속을 한 방향으로 계속 밀 수 없다. 늘어선 코일의 전류를 차례로 바꿔 움직이는 자기장을 만들면 금속을 밀어 옮긴다.",
+      "sub_principle": 3
+    }
+  ],
+  "examples": {
+    "en": [
+      "A smart door lock opened by a radio signal instead of a key",
+      "A wireless charger with no contact",
+      "Town gas odorized so leaks can be smelled"
+    ],
+    "ko": [
+      "열쇠 대신 무선 신호로 여는 스마트 도어락",
+      "접촉 없이 충전하는 무선 충전기",
+      "냄새를 넣어 누출을 알리는 도시가스"
+    ]
+  },
+  "id": 28,
+  "name": {
+    "en": "Mechanics Substitution",
+    "ko": "역학 대체"
+  },
+  "sub_principles": {
+    "en": [
+      "Replace a mechanical means with an optical, acoustic, thermal or olfactory one",
+      "Use electric, magnetic or electromagnetic fields to interact with the object",
+      "Turn a fixed field into a moving one, or a constant field into a changing one",
+      "Combine a field with ferromagnetic particles"
+    ],
+    "ko": [
+      "기계적 수단을 광학·음향·열·후각 수단으로 바꾼다",
+      "대상과 상호작용하는 데 전기·자기·전자기장을 쓴다",
+      "고정된 장은 움직이는 장으로, 시간에 따라 변하지 않는 장은 변하는 장으로 바꾼다",
+      "장과 강자성 입자를 함께 쓴다"
+    ]
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "cases": [
+    {
+      "domain": "software",
+      "en": "When work piles onto one server, the others sit idle. Spreading the jobs evenly keeps every server busy.",
+      "ko": "작업이 한 서버에 몰리면 다른 서버는 논다. 일감을 여러 서버에 고르게 나눠 모두가 쉬지 않고 일하게 한다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "mechanical",
+      "en": "A reciprocating saw blade cuts nothing on its return stroke. A band saw running continuously in one direction cuts all the time.",
+      "ko": "왕복하는 톱날은 되돌아가는 동안 자르지 못한다. 한 방향으로 계속 도는 띠톱으로 바꾸면 쉬지 않고 자른다.",
+      "sub_principle": 3
+    },
+    {
+      "domain": "medical",
+      "en": "An operating room stands empty while the next patient is prepared. Starting the next patient's anaesthesia in an adjoining room cuts the idle time.",
+      "ko": "수술실은 한 수술을 마치고 다음 환자를 준비하는 동안 비어 있다. 다음 환자의 마취 준비를 옆 방에서 미리 시작하면 수술실이 비는 시간이 준다.",
+      "sub_principle": 2
+    },
+    {
+      "domain": "everyday",
+      "en": "After washing, laundry waits until someone moves it to the dryer. A machine that washes and then dries removes the wait.",
+      "ko": "세탁이 끝난 뒤 빨래를 건조기로 옮길 때까지 기다려야 한다. 세탁과 건조를 한 기계에서 이어서 하면 중간에 기다릴 일이 없다.",
+      "sub_principle": 2
+    }
+  ],
+  "examples": {
+    "en": [
+      "A printer head that prints in both directions",
+      "A hybrid engine kept in its efficient rpm range",
+      "A continuous process line that never stops"
+    ],
+    "ko": [
+      "오갈 때 모두 인쇄하는 양방향 프린터 헤드",
+      "항상 효율 좋은 회전수를 유지하는 하이브리드 엔진",
+      "24시간 순환하는 연속 공정 설비"
+    ]
+  },
+  "id": 20,
+  "name": {
+    "en": "Continuity of Useful Action",
+    "ko": "유용한 작동의 지속"
+  },
+  "sub_principles": {
+    "en": [
+      "Keep every part of the object working at full load without interruption",
+      "Remove idle time, waiting and intermediate motions",
+      "Convert back-and-forth motion into rotary motion"
+    ],
+    "ko": [
+      "대상의 모든 부분이 늘 최대 부하로 쉬지 않고 일하게 한다",
+      "공회전·대기·중간 동작을 없앤다",
+      "왕복 운동을 회전 운동으로 바꾼다"
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "cases": [
+    {
+      "domain": "mechanical",
+      "en": "Tightening a large bolt to an exact load is hard. Heating the bolt so it stretches, running the nut down and letting it cool sets the load as it shrinks.",
+      "ko": "큰 볼트를 정해진 힘으로 조이기 어렵다. 볼트를 데워 늘린 상태에서 너트를 채우면 식으면서 줄어들어 정해진 힘으로 조인다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "electronics",
+      "en": "There is no room for a motor to move a microscopic part. Passing current through a thin silicon arm heats it, and its expansion pushes the part along.",
+      "ko": "아주 작은 부품을 움직이려면 모터를 넣을 자리가 없다. 가는 실리콘 팔에 전류를 흘려 데우면 늘어나는 길이만큼 부품을 밀어 움직인다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "everyday",
+      "en": "A metal lid stuck on a glass jar will not turn. Hot water poured over the lid expands the metal more than the glass, and it opens.",
+      "ko": "유리병의 금속 뚜껑이 꽉 끼어 열리지 않는다. 뚜껑에만 뜨거운 물을 부으면 금속이 유리보다 더 늘어나 쉽게 열린다.",
+      "sub_principle": 2
+    },
+    {
+      "domain": "materials",
+      "en": "Thin glass is hard to cut cleanly along a chosen line. Heating a narrow line and cooling right behind it creates tensile stress that splits the glass along that line.",
+      "ko": "얇은 유리를 원하는 선을 따라 깔끔하게 자르기 어렵다. 선을 따라 좁게 가열하고 바로 뒤를 냉각하면 생기는 인장 응력으로 그 선을 따라 갈라진다.",
+      "sub_principle": 1
+    }
+  ],
+  "examples": {
+    "en": [
+      "A bimetal strip that bends to act as a switch",
+      "Shrink-fit assembly by heating the outer part",
+      "A greenhouse vent that opens with temperature"
+    ],
+    "ko": [
+      "온도에 따라 휘어 스위치가 되는 바이메탈",
+      "가열해서 끼우는 열박음 조립",
+      "기온에 따라 여닫히는 온실 환기창"
+    ]
+  },
+  "id": 37,
+  "name": {
+    "en": "Thermal Expansion",
+    "ko": "열팽창"
+  },
+  "sub_principles": {
+    "en": [
+      "Use the thermal expansion or contraction of a material",
+      "Combine materials with different expansion rates"
+    ],
+    "ko": [
+      "재료의 열팽창이나 열수축을 이용한다",
+      "팽창률이 서로 다른 재료를 조합해 쓴다"
+    ]
+  }
+}

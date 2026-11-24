@@ -1,0 +1,53 @@
+{
+  "cases": [
+    {
+      "domain": "materials",
+      "en": "Pressing plastic film with a hot bar for long melts and puckers the area around the seal. A very short burst of intense heat seals it before the heat spreads.",
+      "ko": "비닐 포장을 뜨거운 판으로 오래 눌러 붙이면 둘레까지 녹아 쭈글쭈글해진다. 아주 짧은 순간 센 열로 붙이면 열이 퍼지기 전에 끝난다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "medical",
+      "en": "Removing skin pigment with a long laser exposure burns the surrounding skin. Very short pulses finish before the heat can spread.",
+      "ko": "레이저로 피부의 색소를 없앨 때 오래 쬐면 주변 피부까지 탄다. 아주 짧은 펄스로 쬐어 열이 퍼지기 전에 끝낸다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "electronics",
+      "en": "A power switching device heats most while it is between on and off. Switching very fast rushes it through that state.",
+      "ko": "전력을 켜고 끄는 소자는 켜짐과 꺼짐 사이 중간 상태에서 열이 가장 많이 난다. 전환을 아주 빠르게 해 그 구간을 짧게 지나간다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "everyday",
+      "en": "Vegetables left in boiling water go soft and lose color. A few seconds in the pot and straight into cold water avoids it.",
+      "ko": "채소를 끓는 물에 오래 두면 물러지고 색이 빠진다. 아주 잠깐 넣었다가 곧바로 찬물에 식힌다.",
+      "sub_principle": 1
+    }
+  ],
+  "examples": {
+    "en": [
+      "A high-speed dental drill",
+      "High-temperature short-time pasteurized milk",
+      "Cutting plastic so fast that heat does not spread"
+    ],
+    "ko": [
+      "치과용 고속 드릴",
+      "순간 고온 살균(HTST) 우유",
+      "열이 번지기 전에 끝내는 고속 플라스틱 절단"
+    ]
+  },
+  "id": 21,
+  "name": {
+    "en": "Skipping (Rushing Through)",
+    "ko": "고속 처리"
+  },
+  "sub_principles": {
+    "en": [
+      "Rush through a harmful or hazardous stage at very high speed"
+    ],
+    "ko": [
+      "해롭거나 위험한 단계를 매우 빠르게 지나가게 한다"
+    ]
+  }
+}

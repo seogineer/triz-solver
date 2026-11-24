@@ -1,0 +1,59 @@
+{
+  "cases": [
+    {
+      "domain": "medical",
+      "en": "Scraping off tartar can damage gums and enamel. A tip vibrating at ultrasonic frequency breaks the tartar into fragments with much less force.",
+      "ko": "치석을 긁어내면 잇몸과 치아 표면이 상하기 쉽다. 초음파로 떠는 끝을 대면 치석이 잘게 부서져 더 약한 힘으로 떨어진다.",
+      "sub_principle": 2
+    },
+    {
+      "domain": "mechanical",
+      "en": "Belt conveyors have many wearing parts. A tray shaken at its resonant frequency moves parts forward in small hops with little power.",
+      "ko": "물건을 컨베이어 벨트로 옮기면 부품이 많고 닳는다. 받침판을 그 공진 진동수로 흔들면 적은 힘으로 물건이 조금씩 튀며 앞으로 나아간다.",
+      "sub_principle": 3
+    },
+    {
+      "domain": "electronics",
+      "en": "A buzzer built from a coil and metal plate is bulky and power-hungry. A vibrating piezoelectric element makes the sound in a thin, low-power part.",
+      "ko": "코일과 금속판으로 된 부저는 크고 전력을 많이 쓴다. 압전 소자를 떨게 해 소리를 내면 얇고 전력이 적다.",
+      "sub_principle": 4
+    },
+    {
+      "domain": "everyday",
+      "en": "A sound alert is awkward where quiet is needed. Making the device body vibrate tells only the person holding it.",
+      "ko": "소리로 알리면 조용해야 하는 곳에서 곤란하다. 기기 몸체를 떨게 해서 가진 사람만 알아채게 한다.",
+      "sub_principle": 1
+    }
+  ],
+  "examples": {
+    "en": [
+      "An ultrasonic cleaner",
+      "A concrete vibrator that settles the mix",
+      "An electric toothbrush that shakes plaque loose"
+    ],
+    "ko": [
+      "초음파 세척기",
+      "진동으로 입자를 고르게 다지는 콘크리트 진동기",
+      "진동으로 오물을 털어내는 전동칫솔"
+    ]
+  },
+  "id": 18,
+  "name": {
+    "en": "Mechanical Vibration",
+    "ko": "기계적 진동"
+  },
+  "sub_principles": {
+    "en": [
+      "Make the object vibrate",
+      "If it already vibrates, raise the frequency, even into the ultrasonic range",
+      "Exploit the object's resonant frequency",
+      "Replace mechanical vibrators with piezoelectric ones"
+    ],
+    "ko": [
+      "대상을 진동시킨다",
+      "이미 진동하면 진동수를 높여 초음파 영역까지 올린다",
+      "대상의 공진 진동수를 이용한다",
+      "기계식 진동자 대신 압전 소자를 쓴다"
+    ]
+  }
+}

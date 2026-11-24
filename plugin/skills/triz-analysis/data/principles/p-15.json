@@ -1,0 +1,59 @@
+{
+  "cases": [
+    {
+      "domain": "mechanical",
+      "en": "A wing needs high lift for take-off and landing but low drag in cruise. Flaps that extend and retract at the trailing edge change the wing's shape for each phase of flight.",
+      "ko": "날개는 이착륙 때 큰 양력이, 순항 때 작은 공기 저항이 필요하다. 날개 뒤쪽에 펼쳤다 접는 보조 날개를 달아 비행 단계마다 날개 모양을 바꾼다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "software",
+      "en": "With a fixed number of servers, the service slows at peak times and wastes money when quiet. Adding and removing servers automatically with the load keeps both cases right.",
+      "ko": "서버 수가 고정돼 있으면 사용자가 몰릴 때는 느려지고 한산할 때는 비용이 낭비된다. 부하에 따라 서버 수를 자동으로 늘리고 줄이면 두 경우 모두 알맞게 운영된다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "medical",
+      "en": "A straight endoscope cannot see around bends inside the body. With its tip divided into segments that bend against each other, it can follow narrow, curved passages.",
+      "ko": "곧은 내시경은 굽은 장기 안쪽을 볼 수 없다. 끝부분을 여러 마디로 나눠 서로 꺾이게 하면 좁고 굽은 통로를 따라 들어갈 수 있다.",
+      "sub_principle": 2
+    },
+    {
+      "domain": "everyday",
+      "en": "A straight, rigid straw did not suit every cup or posture. A pleated neck that bends lets one straw work at many angles.",
+      "ko": "곧고 단단한 빨대는 컵 모양이나 마시는 자세에 맞지 않았다. 목 부분에 주름을 넣어 휘게 하자 한 가지 빨대로 여러 각도에서 마실 수 있다.",
+      "sub_principle": 4
+    }
+  ],
+  "examples": {
+    "en": [
+      "An office chair with adjustable height and angle",
+      "A folding bicycle",
+      "A nozzle with an adjustable angle"
+    ],
+    "ko": [
+      "높이·각도를 조절하는 사무용 의자",
+      "접이식 자전거",
+      "각도를 바꿀 수 있는 가변 노즐"
+    ]
+  },
+  "id": 15,
+  "name": {
+    "en": "Dynamics",
+    "ko": "역동성"
+  },
+  "sub_principles": {
+    "en": [
+      "Let the object or its surroundings adjust at each stage so it is always at its best",
+      "Divide the object into parts that can move relative to each other",
+      "Make something that was fixed movable or adjustable",
+      "Turn a rigid object into a flexible one"
+    ],
+    "ko": [
+      "작동 단계마다 대상이나 환경이 최적이 되도록 스스로 바뀌게 한다",
+      "대상을 서로 움직일 수 있는 여러 부분으로 나눈다",
+      "고정돼 있던 것을 움직이거나 바꿀 수 있게 한다",
+      "경직된 대상을 유연하게 만든다"
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "cases": [
+    {
+      "domain": "mechanical",
+      "en": "A thick tube under high pressure fails from the inner wall first. Pressurizing it once beyond its working level during manufacture leaves compressive stress inside, so it holds more in service.",
+      "ko": "높은 압력을 받는 두꺼운 관은 안쪽 벽부터 터진다. 만들 때 한 번 더 높은 압력을 걸어 안쪽에 압축 응력을 남겨 두면, 실제 압력이 걸릴 때 그만큼 더 버틴다.",
+      "sub_principle": 2
+    },
+    {
+      "domain": "electronics",
+      "en": "Switching power on sends a surge of current that stresses components. Charging first through a resistor and then bypassing it prevents the surge.",
+      "ko": "전원을 켜는 순간 큰 전류가 한꺼번에 흘러 부품이 상한다. 처음에는 저항을 거쳐 천천히 충전되게 했다가 곧 직접 연결로 바꾸면 그 충격을 막는다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "medical",
+      "en": "A first infection catches the body unprepared. A vaccine given beforehand, made from a weakened or inactivated pathogen or one of its antigens, builds immunity so the real infection is fought off faster.",
+      "ko": "병원체에 처음 감염되면 몸이 방어할 준비가 안 돼 크게 앓는다. 약하게 만들거나 죽인 병원체, 또는 그 일부(항원)를 백신으로 미리 맞아 면역을 길러 두면 실제 감염 때 더 빨리 막는다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "everyday",
+      "en": "Ice bonded to a road after snowfall is hard to clear. Spreading de-icer before the snow keeps it from freezing to the surface.",
+      "ko": "눈이 온 뒤 얼어붙은 도로는 녹이기 어렵다. 눈이 오기 전에 제설제를 미리 뿌려 두면 눈이 땅에 얼어붙지 않는다.",
+      "sub_principle": 1
+    }
+  ],
+  "examples": {
+    "en": [
+      "A prestressed concrete beam",
+      "A plate bent slightly the opposite way before welding",
+      "Masking tape applied before painting"
+    ],
+    "ko": [
+      "프리스트레스트 콘크리트 보",
+      "용접 전에 반대로 살짝 휘게 해 둔 판",
+      "페인트칠 전에 붙이는 마스킹 테이프"
+    ]
+  },
+  "id": 9,
+  "name": {
+    "en": "Preliminary Anti-Action",
+    "ko": "사전 반대 조치"
+  },
+  "sub_principles": {
+    "en": [
+      "Apply in advance an opposite action that cancels a harmful one to come",
+      "If a stress is going to appear, load the part with the opposite stress beforehand"
+    ],
+    "ko": [
+      "나중에 생길 해로운 작용을 미리 반대 방향의 작용으로 상쇄해 둔다",
+      "이미 걸리게 될 응력이 있으면 반대 응력을 미리 준다"
+    ]
+  }
+}

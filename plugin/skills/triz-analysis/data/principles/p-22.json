@@ -1,0 +1,57 @@
+{
+  "cases": [
+    {
+      "domain": "mechanical",
+      "en": "Braking throws a vehicle's kinetic energy away as heat. Running the motor as a generator while slowing puts that energy back into the battery.",
+      "ko": "브레이크를 밟으면 차의 운동 에너지가 열로 버려진다. 감속할 때 모터를 발전기로 돌려 그 에너지로 배터리를 충전한다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "software",
+      "en": "Random break-in attempts are a burden. A deliberately weak-looking decoy server lets defenders watch the attacks and learn from them.",
+      "ko": "공격자의 무작위 접속 시도는 부담이다. 일부러 허술해 보이는 가짜 서버를 두어 공격 방식을 관찰하고 방어에 반영한다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "materials",
+      "en": "Treating acidic and alkaline waste water separately takes a lot of neutralizing chemicals. Mixing the two so they neutralize each other cuts the chemicals sharply.",
+      "ko": "산성 폐수와 알칼리성 폐수를 따로 처리하면 중화 약품이 많이 든다. 둘을 섞어 서로 중화시키면 약품이 크게 준다.",
+      "sub_principle": 2
+    },
+    {
+      "domain": "medical",
+      "en": "A venom is harmful but strongly changes a particular body function. The compound behind that effect is found and refined into a medicine.",
+      "ko": "독은 해롭지만 몸의 특정 작용을 강하게 바꾼다. 독에서 그 작용을 하는 성분을 찾아 약으로 다듬어 쓴다.",
+      "sub_principle": 1
+    }
+  ],
+  "examples": {
+    "en": [
+      "Cogeneration that turns waste heat into electricity",
+      "A plant that burns waste as fuel",
+      "A backfire set to stop a wildfire"
+    ],
+    "ko": [
+      "폐열로 전기를 만드는 열병합 발전",
+      "폐기물을 연료로 쓰는 소각 발전",
+      "산불 확산을 막기 위한 맞불"
+    ]
+  },
+  "id": 22,
+  "name": {
+    "en": "Blessing in Disguise",
+    "ko": "전화위복"
+  },
+  "sub_principles": {
+    "en": [
+      "Use a harmful factor to produce a useful effect",
+      "Combine one harmful factor with another so they cancel",
+      "Amplify a harmful factor until it stops being harmful"
+    ],
+    "ko": [
+      "해로운 요인을 이용해 좋은 효과를 만든다",
+      "해로운 요인을 다른 해로운 요인과 합쳐 서로 상쇄시킨다",
+      "해로운 요인의 세기를 해가 되지 않을 정도까지 키운다"
+    ]
+  }
+}

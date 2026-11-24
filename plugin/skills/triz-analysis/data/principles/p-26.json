@@ -1,0 +1,57 @@
+{
+  "cases": [
+    {
+      "domain": "software",
+      "en": "Testing against the real payment system costs money and carries risk. A fake payment server that answers the same way is used for tests.",
+      "ko": "실제 결제 시스템으로 시험하면 비용이 들고 위험하다. 같은 방식으로 응답하는 가짜 결제 서버를 두고 시험한다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "mechanical",
+      "en": "Repeating crash tests on real parts is slow and expensive. Tests run first on a computer model, and physical tests are kept for final confirmation.",
+      "ko": "실제 부품으로 충돌 시험을 반복하면 비싸고 오래 걸린다. 컴퓨터 속 모델로 먼저 시험하고 실물 시험은 마지막 확인에만 쓴다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "medical",
+      "en": "A dermatologist cannot easily see distant patients in person. Photos of the skin are sent and read remotely.",
+      "ko": "피부과 전문의가 멀리 있는 환자를 직접 보기 어렵다. 환자가 찍은 피부 사진을 보내 판독하게 한다.",
+      "sub_principle": 2
+    },
+    {
+      "domain": "materials",
+      "en": "Paint layers hide the underdrawing of a painting. Some paint layers are transparent to infrared, so an infrared image sees through them and reveals it.",
+      "ko": "그림 위에 칠한 물감 때문에 밑그림이 보이지 않는다. 일부 물감층은 적외선을 투과하므로, 적외선으로 찍으면 그 층을 지나 밑그림이 드러난다.",
+      "sub_principle": 3
+    }
+  ],
+  "examples": {
+    "en": [
+      "Reviewing a building with a scale model",
+      "Surveying terrain from satellite images",
+      "Inspecting equipment with a thermal camera"
+    ],
+    "ko": [
+      "축소 모형으로 하는 건축 검토",
+      "위성 사진으로 하는 지형 측량",
+      "열화상 카메라로 하는 설비 점검"
+    ]
+  },
+  "id": 26,
+  "name": {
+    "en": "Copying",
+    "ko": "복사"
+  },
+  "sub_principles": {
+    "en": [
+      "Use a simple, cheap copy in place of a complex, costly or awkward original",
+      "Use an optical copy such as a photo or image instead of the object",
+      "If visible light is not enough, use an infrared or ultraviolet copy"
+    ],
+    "ko": [
+      "복잡하고 비싸고 다루기 어려운 실물 대신 단순하고 싼 복제본을 쓴다",
+      "실물 대신 사진이나 영상 같은 광학적 복제를 쓴다",
+      "가시광 복제로 부족하면 적외선·자외선 복제를 쓴다"
+    ]
+  }
+}

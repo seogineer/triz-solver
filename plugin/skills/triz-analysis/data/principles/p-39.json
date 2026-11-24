@@ -1,0 +1,55 @@
+{
+  "cases": [
+    {
+      "domain": "electronics",
+      "en": "Hot metal surfaces oxidize in air during soldering and wet poorly. Soldering in a nitrogen atmosphere cuts the oxidation.",
+      "ko": "납땜할 때 뜨거운 금속 표면이 공기와 만나 산화돼 잘 붙지 않는다. 질소를 채운 환경에서 납땜하면 산화가 줄어든다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "materials",
+      "en": "Melting metal in air lets it react with gases and pick up impurities. Melting it in a vacuum gives a purer metal.",
+      "ko": "금속을 녹일 때 공기 중 기체와 반응해 불순물이 생긴다. 진공 속에서 녹이면 순도 높은 금속을 얻는다.",
+      "sub_principle": 2
+    },
+    {
+      "domain": "medical",
+      "en": "An injectable drug reacts with the air in its vial and degrades. The air in the vial is replaced with nitrogen for storage.",
+      "ko": "병에 든 주사약이 병 속 공기와 반응해 변한다. 병 속 공기를 질소로 바꿔 채워 보관한다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "everyday",
+      "en": "Coffee beans lose their aroma quickly in air. Removing the air from the pack keeps the aroma longer.",
+      "ko": "커피 원두의 향이 공기와 만나 빨리 날아간다. 포장 속 공기를 빼 진공으로 두면 향이 오래 남는다.",
+      "sub_principle": 2
+    }
+  ],
+  "examples": {
+    "en": [
+      "Argon-shielded welding",
+      "Nitrogen-flushed food packaging",
+      "A vacuum inside an incandescent bulb"
+    ],
+    "ko": [
+      "아르곤으로 감싸는 용접",
+      "질소를 채운 식품 포장",
+      "진공 상태의 백열전구"
+    ]
+  },
+  "id": 39,
+  "name": {
+    "en": "Inert Atmosphere",
+    "ko": "불활성 분위기"
+  },
+  "sub_principles": {
+    "en": [
+      "Replace the normal environment with an inert one",
+      "Carry out the process in a vacuum"
+    ],
+    "ko": [
+      "일반 환경을 불활성 환경으로 바꾼다",
+      "진공 상태에서 작업한다"
+    ]
+  }
+}

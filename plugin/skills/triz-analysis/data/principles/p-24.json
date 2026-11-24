@@ -1,0 +1,55 @@
+{
+  "cases": [
+    {
+      "domain": "mechanical",
+      "en": "Machining a thin plate on its own makes it bend and chatter. The plate is fixed temporarily to a backing plate, machined, and then released.",
+      "ko": "얇은 판을 그대로 가공하면 휘고 떨린다. 판을 받침판에 임시로 붙여 가공한 뒤 떼어 낸다.",
+      "sub_principle": 2
+    },
+    {
+      "domain": "electronics",
+      "en": "Rough surfaces leave an air gap between chip and heat sink that blocks heat. A thermally conductive paste between them fills the gap.",
+      "ko": "칩과 방열판의 표면이 거칠어 그 사이 공기층 때문에 열이 잘 빠지지 않는다. 사이에 열을 잘 전하는 페이스트를 발라 틈을 메운다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "medical",
+      "en": "Some drugs are broken down by stomach acid. A coating that does not dissolve in the stomach carries the drug to the intestine, where it is released.",
+      "ko": "어떤 약은 위산에 분해돼 효과를 잃는다. 약을 위에서는 녹지 않는 막으로 감싸 장에 가서 녹게 한다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "software",
+      "en": "Two systems with different data formats are hard to connect directly. A middle layer translates and passes the data between them.",
+      "ko": "서로 다른 데이터 형식을 쓰는 두 시스템을 직접 잇기 어렵다. 가운데에 형식을 바꿔 전달하는 중계 계층을 둔다.",
+      "sub_principle": 1
+    }
+  ],
+  "examples": {
+    "en": [
+      "A guitar pick",
+      "A pallet for moving heavy goods",
+      "A catalyst that speeds up a reaction"
+    ],
+    "ko": [
+      "기타 줄을 튕기는 피크",
+      "무거운 물건을 옮기는 팔레트",
+      "반응 속도를 높이는 촉매"
+    ]
+  },
+  "id": 24,
+  "name": {
+    "en": "Intermediary",
+    "ko": "매개물"
+  },
+  "sub_principles": {
+    "en": [
+      "Insert an intermediary object that carries or mediates the action",
+      "Attach an intermediary temporarily and remove it later"
+    ],
+    "ko": [
+      "두 대상 사이에서 전달이나 작용을 매개하는 대상을 둔다",
+      "매개체를 임시로 붙여 쓰고 나중에 뗀다"
+    ]
+  }
+}

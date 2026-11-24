@@ -1,0 +1,57 @@
+{
+  "cases": [
+    {
+      "domain": "mechanical",
+      "en": "A reciprocating piston pump gives a pulsing flow and strong vibration. A pump that pushes fluid with a spinning impeller gives a smooth, quiet flow.",
+      "ko": "왕복하는 피스톤 펌프는 흐름이 끊겼다 이어지고 진동이 크다. 회전하는 날개로 유체를 미는 펌프로 바꾸면 흐름이 고르고 조용하다.",
+      "sub_principle": 3
+    },
+    {
+      "domain": "electronics",
+      "en": "Fast signals reflect at right-angle corners in circuit-board traces. Rounding or mitering the corners reduces the reflections.",
+      "ko": "직각으로 꺾인 기판 배선에서는 빠른 신호가 모서리에서 반사된다. 배선 모서리를 둥글게 또는 비스듬히 꺾으면 반사가 줄어든다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "medical",
+      "en": "Heavy medical equipment on fixed wheels is hard to turn in a small ward. Ball-shaped wheels that roll in every direction let it turn on the spot.",
+      "ko": "무거운 의료 장비를 한 방향 바퀴로 밀면 좁은 병실에서 방향을 바꾸기 어렵다. 모든 방향으로 도는 공 모양 바퀴를 달면 제자리에서 돌린다.",
+      "sub_principle": 2
+    },
+    {
+      "domain": "everyday",
+      "en": "Square corners where a bath meets the wall collect grime and hurt when bumped. Curving the corners makes them easy to clean and safer.",
+      "ko": "욕조와 벽이 직각으로 만나는 모서리에는 물때가 끼고 부딪히면 다친다. 모서리를 둥글게 이어 만들면 청소가 쉽고 안전하다.",
+      "sub_principle": 1
+    }
+  ],
+  "examples": {
+    "en": [
+      "An arch bridge that spreads the load",
+      "The rolling ball in a ballpoint pen",
+      "A screw press"
+    ],
+    "ko": [
+      "하중을 고르게 나누는 아치형 다리",
+      "볼펜의 회전하는 볼",
+      "나사식 압착 프레스"
+    ]
+  },
+  "id": 14,
+  "name": {
+    "en": "Spheroidality (Curvature)",
+    "ko": "구면화"
+  },
+  "sub_principles": {
+    "en": [
+      "Replace straight lines and flat surfaces with curves and curved surfaces",
+      "Use round elements such as rollers, balls and spirals",
+      "Convert linear motion to rotary motion"
+    ],
+    "ko": [
+      "직선·평면인 부분을 곡선·곡면으로 바꾼다",
+      "롤러, 공, 나선 같은 둥근 요소를 쓴다",
+      "직선 운동을 회전 운동으로 바꾼다"
+    ]
+  }
+}

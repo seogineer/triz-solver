@@ -1,0 +1,59 @@
+{
+  "cases": [
+    {
+      "domain": "electronics",
+      "en": "Cooling a chip in a thin device would need a large heat sink. Liquid in a sealed thin tube that boils near the chip and condenses at the far end moves a lot of heat in little space.",
+      "ko": "얇은 기기에서 칩을 식히려면 큰 방열판이 필요하다. 밀폐된 가는 관 속 액체가 칩 쪽에서 끓어 증기가 되고 먼 쪽에서 식어 다시 액체가 되게 하면, 작은 부피로 많은 열을 옮길 수 있다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "materials",
+      "en": "Liquid glue runs and needs time to dry. A glue that is solid at room temperature is heated to melt, flows in like a liquid, and sets as soon as it cools.",
+      "ko": "액체 접착제는 흘러내리고 마를 때까지 기다려야 한다. 상온에서 고체인 접착제를 가열해 녹여 바르면 액체처럼 스며들었다가 식으면서 곧바로 굳는다.",
+      "sub_principle": 4
+    },
+    {
+      "domain": "mechanical",
+      "en": "A rigid robot finger crushes soft objects, and a soft one drops heavy ones. A finger whose stiffness is set by the air pressure inside can grip both.",
+      "ko": "단단한 로봇 손가락은 연한 물체를 으깨고, 부드러운 손가락은 무거운 물체를 놓친다. 안쪽 공기압으로 굳기를 조절하는 손가락이면 두 경우를 모두 잡을 수 있다.",
+      "sub_principle": 3
+    },
+    {
+      "domain": "medical",
+      "en": "An injected drug must be thin to pass the needle but should stay put inside the body to act longer. A formulation that thickens at body temperature flows during injection and stays where it was placed.",
+      "ko": "몸에 주사하는 약은 묽어야 잘 들어가지만, 몸 안에서는 한곳에 머물러야 효과가 오래간다. 체온에 닿으면 끈적하게 굳는 제형을 쓰면 주사할 때는 흐르고 들어간 뒤에는 그 자리에 남는다.",
+      "sub_principle": 2
+    }
+  ],
+  "examples": {
+    "en": [
+      "Liquid soap instead of a bar",
+      "Gas liquefied for storage",
+      "A suspension whose stiffness varies with conditions"
+    ],
+    "ko": [
+      "액체 비누(고형 비누 대신)",
+      "저장을 위해 액화한 가스",
+      "조건에 따라 강성이 바뀌는 서스펜션"
+    ]
+  },
+  "id": 35,
+  "name": {
+    "en": "Parameter Changes",
+    "ko": "매개변수 변화"
+  },
+  "sub_principles": {
+    "en": [
+      "Change the physical state of the object (solid, liquid, gas)",
+      "Change its concentration or viscosity",
+      "Change its degree of flexibility",
+      "Change its temperature"
+    ],
+    "ko": [
+      "대상의 물리적 상태(고체·액체·기체)를 바꾼다",
+      "농도나 점도를 바꾼다",
+      "유연성의 정도를 바꾼다",
+      "온도를 바꾼다"
+    ]
+  }
+}
