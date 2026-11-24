@@ -1,0 +1,3991 @@
+{
+  "C01": {
+    "improve": [
+      14
+    ],
+    "worsen": [
+      1,
+      2
+    ],
+    "principles_cited": [
+      1,
+      40,
+      8,
+      26,
+      27
+    ],
+    "ranking": [
+      {
+        "id": 1,
+        "count": 2
+      },
+      {
+        "id": 40,
+        "count": 2
+      },
+      {
+        "id": 8,
+        "count": 1
+      },
+      {
+        "id": 26,
+        "count": 1
+      },
+      {
+        "id": 27,
+        "count": 1
+      }
+    ],
+    "stated_separations": [],
+    "skill_used": true,
+    "file_reads": 6,
+    "files_read": [
+      "matrix/row-14.json",
+      "principles/p-01.json",
+      "principles/p-40.json",
+      "principles/p-08.json",
+      "principles/p-26.json",
+      "principles/p-27.json"
+    ],
+    "plugin_loaded": true,
+    "model": "claude-sonnet-5-5",
+    "attempts": 1,
+    "exit_code": 0,
+    "saw_unverified": false,
+    "returned_principles": [
+      1,
+      2,
+      3,
+      7,
+      8,
+      9,
+      10,
+      11,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      22,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      34,
+      35,
+      37,
+      40
+    ],
+    "recommended_principles": [
+      1,
+      2,
+      3,
+      7,
+      8,
+      9,
+      10,
+      11,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      22,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      34,
+      35,
+      37,
+      40
+    ],
+    "separation_types_read": [],
+    "disclosed": true
+  },
+  "C02": {
+    "improve": [
+      15
+    ],
+    "worsen": [
+      1,
+      7
+    ],
+    "principles_cited": [
+      19,
+      10,
+      5,
+      2,
+      34
+    ],
+    "ranking": [
+      {
+        "id": 19,
+        "count": 2
+      },
+      {
+        "id": 10,
+        "count": 1
+      },
+      {
+        "id": 5,
+        "count": 1
+      },
+      {
+        "id": 2,
+        "count": 1
+      },
+      {
+        "id": 34,
+        "count": 1
+      }
+    ],
+    "stated_separations": [],
+    "skill_used": true,
+    "file_reads": 6,
+    "files_read": [
+      "matrix/row-15.json",
+      "principles/p-19.json",
+      "principles/p-10.json",
+      "principles/p-05.json",
+      "principles/p-02.json",
+      "principles/p-34.json"
+    ],
+    "plugin_loaded": true,
+    "model": "claude-sonnet-5-5",
+    "attempts": 1,
+    "exit_code": 0,
+    "saw_unverified": false,
+    "returned_principles": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      33,
+      34,
+      35,
+      38,
+      39,
+      40
+    ],
+    "recommended_principles": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      33,
+      34,
+      35,
+      38,
+      39,
+      40
+    ],
+    "separation_types_read": [],
+    "disclosed": false
+  },
+  "C03": {
+    "improve": [
+      9,
+      39
+    ],
+    "worsen": [
+      27,
+      29
+    ],
+    "principles_cited": [
+      10,
+      35,
+      1,
+      28,
+      32
+    ],
+    "ranking": [
+      {
+        "id": 10,
+        "count": 3
+      },
+      {
+        "id": 35,
+        "count": 3
+      },
+      {
+        "id": 1,
+        "count": 2
+      },
+      {
+        "id": 28,
+        "count": 2
+      },
+      {
+        "id": 32,
+        "count": 2
+      }
+    ],
+    "stated_separations": [],
+    "skill_used": true,
+    "file_reads": 7,
+    "files_read": [
+      "matrix/row-09.json",
+      "matrix/row-39.json",
+      "principles/p-10.json",
+      "principles/p-35.json",
+      "principles/p-01.json",
+      "principles/p-28.json",
+      "principles/p-32.json"
+    ],
+    "plugin_loaded": true,
+    "model": "claude-sonnet-5-5",
+    "attempts": 1,
+    "exit_code": 0,
+    "saw_unverified": false,
+    "returned_principles": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "recommended_principles": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "separation_types_read": [],
+    "disclosed": true
+  },
+  "C04": {
+    "improve": [
+      29
+    ],
+    "worsen": [
+      25,
+      39,
+      9
+    ],
+    "principles_cited": [
+      32,
+      10,
+      18,
+      28,
+      26
+    ],
+    "ranking": [
+      {
+        "id": 32,
+        "count": 3
+      },
+      {
+        "id": 10,
+        "count": 2
+      },
+      {
+        "id": 18,
+        "count": 2
+      },
+      {
+        "id": 28,
+        "count": 2
+      },
+      {
+        "id": 26,
+        "count": 1
+      }
+    ],
+    "stated_separations": [],
+    "skill_used": true,
+    "file_reads": 6,
+    "files_read": [
+      "matrix/row-29.json",
+      "principles/p-32.json",
+      "principles/p-10.json",
+      "principles/p-18.json",
+      "principles/p-28.json",
+      "principles/p-26.json"
+    ],
+    "plugin_loaded": true,
+    "model": "claude-sonnet-5-5",
+    "attempts": 1,
+    "exit_code": 0,
+    "saw_unverified": false,
+    "returned_principles": [
+      1,
+      2,
+      3,
+      4,
+      9,
+      10,
+      11,
+      13,
+      17,
+      18,
+      19,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      39,
+      40
+    ],
+    "recommended_principles": [
+      1,
+      2,
+      3,
+      4,
+      9,
+      10,
+      11,
+      13,
+      17,
+      18,
+      19,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      39,
+      40
+    ],
+    "separation_types_read": [],
+    "disclosed": true
+  },
+  "C05": {
+    "improve": [
+      17
+    ],
+    "worsen": [
+      31
+    ],
+    "principles_cited": [
+      22,
+      35,
+      2,
+      24
+    ],
+    "ranking": [
+      {
+        "id": 22,
+        "count": 1
+      },
+      {
+        "id": 35,
+        "count": 1
+      },
+      {
+        "id": 2,
+        "count": 1
+      },
+      {
+        "id": 24,
+        "count": 1
+      }
+    ],
+    "stated_separations": [],
+    "skill_used": true,
+    "file_reads": 5,
+    "files_read": [
+      "matrix/row-17.json",
+      "principles/p-22.json",
+      "principles/p-35.json",
+      "principles/p-02.json",
+      "principles/p-24.json"
+    ],
+    "plugin_loaded": true,
+    "model": "claude-sonnet-5-5",
+    "attempts": 1,
+    "exit_code": 0,
+    "saw_unverified": false,
+    "returned_principles": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      9,
+      10,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      21,
+      22,
+      24,
+      25,
+      26,
+      27,
+      28,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      38,
+      39,
+      40
+    ],
+    "recommended_principles": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      9,
+      10,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      21,
+      22,
+      24,
+      25,
+      26,
+      27,
+      28,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      38,
+      39,
+      40
+    ],
+    "separation_types_read": [],
+    "disclosed": true
+  },
+  "C06": {
+    "improve": [
+      35
+    ],
+    "worsen": [
+      36,
+      33
+    ],
+    "principles_cited": [
+      15,
+      29,
+      34,
+      1,
+      37
+    ],
+    "ranking": [
+      {
+        "id": 15,
+        "count": 2
+      },
+      {
+        "id": 29,
+        "count": 1
+      },
+      {
+        "id": 34,
+        "count": 1
+      },
+      {
+        "id": 37,
+        "count": 1
+      },
+      {
+        "id": 1,
+        "count": 1
+      }
+    ],
+    "stated_separations": [],
+    "skill_used": true,
+    "file_reads": 6,
+    "files_read": [
+      "matrix/row-35.json",
+      "principles/p-15.json",
+      "principles/p-29.json",
+      "principles/p-34.json",
+      "principles/p-37.json",
+      "principles/p-01.json"
+    ],
+    "plugin_loaded": true,
+    "model": "claude-sonnet-5-5",
+    "attempts": 1,
+    "exit_code": 0,
+    "saw_unverified": false,
+    "returned_principles": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      22,
+      24,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      34,
+      35,
+      37
+    ],
+    "recommended_principles": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      22,
+      24,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      34,
+      35,
+      37
+    ],
+    "separation_types_read": [],
+    "disclosed": false
+  },
+  "C07": {
+    "improve": [
+      38
+    ],
+    "worsen": [
+      36,
+      26
+    ],
+    "principles_cited": [
+      15,
+      35,
+      24,
+      13,
+      10
+    ],
+    "ranking": [
+      {
+        "id": 15,
+        "count": 1
+      },
+      {
+        "id": 35,
+        "count": 1
+      },
+      {
+        "id": 24,
+        "count": 1
+      },
+      {
+        "id": 13,
+        "count": 1
+      },
+      {
+        "id": 10,
+        "count": 1
+      }
+    ],
+    "stated_separations": [],
+    "skill_used": true,
+    "file_reads": 6,
+    "files_read": [
+      "matrix/row-38.json",
+      "principles/p-15.json",
+      "principles/p-35.json",
+      "principles/p-24.json",
+      "principles/p-13.json",
+      "principles/p-10.json"
+    ],
+    "plugin_loaded": true,
+    "model": "claude-sonnet-5-5",
+    "attempts": 1,
+    "exit_code": 0,
+    "saw_unverified": false,
+    "returned_principles": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      30,
+      32,
+      33,
+      34,
+      35
+    ],
+    "recommended_principles": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      30,
+      32,
+      33,
+      34,
+      35
+    ],
+    "separation_types_read": [],
+    "disclosed": true
+  },
+  "C08": {
+    "improve": [
+      2,
+      1
+    ],
+    "worsen": [
+      14,
+      11
+    ],
+    "principles_cited": [
+      10,
+      28,
+      27,
+      18,
+      40
+    ],
+    "ranking": [
+      {
+        "id": 10,
+        "count": 3
+      },
+      {
+        "id": 28,
+        "count": 2
+      },
+      {
+        "id": 27,
+        "count": 2
+      },
+      {
+        "id": 18,
+        "count": 2
+      },
+      {
+        "id": 40,
+        "count": 2
+      }
+    ],
+    "stated_separations": [],
+    "skill_used": true,
+    "file_reads": 7,
+    "files_read": [
+      "matrix/row-02.json",
+      "matrix/row-01.json",
+      "principles/p-10.json",
+      "principles/p-28.json",
+      "principles/p-27.json",
+      "principles/p-18.json",
+      "principles/p-40.json"
+    ],
+    "plugin_loaded": true,
+    "model": "claude-sonnet-5-5",
+    "attempts": 1,
+    "exit_code": 0,
+    "saw_unverified": false,
+    "returned_principles": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "recommended_principles": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "separation_types_read": [],
+    "disclosed": true
+  },
+  "C09": {
+    "improve": [
+      18
+    ],
+    "worsen": [
+      20,
+      21
+    ],
+    "principles_cited": [
+      32,
+      35,
+      1,
+      15
+    ],
+    "ranking": [
+      {
+        "id": 32,
+        "count": 2
+      },
+      {
+        "id": 35,
+        "count": 1
+      },
+      {
+        "id": 1,
+        "count": 1
+      },
+      {
+        "id": 15,
+        "count": 1
+      }
+    ],
+    "stated_separations": [],
+    "skill_used": true,
+    "file_reads": 5,
+    "files_read": [
+      "matrix/row-18.json",
+      "principles/p-32.json",
+      "principles/p-35.json",
+      "principles/p-01.json",
+      "principles/p-15.json"
+    ],
+    "plugin_loaded": true,
+    "model": "claude-sonnet-5-5",
+    "attempts": 1,
+    "exit_code": 0,
+    "saw_unverified": false,
+    "returned_principles": [
+      1,
+      2,
+      3,
+      6,
+      10,
+      11,
+      13,
+      15,
+      16,
+      17,
+      19,
+      25,
+      26,
+      27,
+      28,
+      30,
+      32,
+      35,
+      39
+    ],
+    "recommended_principles": [
+      1,
+      2,
+      3,
+      6,
+      10,
+      11,
+      13,
+      15,
+      16,
+      17,
+      19,
+      25,
+      26,
+      27,
+      28,
+      30,
+      32,
+      35,
+      39
+    ],
+    "separation_types_read": [],
+    "disclosed": false
+  },
+  "C10": {
+    "improve": [
+      28
+    ],
+    "worsen": [
+      33,
+      36
+    ],
+    "principles_cited": [
+      34,
+      1,
+      27,
+      13,
+      35
+    ],
+    "ranking": [
+      {
+        "id": 34,
+        "count": 2
+      },
+      {
+        "id": 1,
+        "count": 1
+      },
+      {
+        "id": 27,
+        "count": 1
+      },
+      {
+        "id": 13,
+        "count": 1
+      },
+      {
+        "id": 35,
+        "count": 1
+      }
+    ],
+    "stated_separations": [],
+    "skill_used": true,
+    "file_reads": 6,
+    "files_read": [
+      "matrix/row-28.json",
+      "principles/p-34.json",
+      "principles/p-01.json",
+      "principles/p-27.json",
+      "principles/p-13.json",
+      "principles/p-35.json"
+    ],
+    "plugin_loaded": true,
+    "model": "claude-sonnet-5-5",
+    "attempts": 1,
+    "exit_code": 0,
+    "saw_unverified": false,
+    "returned_principles": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      10,
+      11,
+      13,
+      16,
+      17,
+      18,
+      19,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      31,
+      32,
+      33,
+      34,
+      35,
+      39
+    ],
+    "recommended_principles": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      10,
+      11,
+      13,
+      16,
+      17,
+      18,
+      19,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      31,
+      32,
+      33,
+      34,
+      35,
+      39
+    ],
+    "separation_types_read": [],
+    "disclosed": true
+  },
+  "C11": {
+    "improve": [
+      34
+    ],
+    "worsen": [
+      27,
+      36
+    ],
+    "principles_cited": [
+      11,
+      1,
+      35,
+      10,
+      13
+    ],
+    "ranking": [
+      {
+        "id": 11,
+        "count": 2
+      },
+      {
+        "id": 1,
+        "count": 2
+      },
+      {
+        "id": 35,
+        "count": 1
+      },
+      {
+        "id": 10,
+        "count": 1
+      },
+      {
+        "id": 13,
+        "count": 1
+      }
+    ],
+    "stated_separations": [],
+    "skill_used": true,
+    "file_reads": 6,
+    "files_read": [
+      "matrix/row-34.json",
+      "principles/p-11.json",
+      "principles/p-01.json",
+      "principles/p-35.json",
+      "principles/p-10.json",
+      "principles/p-13.json"
+    ],
+    "plugin_loaded": true,
+    "model": "claude-sonnet-5-5",
+    "attempts": 1,
+    "exit_code": 0,
+    "saw_unverified": false,
+    "returned_principles": [
+      1,
+      2,
+      3,
+      4,
+      7,
+      9,
+      10,
+      11,
+      12,
+      13,
+      15,
+      16,
+      18,
+      19,
+      25,
+      26,
+      27,
+      28,
+      29,
+      31,
+      32,
+      34,
+      35
+    ],
+    "recommended_principles": [
+      1,
+      2,
+      3,
+      4,
+      7,
+      9,
+      10,
+      11,
+      12,
+      13,
+      15,
+      16,
+      18,
+      19,
+      25,
+      26,
+      27,
+      28,
+      29,
+      31,
+      32,
+      34,
+      35
+    ],
+    "separation_types_read": [],
+    "disclosed": true
+  },
+  "C12": {
+    "improve": [
+      26,
+      2
+    ],
+    "worsen": [
+      14,
+      11
+    ],
+    "principles_cited": [
+      10,
+      14,
+      28,
+      13,
+      35
+    ],
+    "ranking": [
+      {
+        "id": 10,
+        "count": 4
+      },
+      {
+        "id": 14,
+        "count": 2
+      },
+      {
+        "id": 28,
+        "count": 1
+      },
+      {
+        "id": 13,
+        "count": 1
+      },
+      {
+        "id": 35,
+        "count": 1
+      }
+    ],
+    "stated_separations": [],
+    "skill_used": true,
+    "file_reads": 7,
+    "files_read": [
+      "matrix/row-26.json",
+      "matrix/row-02.json",
+      "principles/p-10.json",
+      "principles/p-14.json",
+      "principles/p-28.json",
+      "principles/p-13.json",
+      "principles/p-35.json"
+    ],
+    "plugin_loaded": true,
+    "model": "claude-sonnet-5-5",
+    "attempts": 1,
+    "exit_code": 0,
+    "saw_unverified": false,
+    "returned_principles": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      22,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "recommended_principles": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      22,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "separation_types_read": [],
+    "disclosed": true
+  },
+  "C13": {
+    "improve": [
+      1,
+      2
+    ],
+    "worsen": [
+      14,
+      13
+    ],
+    "principles_cited": [
+      40,
+      1,
+      28,
+      27,
+      39
+    ],
+    "ranking": [
+      {
+        "id": 28,
+        "count": 2
+      },
+      {
+        "id": 1,
+        "count": 2
+      },
+      {
+        "id": 27,
+        "count": 2
+      },
+      {
+        "id": 39,
+        "count": 2
+      },
+      {
+        "id": 40,
+        "count": 2
+      }
+    ],
+    "stated_separations": [],
+    "skill_used": true,
+    "file_reads": 8,
+    "files_read": [
+      "parameters.json",
+      "matrix/row-01.json",
+      "matrix/row-02.json",
+      "principles/p-28.json",
+      "principles/p-01.json",
+      "principles/p-27.json",
+      "principles/p-39.json",
+      "principles/p-40.json"
+    ],
+    "plugin_loaded": true,
+    "model": "claude-sonnet-5-5",
+    "attempts": 1,
+    "exit_code": 0,
+    "saw_unverified": false,
+    "returned_principles": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "recommended_principles": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "separation_types_read": [],
+    "disclosed": true
+  },
+  "C14": {
+    "improve": [
+      9,
+      39
+    ],
+    "worsen": [
+      24,
+      27
+    ],
+    "principles_cited": [
+      13,
+      35,
+      11,
+      1,
+      26
+    ],
+    "ranking": [
+      {
+        "id": 13,
+        "count": 2
+      },
+      {
+        "id": 35,
+        "count": 2
+      },
+      {
+        "id": 11,
+        "count": 1
+      },
+      {
+        "id": 1,
+        "count": 1
+      },
+      {
+        "id": 26,
+        "count": 1
+      }
+    ],
+    "stated_separations": [],
+    "skill_used": true,
+    "file_reads": 7,
+    "files_read": [
+      "matrix/row-09.json",
+      "matrix/row-39.json",
+      "principles/p-13.json",
+      "principles/p-35.json",
+      "principles/p-11.json",
+      "principles/p-01.json",
+      "principles/p-26.json"
+    ],
+    "plugin_loaded": true,
+    "model": "claude-sonnet-5-5",
+    "attempts": 1,
+    "exit_code": 0,
+    "saw_unverified": false,
+    "returned_principles": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "recommended_principles": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "separation_types_read": [],
+    "disclosed": true
+  },
+  "C15": {
+    "improve": [
+      21,
+      10
+    ],
+    "worsen": [
+      31
+    ],
+    "principles_cited": [
+      2,
+      13,
+      35,
+      3,
+      18
+    ],
+    "ranking": [
+      {
+        "id": 2,
+        "count": 1
+      },
+      {
+        "id": 13,
+        "count": 1
+      },
+      {
+        "id": 35,
+        "count": 1
+      },
+      {
+        "id": 3,
+        "count": 1
+      },
+      {
+        "id": 18,
+        "count": 1
+      }
+    ],
+    "stated_separations": [],
+    "skill_used": true,
+    "file_reads": 7,
+    "files_read": [
+      "matrix/row-21.json",
+      "matrix/row-10.json",
+      "principles/p-02.json",
+      "principles/p-13.json",
+      "principles/p-35.json",
+      "principles/p-03.json",
+      "principles/p-18.json"
+    ],
+    "plugin_loaded": true,
+    "model": "claude-sonnet-5-5",
+    "attempts": 1,
+    "exit_code": 0,
+    "saw_unverified": false,
+    "returned_principles": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      34,
+      35,
+      36,
+      37,
+      38,
+      40
+    ],
+    "recommended_principles": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      34,
+      35,
+      36,
+      37,
+      38,
+      40
+    ],
+    "separation_types_read": [],
+    "disclosed": true
+  },
+  "C16": {
+    "improve": [
+      39,
+      9
+    ],
+    "worsen": [
+      20,
+      21
+    ],
+    "principles_cited": [
+      35,
+      1,
+      19,
+      20,
+      10
+    ],
+    "ranking": [
+      {
+        "id": 35,
+        "count": 2
+      },
+      {
+        "id": 1,
+        "count": 1
+      },
+      {
+        "id": 19,
+        "count": 1
+      },
+      {
+        "id": 20,
+        "count": 1
+      },
+      {
+        "id": 10,
+        "count": 1
+      }
+    ],
+    "stated_separations": [],
+    "skill_used": true,
+    "file_reads": 7,
+    "files_read": [
+      "matrix/row-39.json",
+      "matrix/row-09.json",
+      "principles/p-35.json",
+      "principles/p-01.json",
+      "principles/p-19.json",
+      "principles/p-20.json",
+      "principles/p-10.json"
+    ],
+    "plugin_loaded": true,
+    "model": "claude-sonnet-5-5",
+    "attempts": 1,
+    "exit_code": 0,
+    "saw_unverified": false,
+    "returned_principles": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "recommended_principles": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "separation_types_read": [],
+    "disclosed": false
+  },
+  "C17": {
+    "improve": [
+      3
+    ],
+    "worsen": [
+      14,
+      13
+    ],
+    "principles_cited": [
+      8,
+      34,
+      1,
+      35,
+      29
+    ],
+    "ranking": [
+      {
+        "id": 8,
+        "count": 2
+      },
+      {
+        "id": 34,
+        "count": 2
+      },
+      {
+        "id": 1,
+        "count": 1
+      },
+      {
+        "id": 35,
+        "count": 1
+      },
+      {
+        "id": 29,
+        "count": 1
+      }
+    ],
+    "stated_separations": [],
+    "skill_used": true,
+    "file_reads": 7,
+    "files_read": [
+      "parameters.json",
+      "matrix/row-03.json",
+      "principles/p-08.json",
+      "principles/p-34.json",
+      "principles/p-01.json",
+      "principles/p-35.json",
+      "principles/p-29.json"
+    ],
+    "plugin_loaded": true,
+    "model": "claude-sonnet-5-5",
+    "attempts": 1,
+    "exit_code": 0,
+    "saw_unverified": false,
+    "returned_principles": [
+      1,
+      2,
+      4,
+      7,
+      8,
+      10,
+      13,
+      14,
+      15,
+      16,
+      17,
+      19,
+      23,
+      24,
+      26,
+      28,
+      29,
+      32,
+      34,
+      35,
+      37,
+      39,
+      40
+    ],
+    "recommended_principles": [
+      1,
+      2,
+      4,
+      7,
+      8,
+      10,
+      13,
+      14,
+      15,
+      16,
+      17,
+      19,
+      23,
+      24,
+      26,
+      28,
+      29,
+      32,
+      34,
+      35,
+      37,
+      39,
+      40
+    ],
+    "separation_types_read": [],
+    "disclosed": false
+  },
+  "C18": {
+    "improve": [
+      26,
+      1
+    ],
+    "worsen": [
+      14,
+      27
+    ],
+    "principles_cited": [
+      18,
+      28,
+      3,
+      27,
+      40
+    ],
+    "ranking": [
+      {
+        "id": 18,
+        "count": 2
+      },
+      {
+        "id": 28,
+        "count": 2
+      },
+      {
+        "id": 3,
+        "count": 2
+      },
+      {
+        "id": 27,
+        "count": 2
+      },
+      {
+        "id": 40,
+        "count": 2
+      }
+    ],
+    "stated_separations": [],
+    "skill_used": true,
+    "file_reads": 7,
+    "files_read": [
+      "matrix/row-26.json",
+      "matrix/row-01.json",
+      "principles/p-18.json",
+      "principles/p-28.json",
+      "principles/p-03.json",
+      "principles/p-27.json",
+      "principles/p-40.json"
+    ],
+    "plugin_loaded": true,
+    "model": "claude-sonnet-5-5",
+    "attempts": 1,
+    "exit_code": 0,
+    "saw_unverified": false,
+    "returned_principles": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "recommended_principles": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "separation_types_read": [],
+    "disclosed": true
+  },
+  "C19": {
+    "improve": [
+      9,
+      39
+    ],
+    "worsen": [
+      15,
+      23
+    ],
+    "principles_cited": [
+      10,
+      35,
+      28,
+      3,
+      19
+    ],
+    "ranking": [
+      {
+        "id": 10,
+        "count": 3
+      },
+      {
+        "id": 35,
+        "count": 3
+      },
+      {
+        "id": 28,
+        "count": 2
+      },
+      {
+        "id": 3,
+        "count": 1
+      },
+      {
+        "id": 19,
+        "count": 1
+      }
+    ],
+    "stated_separations": [],
+    "skill_used": true,
+    "file_reads": 7,
+    "files_read": [
+      "matrix/row-09.json",
+      "matrix/row-39.json",
+      "principles/p-10.json",
+      "principles/p-35.json",
+      "principles/p-28.json",
+      "principles/p-03.json",
+      "principles/p-19.json"
+    ],
+    "plugin_loaded": true,
+    "model": "claude-sonnet-5-5",
+    "attempts": 1,
+    "exit_code": 0,
+    "saw_unverified": false,
+    "returned_principles": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "recommended_principles": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "separation_types_read": [],
+    "disclosed": true
+  },
+  "C20": {
+    "improve": [
+      35
+    ],
+    "worsen": [
+      14,
+      13,
+      27
+    ],
+    "principles_cited": [
+      35,
+      3,
+      30,
+      13,
+      32
+    ],
+    "ranking": [
+      {
+        "id": 35,
+        "count": 3
+      },
+      {
+        "id": 3,
+        "count": 1
+      },
+      {
+        "id": 30,
+        "count": 1
+      },
+      {
+        "id": 13,
+        "count": 1
+      },
+      {
+        "id": 32,
+        "count": 1
+      }
+    ],
+    "stated_separations": [],
+    "skill_used": true,
+    "file_reads": 6,
+    "files_read": [
+      "matrix/row-35.json",
+      "principles/p-35.json",
+      "principles/p-03.json",
+      "principles/p-30.json",
+      "principles/p-13.json",
+      "principles/p-32.json"
+    ],
+    "plugin_loaded": true,
+    "model": "claude-sonnet-5-5",
+    "attempts": 1,
+    "exit_code": 0,
+    "saw_unverified": false,
+    "returned_principles": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      22,
+      24,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      34,
+      35,
+      37
+    ],
+    "recommended_principles": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      22,
+      24,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      34,
+      35,
+      37
+    ],
+    "separation_types_read": [],
+    "disclosed": true
+  },
+  "C21": {
+    "improve": [
+      1
+    ],
+    "worsen": [
+      15,
+      19
+    ],
+    "principles_cited": [
+      35,
+      34,
+      31,
+      5,
+      12
+    ],
+    "ranking": [
+      {
+        "id": 35,
+        "count": 2
+      },
+      {
+        "id": 34,
+        "count": 2
+      },
+      {
+        "id": 31,
+        "count": 2
+      },
+      {
+        "id": 5,
+        "count": 1
+      },
+      {
+        "id": 12,
+        "count": 1
+      }
+    ],
+    "stated_separations": [],
+    "skill_used": true,
+    "file_reads": 6,
+    "files_read": [
+      "matrix/row-01.json",
+      "principles/p-35.json",
+      "principles/p-34.json",
+      "principles/p-31.json",
+      "principles/p-05.json",
+      "principles/p-12.json"
+    ],
+    "plugin_loaded": true,
+    "model": "claude-sonnet-5-5",
+    "attempts": 1,
+    "exit_code": 0,
+    "saw_unverified": false,
+    "returned_principles": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      8,
+      10,
+      11,
+      12,
+      14,
+      15,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      24,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "recommended_principles": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      8,
+      10,
+      11,
+      12,
+      14,
+      15,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      24,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "separation_types_read": [],
+    "disclosed": false
+  },
+  "C22": {
+    "improve": [
+      28,
+      29
+    ],
+    "worsen": [
+      32,
+      36
+    ],
+    "principles_cited": [
+      35,
+      18,
+      6,
+      27,
+      26
+    ],
+    "ranking": [
+      {
+        "id": 35,
+        "count": 2
+      },
+      {
+        "id": 18,
+        "count": 2
+      },
+      {
+        "id": 6,
+        "count": 1
+      },
+      {
+        "id": 27,
+        "count": 1
+      },
+      {
+        "id": 26,
+        "count": 1
+      }
+    ],
+    "stated_separations": [],
+    "skill_used": true,
+    "file_reads": 7,
+    "files_read": [
+      "matrix/row-28.json",
+      "matrix/row-29.json",
+      "principles/p-35.json",
+      "principles/p-18.json",
+      "principles/p-06.json",
+      "principles/p-27.json",
+      "principles/p-26.json"
+    ],
+    "plugin_loaded": true,
+    "model": "claude-sonnet-5-5",
+    "attempts": 1,
+    "exit_code": 0,
+    "saw_unverified": false,
+    "returned_principles": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      9,
+      10,
+      11,
+      13,
+      16,
+      17,
+      18,
+      19,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      39,
+      40
+    ],
+    "recommended_principles": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      9,
+      10,
+      11,
+      13,
+      16,
+      17,
+      18,
+      19,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      39,
+      40
+    ],
+    "separation_types_read": [],
+    "disclosed": false
+  },
+  "C23": {
+    "improve": [
+      15
+    ],
+    "worsen": [
+      3,
+      7
+    ],
+    "principles_cited": [
+      2,
+      19,
+      10,
+      9,
+      30
+    ],
+    "ranking": [
+      {
+        "id": 2,
+        "count": 2
+      },
+      {
+        "id": 19,
+        "count": 2
+      },
+      {
+        "id": 10,
+        "count": 1
+      },
+      {
+        "id": 9,
+        "count": 1
+      },
+      {
+        "id": 30,
+        "count": 1
+      }
+    ],
+    "stated_separations": [],
+    "skill_used": true,
+    "file_reads": 6,
+    "files_read": [
+      "matrix/row-15.json",
+      "principles/p-02.json",
+      "principles/p-19.json",
+      "principles/p-10.json",
+      "principles/p-09.json",
+      "principles/p-30.json"
+    ],
+    "plugin_loaded": true,
+    "model": "claude-sonnet-5-5",
+    "attempts": 1,
+    "exit_code": 0,
+    "saw_unverified": false,
+    "returned_principles": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      33,
+      34,
+      35,
+      38,
+      39,
+      40
+    ],
+    "recommended_principles": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      33,
+      34,
+      35,
+      38,
+      39,
+      40
+    ],
+    "separation_types_read": [],
+    "disclosed": true
+  },
+  "C24": {
+    "improve": [
+      2,
+      26
+    ],
+    "worsen": [
+      16,
+      27,
+      13
+    ],
+    "principles_cited": [
+      3,
+      40,
+      2,
+      28,
+      10
+    ],
+    "ranking": [
+      {
+        "id": 3,
+        "count": 3
+      },
+      {
+        "id": 40,
+        "count": 3
+      },
+      {
+        "id": 2,
+        "count": 2
+      },
+      {
+        "id": 28,
+        "count": 2
+      },
+      {
+        "id": 10,
+        "count": 1
+      }
+    ],
+    "stated_separations": [],
+    "skill_used": true,
+    "file_reads": 7,
+    "files_read": [
+      "matrix/row-02.json",
+      "matrix/row-26.json",
+      "principles/p-03.json",
+      "principles/p-40.json",
+      "principles/p-02.json",
+      "principles/p-28.json",
+      "principles/p-10.json"
+    ],
+    "plugin_loaded": true,
+    "model": "claude-sonnet-5-5",
+    "attempts": 1,
+    "exit_code": 0,
+    "saw_unverified": false,
+    "returned_principles": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      22,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "recommended_principles": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      22,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "separation_types_read": [],
+    "disclosed": true
+  },
+  "C25": {
+    "improve": [
+      28,
+      27
+    ],
+    "worsen": [
+      25,
+      39
+    ],
+    "principles_cited": [
+      10,
+      34,
+      28,
+      32,
+      24
+    ],
+    "ranking": [
+      {
+        "id": 10,
+        "count": 2
+      },
+      {
+        "id": 34,
+        "count": 2
+      },
+      {
+        "id": 28,
+        "count": 2
+      },
+      {
+        "id": 32,
+        "count": 2
+      },
+      {
+        "id": 24,
+        "count": 1
+      }
+    ],
+    "stated_separations": [],
+    "skill_used": true,
+    "file_reads": 7,
+    "files_read": [
+      "matrix/row-28.json",
+      "matrix/row-27.json",
+      "principles/p-10.json",
+      "principles/p-34.json",
+      "principles/p-28.json",
+      "principles/p-32.json",
+      "principles/p-24.json"
+    ],
+    "plugin_loaded": true,
+    "model": "claude-sonnet-5-5",
+    "attempts": 1,
+    "exit_code": 0,
+    "saw_unverified": false,
+    "returned_principles": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      38,
+      39,
+      40
+    ],
+    "recommended_principles": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      38,
+      39,
+      40
+    ],
+    "separation_types_read": [],
+    "disclosed": true
+  },
+  "C26": {
+    "improve": [
+      21,
+      17
+    ],
+    "worsen": [
+      20,
+      22
+    ],
+    "principles_cited": [
+      35,
+      38,
+      10,
+      21,
+      17
+    ],
+    "ranking": [
+      {
+        "id": 35,
+        "count": 2
+      },
+      {
+        "id": 38,
+        "count": 2
+      },
+      {
+        "id": 10,
+        "count": 1
+      },
+      {
+        "id": 21,
+        "count": 1
+      },
+      {
+        "id": 17,
+        "count": 1
+      }
+    ],
+    "stated_separations": [],
+    "skill_used": true,
+    "file_reads": 7,
+    "files_read": [
+      "matrix/row-21.json",
+      "matrix/row-17.json",
+      "principles/p-35.json",
+      "principles/p-38.json",
+      "principles/p-10.json",
+      "principles/p-21.json",
+      "principles/p-17.json"
+    ],
+    "plugin_loaded": true,
+    "model": "claude-sonnet-5-5",
+    "attempts": 1,
+    "exit_code": 0,
+    "saw_unverified": false,
+    "returned_principles": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      8,
+      9,
+      10,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "recommended_principles": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      8,
+      9,
+      10,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "separation_types_read": [],
+    "disclosed": false
+  },
+  "C27": {
+    "improve": [
+      27
+    ],
+    "worsen": [
+      32,
+      34,
+      36
+    ],
+    "principles_cited": [
+      1,
+      13,
+      11,
+      35
+    ],
+    "ranking": [
+      {
+        "id": 1,
+        "count": 2
+      },
+      {
+        "id": 13,
+        "count": 1
+      },
+      {
+        "id": 11,
+        "count": 1
+      },
+      {
+        "id": 35,
+        "count": 1
+      }
+    ],
+    "stated_separations": [],
+    "skill_used": true,
+    "file_reads": 5,
+    "files_read": [
+      "matrix/row-27.json",
+      "principles/p-01.json",
+      "principles/p-13.json",
+      "principles/p-11.json",
+      "principles/p-35.json"
+    ],
+    "plugin_loaded": true,
+    "model": "claude-sonnet-5-5",
+    "attempts": 1,
+    "exit_code": 0,
+    "saw_unverified": false,
+    "returned_principles": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      8,
+      9,
+      10,
+      11,
+      13,
+      14,
+      15,
+      16,
+      17,
+      19,
+      21,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      34,
+      35,
+      36,
+      38,
+      39,
+      40
+    ],
+    "recommended_principles": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      8,
+      9,
+      10,
+      11,
+      13,
+      14,
+      15,
+      16,
+      17,
+      19,
+      21,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      34,
+      35,
+      36,
+      38,
+      39,
+      40
+    ],
+    "separation_types_read": [],
+    "disclosed": false
+  },
+  "C29": {
+    "improve": [
+      34
+    ],
+    "worsen": [
+      1,
+      26
+    ],
+    "principles_cited": [
+      2,
+      27,
+      28,
+      35,
+      10
+    ],
+    "ranking": [
+      {
+        "id": 2,
+        "count": 2
+      },
+      {
+        "id": 27,
+        "count": 1
+      },
+      {
+        "id": 28,
+        "count": 1
+      },
+      {
+        "id": 35,
+        "count": 1
+      },
+      {
+        "id": 10,
+        "count": 1
+      }
+    ],
+    "stated_separations": [],
+    "skill_used": true,
+    "file_reads": 6,
+    "files_read": [
+      "matrix/row-34.json",
+      "principles/p-02.json",
+      "principles/p-27.json",
+      "principles/p-28.json",
+      "principles/p-35.json",
+      "principles/p-10.json"
+    ],
+    "plugin_loaded": true,
+    "model": "claude-sonnet-5-5",
+    "attempts": 1,
+    "exit_code": 0,
+    "saw_unverified": false,
+    "returned_principles": [
+      1,
+      2,
+      3,
+      4,
+      7,
+      9,
+      10,
+      11,
+      12,
+      13,
+      15,
+      16,
+      18,
+      19,
+      25,
+      26,
+      27,
+      28,
+      29,
+      31,
+      32,
+      34,
+      35
+    ],
+    "recommended_principles": [
+      1,
+      2,
+      3,
+      4,
+      7,
+      9,
+      10,
+      11,
+      12,
+      13,
+      15,
+      16,
+      18,
+      19,
+      25,
+      26,
+      27,
+      28,
+      29,
+      31,
+      32,
+      34,
+      35
+    ],
+    "separation_types_read": [],
+    "disclosed": true
+  },
+  "C30": {
+    "improve": [
+      8
+    ],
+    "worsen": [
+      25,
+      32
+    ],
+    "principles_cited": [
+      35,
+      16,
+      32,
+      18
+    ],
+    "ranking": [
+      {
+        "id": 35,
+        "count": 2
+      },
+      {
+        "id": 16,
+        "count": 1
+      },
+      {
+        "id": 32,
+        "count": 1
+      },
+      {
+        "id": 18,
+        "count": 1
+      }
+    ],
+    "stated_separations": [],
+    "skill_used": true,
+    "file_reads": 5,
+    "files_read": [
+      "matrix/row-08.json",
+      "principles/p-35.json",
+      "principles/p-16.json",
+      "principles/p-32.json",
+      "principles/p-18.json"
+    ],
+    "plugin_loaded": true,
+    "model": "claude-sonnet-5-5",
+    "attempts": 1,
+    "exit_code": 0,
+    "saw_unverified": false,
+    "returned_principles": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      7,
+      8,
+      9,
+      10,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      24,
+      25,
+      26,
+      27,
+      28,
+      30,
+      31,
+      32,
+      34,
+      35,
+      37,
+      38,
+      39,
+      40
+    ],
+    "recommended_principles": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      7,
+      8,
+      9,
+      10,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      24,
+      25,
+      26,
+      27,
+      28,
+      30,
+      31,
+      32,
+      34,
+      35,
+      37,
+      38,
+      39,
+      40
+    ],
+    "separation_types_read": [],
+    "disclosed": true
+  },
+  "C31": {
+    "improve": [
+      9,
+      21
+    ],
+    "worsen": [
+      1,
+      26
+    ],
+    "principles_cited": [
+      38,
+      8,
+      19,
+      10
+    ],
+    "ranking": [
+      {
+        "id": 38,
+        "count": 3
+      },
+      {
+        "id": 8,
+        "count": 2
+      },
+      {
+        "id": 19,
+        "count": 2
+      },
+      {
+        "id": 10,
+        "count": 1
+      }
+    ],
+    "stated_separations": [],
+    "skill_used": true,
+    "file_reads": 6,
+    "files_read": [
+      "matrix/row-09.json",
+      "matrix/row-21.json",
+      "principles/p-38.json",
+      "principles/p-08.json",
+      "principles/p-19.json",
+      "principles/p-10.json"
+    ],
+    "plugin_loaded": true,
+    "model": "claude-sonnet-5-5",
+    "attempts": 1,
+    "exit_code": 0,
+    "saw_unverified": false,
+    "returned_principles": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      40
+    ],
+    "recommended_principles": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      40
+    ],
+    "separation_types_read": [],
+    "disclosed": false
+  },
+  "C32": {
+    "improve": [
+      39
+    ],
+    "worsen": [
+      33,
+      36
+    ],
+    "principles_cited": [
+      28,
+      1,
+      12,
+      17
+    ],
+    "ranking": [
+      {
+        "id": 28,
+        "count": 2
+      },
+      {
+        "id": 1,
+        "count": 1
+      },
+      {
+        "id": 12,
+        "count": 1
+      },
+      {
+        "id": 17,
+        "count": 1
+      }
+    ],
+    "stated_separations": [],
+    "skill_used": true,
+    "file_reads": 5,
+    "files_read": [
+      "matrix/row-39.json",
+      "principles/p-28.json",
+      "principles/p-01.json",
+      "principles/p-12.json",
+      "principles/p-17.json"
+    ],
+    "plugin_loaded": true,
+    "model": "claude-sonnet-5-5",
+    "attempts": 1,
+    "exit_code": 0,
+    "saw_unverified": false,
+    "returned_principles": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      10,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "recommended_principles": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      10,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "separation_types_read": [],
+    "disclosed": true
+  },
+  "C33": {
+    "improve": [
+      14,
+      13
+    ],
+    "worsen": [
+      33
+    ],
+    "principles_cited": [
+      32,
+      40,
+      35,
+      28,
+      30
+    ],
+    "ranking": [
+      {
+        "id": 32,
+        "count": 2
+      },
+      {
+        "id": 40,
+        "count": 1
+      },
+      {
+        "id": 35,
+        "count": 1
+      },
+      {
+        "id": 28,
+        "count": 1
+      },
+      {
+        "id": 30,
+        "count": 1
+      }
+    ],
+    "stated_separations": [],
+    "skill_used": true,
+    "file_reads": 7,
+    "files_read": [
+      "matrix/row-14.json",
+      "matrix/row-13.json",
+      "principles/p-32.json",
+      "principles/p-40.json",
+      "principles/p-35.json",
+      "principles/p-28.json",
+      "principles/p-30.json"
+    ],
+    "plugin_loaded": true,
+    "model": "claude-sonnet-5-5",
+    "attempts": 1,
+    "exit_code": 0,
+    "saw_unverified": false,
+    "returned_principles": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      21,
+      22,
+      23,
+      24,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      37,
+      39,
+      40
+    ],
+    "recommended_principles": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      21,
+      22,
+      23,
+      24,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      37,
+      39,
+      40
+    ],
+    "separation_types_read": [],
+    "disclosed": true
+  }
+}
