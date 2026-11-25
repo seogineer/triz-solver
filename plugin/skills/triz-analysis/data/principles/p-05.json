@@ -1,0 +1,55 @@
+{
+  "cases": [
+    {
+      "domain": "software",
+      "en": "Sending requests one by one pays the connection overhead every time. Batching the requests that arrive within a short window handles far more with the same resources.",
+      "ko": "요청을 하나씩 보내면 매번 연결을 준비하는 시간이 든다. 짧은 시간 동안 모인 요청을 한 번에 묶어 보내면 같은 자원으로 훨씬 많이 처리한다.",
+      "sub_principle": 2
+    },
+    {
+      "domain": "electronics",
+      "en": "Mounting chips separately on a board makes long, slow wiring and uses space. Stacking several chips inside one package shortens signal paths and shrinks the board.",
+      "ko": "칩을 기판에 따로따로 올리면 배선이 길어져 느리고 자리를 많이 차지한다. 여러 칩을 한 패키지 안에 겹쳐 쌓으면 신호 경로가 짧아지고 기판이 작아진다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "medical",
+      "en": "Testing blood item by item means drawing blood several times. An analyzer that measures many items at once from one sample cuts it to a single draw.",
+      "ko": "혈액 검사를 항목마다 따로 하면 피를 여러 번 뽑아야 한다. 한 번 뽑은 피로 여러 항목을 동시에 재는 분석기를 쓰면 채혈이 한 번으로 준다.",
+      "sub_principle": 2
+    },
+    {
+      "domain": "everyday",
+      "en": "Door-to-door delivery sends vans round the same area again and again. Gathering a neighbourhood's parcels into one set of lockers takes a single stop.",
+      "ko": "택배를 집집마다 배달하면 차가 같은 동네를 여러 번 오간다. 한 동네로 가는 물건을 무인 보관함 한곳에 모으면 한 번 들러 끝난다.",
+      "sub_principle": 1
+    }
+  ],
+  "examples": {
+    "en": [
+      "An inertial unit packing several sensors in one package",
+      "A multi-axis machine tool that cuts in several directions at once",
+      "Several cars coupled into a single train"
+    ],
+    "ko": [
+      "여러 센서를 한 패키지에 넣은 관성 측정 장치",
+      "한 번에 여러 방향을 동시에 가공하는 다축 공작기계",
+      "한 열차에 연결한 여러 차량"
+    ]
+  },
+  "id": 5,
+  "name": {
+    "en": "Merging",
+    "ko": "통합"
+  },
+  "sub_principles": {
+    "en": [
+      "Bring identical or similar objects together in space",
+      "Bring identical or consecutive operations together in time"
+    ],
+    "ko": [
+      "같거나 비슷한 대상을 공간적으로 가깝게 합친다",
+      "같거나 이어지는 작업을 시간적으로 함께 수행하게 합친다"
+    ]
+  }
+}

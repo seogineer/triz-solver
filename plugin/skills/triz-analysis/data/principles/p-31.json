@@ -1,0 +1,55 @@
+{
+  "cases": [
+    {
+      "domain": "materials",
+      "en": "Thick, dense insulation is heavy. A material full of tiny pores is light and still blocks heat well.",
+      "ko": "단열재를 두껍고 빽빽하게 만들면 무겁다. 미세한 기공이 가득한 소재를 쓰면 가벼우면서도 열이 잘 통하지 않는다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "medical",
+      "en": "A smooth bone implant bonds poorly to the surrounding bone. A porous surface lets bone grow into the pores and anchor it firmly.",
+      "ko": "표면이 매끈한 인공 뼈는 주변 뼈와 잘 붙지 않는다. 표면을 다공질로 만들면 뼈가 기공 속으로 자라 들어가 단단히 붙는다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "electronics",
+      "en": "An electrode with little surface area stores little charge. Making it porous multiplies the surface area and stores far more charge in the same size.",
+      "ko": "전극 겉넓이가 작으면 저장할 수 있는 전하가 적다. 전극을 다공질로 만들어 겉넓이를 크게 늘리면 같은 크기에 훨씬 많은 전하를 담는다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "everyday",
+      "en": "Washing up means squeezing out detergent every time. A sponge with detergent already held in its pores lathers with just water.",
+      "ko": "설거지할 때마다 세제를 따로 짜야 한다. 스펀지 기공에 세제를 미리 채워 두면 물만 묻혀도 거품이 난다.",
+      "sub_principle": 2
+    }
+  ],
+  "examples": {
+    "en": [
+      "Lightweight, stiff metal foam",
+      "An activated-carbon filter trapping odor in its pores",
+      "A porous implant filled with medication"
+    ],
+    "ko": [
+      "가볍고 단단한 금속 폼",
+      "기공에 냄새 분자를 잡아 두는 활성탄 필터",
+      "약물을 채운 다공성 임플란트"
+    ]
+  },
+  "id": 31,
+  "name": {
+    "en": "Porous Materials",
+    "ko": "다공성 소재"
+  },
+  "sub_principles": {
+    "en": [
+      "Make the object porous or add porous elements",
+      "If it is already porous, fill the pores with something useful"
+    ],
+    "ko": [
+      "대상을 다공질로 만들거나 다공질 요소를 추가한다",
+      "이미 다공질이라면 그 기공에 유용한 물질을 채운다"
+    ]
+  }
+}

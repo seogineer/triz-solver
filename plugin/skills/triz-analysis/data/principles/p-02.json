@@ -1,0 +1,55 @@
+{
+  "cases": [
+    {
+      "domain": "mechanical",
+      "en": "Heat from a machine tool's motor and hydraulics warmed the cutting zone and threw dimensions off. Moving the heat sources out of the machine body keeps the cutting zone at a steady temperature.",
+      "ko": "공작기계의 모터와 유압 장치가 내는 열이 가공 부위를 데워 치수가 틀어졌다. 열을 내는 장치를 기계 본체 밖으로 떼어 내 가공 부위의 온도를 일정하게 지킨다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "software",
+      "en": "Making users download the whole app up front slows the first launch and drives them away. Only what the first screen needs is sent first; the rest loads when used.",
+      "ko": "앱 전체를 한 번에 내려받게 하면 첫 실행이 느려 사용자가 떠난다. 첫 화면에 꼭 필요한 기능만 골라 먼저 보내고 나머지는 쓸 때 받게 한다.",
+      "sub_principle": 2
+    },
+    {
+      "domain": "medical",
+      "en": "Taking a whole herb brewed as tea brings along useless compounds and gives uneven effects. Extracting and purifying the active compound alone allows an exact dose.",
+      "ko": "약초를 통째로 달여 먹으면 쓸모없는 성분까지 함께 먹게 되고 효과가 들쭉날쭉하다. 효과를 내는 성분만 뽑아 정제하면 양을 정확히 맞출 수 있다.",
+      "sub_principle": 2
+    },
+    {
+      "domain": "everyday",
+      "en": "Cooking smoke and grease odor spread through the whole home. A hood right above the stove draws them off where they form and sends them outside.",
+      "ko": "조리할 때 생기는 연기와 기름 냄새가 집 안 전체로 퍼진다. 연기가 생기는 자리 바로 위에서 후드로 빨아들여 밖으로 내보낸다.",
+      "sub_principle": 1
+    }
+  ],
+  "examples": {
+    "en": [
+      "A compressor moved into a soundproof booth",
+      "An air purifier that filters out only the dust",
+      "A speaker crossover passing only the needed frequency band"
+    ],
+    "ko": [
+      "소음원을 방음 부스로 옮긴 컴프레서",
+      "필터로 먼지만 분리해 내는 공기청정기",
+      "필요한 대역만 통과시키는 스피커 크로스오버"
+    ]
+  },
+  "id": 2,
+  "name": {
+    "en": "Taking Out (Extraction)",
+    "ko": "추출"
+  },
+  "sub_principles": {
+    "en": [
+      "Pull the disturbing part or property out of the object",
+      "Keep only the part or property that is truly needed and use it on its own"
+    ],
+    "ko": [
+      "방해가 되는 부분이나 성질을 대상에서 떼어낸다",
+      "꼭 필요한 부분이나 성질만 골라내 따로 쓴다"
+    ]
+  }
+}

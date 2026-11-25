@@ -1,0 +1,53 @@
+{
+  "cases": [
+    {
+      "domain": "medical",
+      "en": "Disinfecting a thermometer tip between patients takes time and still leaves a risk. A thin single-use cover goes over the tip for each reading.",
+      "ko": "체온계 끝을 환자마다 소독하면 시간이 들고 감염 위험이 남는다. 한 번 쓰고 버리는 얇은 덮개를 씌워 잰다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "mechanical",
+      "en": "Regrinding one precision tool whenever it dulls stops the machine for long. Cheap replaceable inserts are thrown away when dull and swapped in seconds.",
+      "ko": "정밀하게 다듬은 공구 하나를 무뎌질 때마다 갈아 쓰면 기계가 오래 멈춘다. 값싼 교체형 날을 끼워 쓰다 무뎌지면 버리고 새 날로 바꾼다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "software",
+      "en": "Long-running servers drift in configuration and get hard to manage. Servers are used briefly, discarded and recreated from the same image.",
+      "ko": "오래 켜 둔 서버는 설정이 조금씩 달라져 관리하기 어렵다. 서버를 짧게 쓰고 버린 뒤 같은 이미지로 새로 띄운다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "everyday",
+      "en": "A cleaning cloth needs washing after every use. A cheap disposable sheet clipped to a handle is used once and thrown away.",
+      "ko": "청소 걸레를 쓸 때마다 빨아야 해서 번거롭다. 한 번 쓰고 버리는 얇은 시트를 막대에 끼워 쓴다.",
+      "sub_principle": 1
+    }
+  ],
+  "examples": {
+    "en": [
+      "A disposable syringe",
+      "A paper cup",
+      "A disposable cleanroom suit"
+    ],
+    "ko": [
+      "일회용 주사기",
+      "종이컵",
+      "일회용 방진복"
+    ]
+  },
+  "id": 27,
+  "name": {
+    "en": "Cheap Short-Living",
+    "ko": "저가 단수명"
+  },
+  "sub_principles": {
+    "en": [
+      "Replace one expensive object with several cheap ones that do not last long"
+    ],
+    "ko": [
+      "비싼 대상 하나를 값싸고 수명이 짧은 여러 개로 바꾼다"
+    ]
+  }
+}

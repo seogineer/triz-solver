@@ -82,7 +82,7 @@ def test_score_counts_hallucinated_principles():
     assert out["rows"][0]["hallucinated_principles"] == [39, 40]
 
 
-def test_score_lookup_error_counts_all_cited_as_hallucinated():
+def test_score_oracle_error_counts_all_cited_as_hallucinated():
     results = {"A": {"improve": [14], "worsen": [14], "principles_cited": [1, 2]}}
     out = score_mod.score(CASES_2[:1], results, matrix=lambda i, w: None)
     assert out["hallucinated_principles"] == 2
@@ -130,11 +130,13 @@ def test_parse_answer_korean():
     assert r["improve"] == [9, 39]
     assert r["worsen"] == [29, 9]
     assert r["principles_cited"] == [10, 35]  # ranking-table rows are not "cited"
+    assert r["ranking"] == [{"id": 10, "count": 2}]
 
 
 def test_parse_answer_english():
     r = run_blind.parse_answer(ANSWER_EN)
-    assert r == {"improve": [9], "worsen": [23], "principles_cited": [35], "stated_separations": []}
+    assert r == {"improve": [9], "worsen": [23], "principles_cited": [35], "ranking": [],
+                 "stated_separations": []}
 
 
 def test_parse_stream_extracts_tool_calls_and_result():
@@ -142,14 +144,15 @@ def test_parse_stream_extracts_tool_calls_and_result():
         json.dumps({"type": "system", "subtype": "init", "plugins": [{"name": "triz-solver"}], "slash_commands": []}),
         json.dumps({"type": "assistant", "message": {"content": [
             {"type": "tool_use", "name": "Skill", "input": {"skill": "triz-solver:triz-analysis"}},
-            {"type": "tool_use", "name": "Bash", "input": {"command": "python3 x/lookup.py matrix --improve 1 --worsen 2"}},
-            {"type": "tool_use", "name": "Bash", "input": {"command": "ls"}}]}}),
+            read_call("r1", "/x/skills/triz-analysis/data/matrix/row-01.json"),
+            read_call("r2", "/x/skills/triz-analysis/SKILL.md")]}}),
+        read_result("r1"), read_result("r2"),
         "not json",
         json.dumps({"type": "result", "result": "final text"}),
     ]
     info = run_blind.parse_stream(lines)
     assert info["plugin_loaded"] and info["skill_used"]
-    assert info["lookup_calls"] == 1
+    assert info["file_reads"] == 1 and info["files_read"] == ["matrix/row-01.json"]  # SKILL.md is no data file
     assert info["text"] == "final text"
 
 
@@ -166,7 +169,7 @@ def test_parse_stream_detects_missing_plugin_and_skill():
     lines = [json.dumps({"type": "system", "subtype": "init", "plugins": [], "slash_commands": ["help"]}),
              json.dumps({"type": "result", "result": "answer from memory"})]
     info = run_blind.parse_stream(lines)
-    assert not info["plugin_loaded"] and not info["skill_used"] and info["lookup_calls"] == 0
+    assert not info["plugin_loaded"] and not info["skill_used"] and info["file_reads"] == 0
 
 
 def test_build_prompt_modes():
@@ -197,13 +200,13 @@ def test_parse_answer_labels_with_translation_and_bold_ids():
 
 
 def test_run_command_is_isolated_from_host_tools():
-    assert run_blind.ISOLATION[:2] == ["--tools", "Bash,Read,Skill"]
+    assert run_blind.ISOLATION[:2] == ["--tools", "Read,Skill"]   # no Bash: no oracle for the subject
     assert "--strict-mcp-config" in run_blind.ISOLATION
 
 
 def test_parse_answer_empty():
     assert run_blind.parse_answer("") == {"improve": [], "worsen": [], "principles_cited": [],
-                                          "stated_separations": []}
+                                          "ranking": [], "stated_separations": []}
 
 
 def test_plugin_copy_excludes_expected_values(tmp_path):
@@ -211,26 +214,35 @@ def test_plugin_copy_excludes_expected_values(tmp_path):
     assert (tmp_path / "skills" / "triz-analysis" / "SKILL.md").exists()
     assert not (tmp_path / "tests").exists()
     assert not any(tmp_path.rglob("cases.yaml")) and not any(tmp_path.rglob("physical-cases.json"))
+    # the copy holds plugin/ only: the data the subject reads, no root data/, tools/ or oracle
+    assert (tmp_path / "skills" / "triz-analysis" / "data" / "matrix" / "row-01.json").exists()
+    assert not any(tmp_path.rglob("lookup.py")) and not any(tmp_path.rglob("contradiction-matrix.json"))
+    assert not (tmp_path / "data").exists() and not (tmp_path / "tools").exists()
 
 
 # ------------------------------------------- unverified-cell disclosure ---
 
-def test_parse_stream_sees_unverified_warning_in_tool_result():
-    lines = [
-        json.dumps({"type": "system", "subtype": "init", "plugins": [{"name": "triz-solver"}], "slash_commands": []}),
-        json.dumps({"type": "user", "message": {"content": [
-            {"type": "tool_result", "content": '{"warnings": [{"code": "unverified_cell", "improve": 1, "worsen": 28}]}'}]}}),
-        json.dumps({"type": "result", "result": "ok"}),
-    ]
-    assert run_blind.parse_stream(lines)["saw_unverified"] is True
-    assert run_blind.parse_stream(lines[:1] + lines[2:])["saw_unverified"] is False
+def test_parse_stream_collects_unverified_rows_from_read_row(tmp_path):
+    data = tmp_path / "data"
+    (data / "matrix").mkdir(parents=True)
+    (data / "matrix" / "row-01.json").write_text(
+        json.dumps({"cells": {"3": [1, 2]}, "unverified": [28], "improve": 1}), encoding="utf-8")
+    lines = [json.dumps({"type": "assistant", "message": {"content": [
+                 read_call("r1", "/p/skills/triz-analysis/data/matrix/row-01.json")]}}),
+             read_result("r1")]
+    info = run_blind.parse_stream(lines, data)
+    assert info["unverified_rows"] == {"1": [28]}
+    assert run_blind.saw_unverified(info["unverified_rows"], [1], [28, 3]) is True
+    assert run_blind.saw_unverified(info["unverified_rows"], [1], [3]) is False
+    assert run_blind.saw_unverified(info["unverified_rows"], [2], [28]) is False
 
 
 def test_parse_stream_ignores_the_word_in_file_text():
-    """Reading SKILL.md shows 'unverified_cell' in prose; that is not a lookup warning."""
-    lines = [json.dumps({"type": "user", "message": {"content": [
-        {"type": "tool_result", "content": "143\t- `unverified_cell`: 그 조합의 셀은 ..."}]}})]
-    assert run_blind.parse_stream(lines)["saw_unverified"] is False
+    """Reading SKILL.md shows 'unverified' in prose; that is not a data warning."""
+    lines = [json.dumps({"type": "assistant", "message": {"content": [
+                 read_call("r1", "/p/skills/triz-analysis/SKILL.md")]}}),
+             read_result("r1", text="162\t**`unverified` 키** ...")]
+    assert run_blind.parse_stream(lines)["unverified_rows"] == {}
 
 
 @pytest.mark.parametrize("text, expected", [
@@ -257,26 +269,105 @@ def test_score_unverified_disclosure_summary():
     assert u == {"cases_with_warning": 2, "disclosed": 1, "not_disclosed": ["U2"]}
 
 
-# --------------------------------- principles actually returned by lookup ---
+# ------------------------------------------ principles in the files read ---
 
-def _tool_result(payload):
-    return json.dumps({"type": "user", "message": {"content": [
-        {"type": "tool_result", "content": [{"type": "text", "text": json.dumps(payload)}]}]}})
+DATA = Path(__file__).resolve().parent.parent / "plugin" / "skills" / "triz-analysis" / "data"
 
 
-def test_parse_stream_collects_principles_returned_by_lookup():
-    lines = [
-        json.dumps({"type": "system", "subtype": "init", "plugins": [{"name": "triz-solver"}], "slash_commands": []}),
-        _tool_result({"pairs": [{"improve": 34, "worsen": 26, "principles": [2, 28, 10, 25]}],
-                      "ranking": [{"id": 2, "count": 1, "name": "x"}], "warnings": []}),
-        _tool_result({"principles": [{"id": 35, "name": "y"}]}),
-        _tool_result({"unrelated": [7, 8]}),
-    ]
+def read_call(tool_id, path):
+    return {"type": "tool_use", "id": tool_id, "name": "Read", "input": {"file_path": path}}
+
+
+def read_result(tool_id, text="1\t{", is_error=False):
+    """A Read tool result; the text may carry `cat -n` line numbers (it is not parsed)."""
+    block = {"type": "tool_result", "tool_use_id": tool_id, "content": text}
+    if is_error:
+        block["is_error"] = True
+    return json.dumps({"type": "user", "message": {"content": [block]}})
+
+
+def read_stream(*reads, errors=()):
+    """Fake stream: the agent reads each path (under a plugin copy path), one result each."""
+    base = "/tmp/x/plugin/skills/triz-analysis/data/"
+    calls = [read_call(f"t{i}", base + p) for i, p in enumerate(reads)]
+    out = [json.dumps({"type": "assistant", "message": {"content": calls}})]
+    out += [read_result(f"t{i}", is_error=p in errors) for i, p in enumerate(reads)]
+    return out
+
+
+def _row_principles(n):
+    cells = json.loads((DATA / "matrix" / f"row-{n:02d}.json").read_text(encoding="utf-8"))["cells"]
+    return {p for cell in cells.values() for p in cell}
+
+
+def test_parse_stream_collects_principles_from_read_files():
+    info = run_blind.parse_stream(read_stream("matrix/row-34.json", "principles/p-35.json"))
+    assert info["file_reads"] == 2
+    assert info["recommended_principles"] == sorted(_row_principles(34))
+    assert info["returned_principles"] == sorted(_row_principles(34) | {35})
+
+
+def test_read_principle_record_is_returned_not_recommended():
+    info = run_blind.parse_stream(read_stream("principles/p-07.json"))
+    assert info["returned_principles"] == [7] and info["recommended_principles"] == []
+
+
+def test_unread_file_is_no_evidence():
+    no_reads = run_blind.parse_stream([json.dumps({"type": "result", "result": "answer from memory"})])
+    assert no_reads["returned_principles"] == [] and no_reads["file_reads"] == 0
+    only_row = run_blind.parse_stream(read_stream("matrix/row-34.json"))
+    assert only_row["files_read"] == ["matrix/row-34.json"]
+
+
+def test_failed_read_and_non_data_paths_do_not_count():
+    lines = read_stream("matrix/row-34.json", "principles/p-01.json", errors={"matrix/row-34.json"})
+    lines += [json.dumps({"type": "assistant", "message": {"content": [
+        read_call("z1", "/tmp/x/plugin/skills/triz-analysis/data/../../../../../etc/passwd"),
+        read_call("z2", "/tmp/x/tools/contradiction-matrix.json"),
+        read_call("z3", "/tmp/x/data/contradiction-matrix.json")]}}),
+        read_result("z1"), read_result("z2"), read_result("z3")]
     info = run_blind.parse_stream(lines)
-    assert info["returned_principles"] == [2, 10, 25, 28, 35]
+    assert info["files_read"] == ["principles/p-01.json"]
 
 
-def test_score_prefers_observed_lookup_output_over_recomputation():
+def test_read_without_result_does_not_count():
+    lines = read_stream("principles/p-03.json")[:1]
+    assert run_blind.parse_stream(lines)["file_reads"] == 0
+
+
+def test_same_file_read_twice_counts_once():
+    info = run_blind.parse_stream(read_stream("principles/p-03.json", "principles/p-03.json"))
+    assert info["file_reads"] == 1
+
+
+def test_data_file_kind():
+    k = run_blind.data_file_kind
+    assert k("/a/plugin/skills/triz-analysis/data/matrix/row-09.json") == ("row", 9)
+    assert k("data/principles/p-40.json") == ("principle", 40)
+    assert k("/a/data/separation-principles.json") == ("separation", 0)
+    assert k("/a/data/parameters.json") == ("parameters", 0)
+    assert k("/a/mydata/matrix/row-09.json") is None
+    assert k("/a/data/matrix/row-9.json") is None
+    assert k("/a/SKILL.md") is None
+
+
+def test_hallucination_judged_by_files_read():
+    """A principle from a file the agent read passes; one from an unread file is caught."""
+    row = sorted(_row_principles(34))
+    outside = next(p for p in range(1, 41) if p not in row)
+    info = run_blind.parse_stream(read_stream("matrix/row-34.json"))
+    cases = [{"id": "A", "expected_improve": [34], "expected_worsen": [1]}]
+    results = {"A": {"improve": [34], "worsen": [1], "principles_cited": [row[0], outside],
+                     "returned_principles": info["returned_principles"]}}
+    out = score_mod.score(cases, results, matrix=lambda i, w: set())
+    assert out["rows"][0]["hallucinated_principles"] == [outside]
+    # reading the record of the missing principle makes the citation legitimate
+    info2 = run_blind.parse_stream(read_stream("matrix/row-34.json", f"principles/p-{outside:02d}.json"))
+    results["A"]["returned_principles"] = info2["returned_principles"]
+    assert score_mod.score(cases, results, matrix=lambda i, w: set())["hallucinated_principles"] == 0
+
+
+def test_score_prefers_principles_of_read_files_over_recomputation():
     cases = [{"id": "A", "expected_improve": [34], "expected_worsen": [1]}]
     results = {"A": {"improve": [34], "worsen": [1], "principles_cited": [2, 25, 99],
                      "returned_principles": [2, 25, 28]}}
@@ -306,31 +397,14 @@ def test_physical_cases_are_well_formed():
         assert c["expected_separation"] and set(c["expected_separation"]) <= SEPARATION_IDS
 
 
-@pytest.mark.parametrize("command, types", [
-    ("python3 /x/scripts/lookup.py separation --type time,space --lang ko", ["time", "space"]),
-    ("cd /x && python3 scripts/lookup.py separation --type=system", ["system"]),
-    ("python3 lookup.py separation --lang en", []),
-    ("python3 lookup.py matrix --improve 1 --worsen 2", []),
-])
-def test_separation_types_from_command(command, types):
-    assert run_blind.separation_types(command) == types
-
-
-def test_parse_stream_collects_separation_calls_and_recommendations():
-    lines = [
-        json.dumps({"type": "system", "subtype": "init", "plugins": [{"name": "triz-solver"}], "slash_commands": []}),
-        json.dumps({"type": "assistant", "message": {"content": [
-            {"type": "tool_use", "name": "Bash", "input": {"command": "python3 l/lookup.py separation"}},
-            {"type": "tool_use", "name": "Bash", "input": {"command": "python3 l/lookup.py separation --type time,system"}},
-            {"type": "tool_use", "name": "Bash", "input": {"command": "python3 l/lookup.py separation --type time"}}]}}),
-        _tool_result({"separations": [{"id": "time", "related_principles": [{"id": 10, "name": "a"}]}],
-                      "ranking": [{"id": 10, "count": 1, "name": "a"}, {"id": 1, "count": 1, "name": "b"}]}),
-        _tool_result({"principles": [{"id": 35, "name": "y"}]}),
-    ]
-    info = run_blind.parse_stream(lines)
-    assert info["separation_types"] == ["time", "system"]
-    assert info["recommended_principles"] == [1, 10]
-    assert info["returned_principles"] == [1, 10, 35]
+def test_parse_stream_reads_separation_file():
+    info = run_blind.parse_stream(read_stream("separation-principles.json", "principles/p-35.json"))
+    sep = json.loads((DATA / "separation-principles.json").read_text(encoding="utf-8"))["separations"]
+    assert info["separation_types_read"] == [x["id"] for x in sep]
+    want = {p for x in sep for p in x["related_principles"]}
+    assert info["recommended_principles"] == sorted(want)
+    assert info["returned_principles"] == sorted(want | {35})
+    assert run_blind.parse_stream(read_stream("principles/p-35.json"))["separation_types_read"] == []
 
 
 def test_score_physical():
@@ -339,16 +413,18 @@ def test_score_physical():
              {"id": "P3", "expected_separation": ["direction"]},
              {"id": "P4", "expected_separation": ["time"]}]
     results = {
-        "P1": {"separation_types": ["time"], "principles_cited": [10], "recommended_principles": [9, 10]},
-        "P2": {"separation_types": ["condition", "system"], "principles_cited": [1, 99],
-               "recommended_principles": [1, 5]},
-        "P3": {"separation_types": [], "principles_cited": [4], "recommended_principles": []},
+        "P1": {"stated_separations": ["time"], "separation_types_read": ["time", "space"],
+               "principles_cited": [10], "recommended_principles": [9, 10]},
+        "P2": {"stated_separations": ["condition", "system"], "separation_types_read": ["time"],
+               "principles_cited": [1, 99], "recommended_principles": [1, 5]},
+        "P3": {"stated_separations": [], "separation_types_read": [],
+               "principles_cited": [4], "recommended_principles": []},
     }
     out = score_mod.score_physical(cases, results)
     assert out["cases_scored"] == 3 and out["cases_missing"] == ["P4"]
     assert [r["hit"] for r in out["rows"]] == [True, True, False]
     assert [r["first_hit"] for r in out["rows"]] == [True, False, False]
-    assert out["hallucinated_principles"] == 2   # 99 in P2, 4 in P3 (nothing looked up)
+    assert out["hallucinated_principles"] == 2   # 99 in P2, 4 in P3 (nothing read)
     assert out["used_separation_rate"] == 2 / 3
 
 
@@ -365,25 +441,58 @@ def test_stated_separations_reads_chosen_rows():
     assert run_blind.stated_separations(text) == ["time", "system", "direction"]
 
 
-def test_score_physical_accepts_stated_choice_as_secondary():
+def test_stated_separations_ignores_negated_choices():
+    text = """| 유형 | P | 반대 P | 판단 |
+| --- | --- | --- | --- |
+| 공간 | a | b | 이번에는 선택하지 않음 |
+| 시간 | a | b | 미선택 |
+| 관계 | a | b | 선택 안 함 |
+| 방향 | a | b | not selected |
+| Separation in space | a | b | not adopted |
+| Separation in time | a | b | unselected |
+| Separation in relation | a | b | deselected |
+| 시스템 수준 | a | b | 선택 |
+"""
+    assert run_blind.stated_separations(text) == ["system"]
+    assert run_blind.stated_separations("| 시간 | a | b | 선택 안정적 |\n| 공간 | a | b | 선택 안 B |") == ["time", "space"]
+
+
+def test_score_physical_hit_needs_a_stated_choice():
+    """Reading the separation file is not a choice: only the answer's chosen types count."""
     cases = [{"id": "P1", "expected_separation": ["time"]}]
-    results = {"P1": {"separation_types": [], "stated_separations": ["time"],
+    results = {"P1": {"stated_separations": [], "separation_types_read": ["time", "space"],
                       "principles_cited": [], "recommended_principles": [9]}}
     out = score_mod.score_physical(cases, results)
-    assert out["separation_hit_rate"] == 0 and out["hit_rate_stated_or_observed"] == 1
+    assert out["separation_hit_rate"] == 0 and out["used_separation_rate"] == 1
 
 
-def test_json_objects_found_inside_chained_command_output():
-    guide = "# guide\nsome {braces} in text\n"
-    sep = {"separations": [{"id": "time", "related_principles": [{"id": 15}, {"id": 10}]}], "ranking": []}
-    text = guide + json.dumps(sep, indent=2) + "\n"
-    objs = list(run_blind._json_objects(text))
-    assert objs == [sep]
-    assert run_blind._recommended_principles(objs[0]) == {15, 10}
+# ----------------------------------------------------------- ranking_match ---
+
+def test_ranking_match_compares_first_n_of_oracle():
+    oracle = [(35, 2), (8, 1), (14, 1), (15, 1)]
+    rm = score_mod.ranking_match
+    assert rm([{"id": 35, "count": 2}, {"id": 8, "count": 1}], oracle) is True
+    assert rm([{"id": 35, "count": 2}, {"id": 14, "count": 1}], oracle) is False   # wrong order
+    assert rm([{"id": 35, "count": 1}], oracle) is False                           # wrong count
+    assert rm([], oracle) is None and rm([{"id": 35, "count": 2}], None) is None
 
 
-def test_json_objects_pure_and_multiple():
-    a, b = {"pairs": []}, {"principles": [{"id": 1}]}
-    assert list(run_blind._json_objects(json.dumps(a))) == [a]
-    assert list(run_blind._json_objects(json.dumps(a) + "\n" + json.dumps(b))) == [a, b]
-    assert list(run_blind._json_objects("no json here")) == []
+def test_score_reports_ranking_match_rate():
+    cases = [{"id": "A", "expected_improve": [9], "expected_worsen": [1]},
+             {"id": "B", "expected_improve": [9], "expected_worsen": [27]},
+             {"id": "C", "expected_improve": [9], "expected_worsen": [2]}]
+    good = [{"id": 35, "count": 2}, {"id": 8, "count": 1}]
+    bad = [{"id": 8, "count": 1}, {"id": 35, "count": 2}]
+    base = {"principles_cited": [], "returned_principles": []}
+    results = {"A": {"improve": [9], "worsen": [1], **base, "ranking": good},
+               "B": {"improve": [9], "worsen": [27], **base, "ranking": bad},
+               "C": {"improve": [9], "worsen": [2], **base}}
+    out = score_mod.score(cases, results, matrix=fake_matrix, ranking=lambda i, w: [(35, 2), (8, 1)])
+    assert [r["ranking_match"] for r in out["rows"]] == [True, False, None]
+    assert out["ranking_checked"] == 2 and out["ranking_match_rate"] == 0.5
+    assert out["ranking_unchecked"] == ["C"]
+
+
+def test_parse_answer_ranking_feeds_ranking_match():
+    text = "| 순위 | 원리 | 등장 횟수 |\n| --- | --- | --- |\n| 2 | #8 x | 1 |\n| 1 | #35 y | 2 |\n"
+    assert run_blind.parse_answer(text)["ranking"] == [{"id": 35, "count": 2}, {"id": 8, "count": 1}]

@@ -1,0 +1,53 @@
+{
+  "cases": [
+    {
+      "domain": "mechanical",
+      "en": "Drilling a hole to exact size and position in one pass is hard. A slightly smaller hole is drilled first and then opened to size with a precision tool.",
+      "ko": "구멍을 한 번에 정확한 크기와 위치로 뚫기 어렵다. 조금 작게 먼저 뚫고 마지막에 정밀 공구로 넓혀 맞춘다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "software",
+      "en": "Building a feature that handles every case perfectly in one go is hard. The core is released first and the rest is filled in from real use.",
+      "ko": "모든 경우를 완벽히 처리하는 기능을 한 번에 만들기 어렵다. 핵심만 먼저 내놓고 실제로 쓰는 모습을 보며 나머지를 채운다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "medical",
+      "en": "The right dose for each person is hard to know at the start. Treatment begins low and is raised step by step while the response is watched.",
+      "ko": "사람마다 알맞은 약의 양을 처음부터 정확히 정하기 어렵다. 적은 양으로 시작해 반응을 보며 조금씩 늘려 맞춘다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "everyday",
+      "en": "Cutting wallpaper exactly to the wall is hard. Strips are cut a little long, hung, and trimmed at the ceiling and floor.",
+      "ko": "벽지를 벽 크기에 딱 맞게 재단하기 어렵다. 조금 길게 잘라 붙인 뒤 천장과 바닥 모서리에서 남는 부분을 칼로 잘라 낸다.",
+      "sub_principle": 1
+    }
+  ],
+  "examples": {
+    "en": [
+      "Painting too much and wiping off the excess",
+      "Spin coating: over-dispense, then spin off the surplus",
+      "Cutting a board slightly oversize and trimming to fit"
+    ],
+    "ko": [
+      "일단 과하게 칠한 뒤 남는 부분을 닦아내는 도장 작업",
+      "과량으로 분사한 뒤 원심력으로 털어내는 스핀 코팅",
+      "조금 크게 잘라 두었다가 다듬는 목재 가공"
+    ]
+  },
+  "id": 16,
+  "name": {
+    "en": "Partial or Excessive Action",
+    "ko": "과부족 조치"
+  },
+  "sub_principles": {
+    "en": [
+      "If the full result is hard to reach, aim slightly under or slightly over and fix the remainder afterwards"
+    ],
+    "ko": [
+      "목표를 100% 달성하기 어려우면 조금 덜 하거나 조금 더 하는 쪽을 택한다"
+    ]
+  }
+}

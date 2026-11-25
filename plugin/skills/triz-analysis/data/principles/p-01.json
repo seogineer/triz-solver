@@ -1,0 +1,57 @@
+{
+  "cases": [
+    {
+      "domain": "software",
+      "en": "A single server program had to be redeployed as a whole for any change, taking the service down meanwhile. Split into small services that run on their own, only the changed part is redeployed while the rest keeps running.",
+      "ko": "하나로 묶인 서버 프로그램은 기능 하나를 고쳐도 전체를 다시 배포해야 해서 그동안 서비스가 멈췄다. 기능별로 따로 실행되는 작은 서비스로 나누자, 바꾼 부분만 배포하고 나머지는 계속 돌아간다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "mechanical",
+      "en": "A long conveyor built in one piece is hard to ship and repair. Made of short modules of one standard size bolted together, it installs easily and a failed section can be swapped on its own.",
+      "ko": "긴 컨베이어를 통째로 만들면 운반과 수리가 어렵다. 같은 규격의 짧은 모듈을 볼트로 잇게 하면 설치가 쉽고, 고장 난 구간만 떼어 바꿀 수 있다.",
+      "sub_principle": 2
+    },
+    {
+      "domain": "electronics",
+      "en": "A backlight that lights the whole screen at once wastes power on dark scenes and washes out blacks. Divided into zones whose brightness is set separately, it uses less power and gives higher contrast.",
+      "ko": "화면 전체를 한 번에 밝히는 백라이트는 어두운 장면에서도 전력을 쓰고 검은색이 뜬다. 백라이트를 여러 구역으로 나눠 구역마다 밝기를 따로 조절하면 전력은 줄고 명암비는 높아진다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "medical",
+      "en": "The dose cannot shrink, yet a large tablet is hard to swallow. The same dose split into many small pellets inside a capsule is easier to take, and the pellets can dissolve at different rates.",
+      "ko": "약효 성분의 양은 줄일 수 없는데 큰 알약은 삼키기 어렵다. 같은 양을 작은 알갱이 여러 개로 나눠 캡슐에 담으면 삼키기 쉬워지고, 알갱이마다 녹는 속도를 달리할 수도 있다.",
+      "sub_principle": 3
+    }
+  ],
+  "examples": {
+    "en": [
+      "Modular furniture",
+      "A battery pack divided into cells",
+      "Carpet tiles replaced one square at a time"
+    ],
+    "ko": [
+      "조립식 모듈 가구",
+      "여러 구역으로 나뉜 배터리 팩",
+      "조각 단위로 교체하는 타일 카펫"
+    ]
+  },
+  "id": 1,
+  "name": {
+    "en": "Segmentation",
+    "ko": "분할"
+  },
+  "sub_principles": {
+    "en": [
+      "Split the object into parts that can work independently",
+      "Build it so it is easy to assemble and take apart",
+      "Push the division further into finer pieces"
+    ],
+    "ko": [
+      "대상을 서로 독립적으로 움직이는 부분으로 나눈다",
+      "쉽게 조립하고 분해할 수 있는 구조로 만든다",
+      "나누는 정도를 더 높여 조각을 더 잘게 한다"
+    ]
+  }
+}

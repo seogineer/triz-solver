@@ -1,0 +1,53 @@
+{
+  "cases": [
+    {
+      "domain": "mechanical",
+      "en": "Lifting a heavy die into a press needs a crane. A roller cart at the same height as the press bed lets it slide straight across.",
+      "ko": "무거운 금형을 기계에 올리고 내리려면 크레인이 필요하다. 기계 작업대와 같은 높이의 롤러 대차에 실어 옆으로 밀어 넣는다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "electronics",
+      "en": "Small differences in ground potential between devices drive noise currents. Bonding all devices to one point puts them at the same potential and the noise drops sharply.",
+      "ko": "장비마다 접지 전위가 조금씩 다르면 그 차이로 잡음 전류가 흐른다. 모든 장비를 한 점에 묶어 같은 전위로 맞추면 잡음이 크게 줄어든다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "medical",
+      "en": "Lifting a patient from bed to operating table risks injury to everyone. Matching the heights and sliding the patient across on a transfer board avoids the lift.",
+      "ko": "환자를 침대에서 수술대로 옮기려고 들어 올리면 환자도 옮기는 사람도 다칠 수 있다. 두 침대 높이를 맞추고 미끄럼판을 깔아 옆으로 밀어 옮긴다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "everyday",
+      "en": "Wheelchairs and strollers struggle with bus steps. A bus whose floor sits close to curb height needs only a short ramp for them to roll in.",
+      "ko": "휠체어나 유모차는 버스 계단을 오르기 어렵다. 바닥이 정류장 턱 높이에 가깝게 낮은 버스는 짧은 경사판만으로 들어갈 수 있다.",
+      "sub_principle": 1
+    }
+  ],
+  "examples": {
+    "en": [
+      "A canal that raises and lowers boats with locks",
+      "A workbench set to the conveyor's height",
+      "A service pit that lets mechanics work beneath a car"
+    ],
+    "ko": [
+      "수위 차이를 갑문으로 올리고 내리는 운하",
+      "컨베이어 높이에 맞춘 작업대",
+      "차 밑을 작업하기 위한 정비용 피트"
+    ]
+  },
+  "id": 12,
+  "name": {
+    "en": "Equipotentiality",
+    "ko": "등퍼텐셜"
+  },
+  "sub_principles": {
+    "en": [
+      "Change the working conditions so no lifting or lowering is needed, keeping everything at one energy level"
+    ],
+    "ko": [
+      "위치 에너지 차이가 생기지 않게 작업 조건을 바꿔 들어 올리거나 내릴 일을 없앤다"
+    ]
+  }
+}

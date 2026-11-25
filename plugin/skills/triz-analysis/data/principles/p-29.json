@@ -1,0 +1,53 @@
+{
+  "cases": [
+    {
+      "domain": "mechanical",
+      "en": "Raising a heavy car with a screw jack is slow and hard work. In a hydraulic jack, pushing a small piston drives oil that lifts a large one.",
+      "ko": "무거운 차를 나사식 잭으로 들어 올리면 느리고 힘들다. 작은 피스톤을 누르면 기름이 큰 피스톤을 밀어 올리는 유압 잭을 쓴다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "medical",
+      "en": "A rigid splint does not fit a swollen injured leg. An inflatable splint takes the shape of the leg and grips it evenly.",
+      "ko": "딱딱한 부목은 다친 다리의 부기에 맞지 않는다. 공기를 넣어 부풀리는 부목은 다리 모양에 맞춰 고르게 감싼다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "everyday",
+      "en": "Items shift in a shipping box and break. Filling the gaps with air-filled plastic cushions holds them lightly in place.",
+      "ko": "포장 상자 속 물건이 움직이다 깨진다. 빈 곳을 공기를 채운 비닐 쿠션으로 메우면 가볍게 고정된다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "materials",
+      "en": "Pushing a plastic part out of a mold with ejector pins leaves marks. A blast of compressed air releases it instead.",
+      "ko": "금형에서 플라스틱 제품을 핀으로 밀어내면 표면에 자국이 남는다. 압축 공기를 불어 넣어 제품을 떼어 낸다.",
+      "sub_principle": 1
+    }
+  ],
+  "examples": {
+    "en": [
+      "An air-cushioned sole",
+      "A hydraulic brake",
+      "An air-flotation conveyor"
+    ],
+    "ko": [
+      "공기 쿠션 밑창",
+      "유압 브레이크",
+      "공기 부양 컨베이어"
+    ]
+  },
+  "id": 29,
+  "name": {
+    "en": "Pneumatics and Hydraulics",
+    "ko": "공압 및 수압"
+  },
+  "sub_principles": {
+    "en": [
+      "Use a gas or liquid in place of solid parts to do the work"
+    ],
+    "ko": [
+      "고체 부분 대신 기체나 액체를 사용해 작동시킨다"
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "cases": [
+    {
+      "domain": "mechanical",
+      "en": "A separate frame plus body panels is heavy. A body whose skin also carries the loads needs no separate frame and weighs less.",
+      "ko": "차체 뼈대와 겉판을 따로 만들면 무겁다. 겉판이 하중까지 받게 만든 일체형 차체는 별도 뼈대를 없애 가벼워진다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "electronics",
+      "en": "A display plus a keypad makes a device bigger. A screen that both shows and takes touch input removes the keypad and leaves room for a larger screen.",
+      "ko": "화면과 버튼 자판을 따로 두면 기기가 커진다. 화면이 표시와 터치 입력을 함께 맡게 하면 자판을 없애고 화면을 키울 수 있다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "medical",
+      "en": "Separate devices for ECG, oxygen saturation and blood pressure crowd the bedside with cables. One monitor that gathers these measurements shows them together on one screen.",
+      "ko": "심전도, 산소포화도, 혈압을 기기마다 따로 재면 병상 둘레가 선과 장비로 붐빈다. 필요한 측정을 한 감시 장치에 모으면 한 화면에서 함께 본다.",
+      "sub_principle": 2
+    },
+    {
+      "domain": "everyday",
+      "en": "A separate shoe cabinet eats up a small entrance. Making the entrance step a hollow storage box removes the need for one.",
+      "ko": "좁은 현관에 신발장을 따로 들이면 지나다닐 자리가 줄어든다. 현관 디딤판을 속이 빈 수납장으로 만들면 따로 신발장을 둘 필요가 없다.",
+      "sub_principle": 1
+    }
+  ],
+  "examples": {
+    "en": [
+      "A travel toothbrush whose handle stores toothpaste",
+      "A walking stick that doubles as a seat",
+      "A smartphone that replaces a camera, phone and map"
+    ],
+    "ko": [
+      "칫솔 손잡이에 치약을 넣은 여행용 칫솔",
+      "지팡이 겸 의자",
+      "카메라·전화·지도를 한데 모은 스마트폰"
+    ]
+  },
+  "id": 6,
+  "name": {
+    "en": "Universality",
+    "ko": "다기능성"
+  },
+  "sub_principles": {
+    "en": [
+      "Let one object perform several functions so other objects are no longer needed",
+      "Gather the needed functions into a single object"
+    ],
+    "ko": [
+      "한 대상이 여러 기능을 맡게 해서 다른 대상을 없앤다",
+      "필요한 기능을 한 대상에 모은다"
+    ]
+  }
+}

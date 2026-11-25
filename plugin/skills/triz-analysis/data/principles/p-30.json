@@ -1,0 +1,55 @@
+{
+  "cases": [
+    {
+      "domain": "medical",
+      "en": "Gauze over a wound does little to keep water out and hides the wound. A thin transparent film blocks water and germs while the wound stays visible.",
+      "ko": "상처를 거즈로 덮으면 물을 막기 어렵고 상처를 볼 수 없다. 투명하고 얇은 필름으로 덮으면 물과 세균은 막고 상처는 들여다보인다.",
+      "sub_principle": 2
+    },
+    {
+      "domain": "mechanical",
+      "en": "Roofing a large space with steel is heavy and slow to build. An air-inflated membrane covers it without columns.",
+      "ko": "넓은 공간을 철골 지붕으로 덮으면 무겁고 짓는 데 오래 걸린다. 공기로 부풀린 막 구조로 기둥 없이 넓게 덮는다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "electronics",
+      "en": "A rigid circuit board cannot pass through the hinge of a folding device. Wiring printed on a thin flexible film runs through the hinge.",
+      "ko": "딱딱한 기판은 접히는 기기의 경첩을 지나갈 수 없다. 얇고 휘는 필름 위에 배선을 만들어 경첩을 지나가게 한다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "everyday",
+      "en": "Things in a backpack get wet in the rain. A thin waterproof bag inside the pack wraps them separately.",
+      "ko": "배낭 속 물건이 비에 젖는다. 가방 안에 얇은 방수 주머니를 넣어 물건을 따로 감싼다.",
+      "sub_principle": 2
+    }
+  ],
+  "examples": {
+    "en": [
+      "A plastic-film greenhouse",
+      "Cling film around food",
+      "A waterproof breathable membrane"
+    ],
+    "ko": [
+      "비닐 온실",
+      "식품을 감싸는 랩 필름",
+      "방수 투습 멤브레인"
+    ]
+  },
+  "id": 30,
+  "name": {
+    "en": "Flexible Shells and Thin Films",
+    "ko": "유연한 껍질과 박막"
+  },
+  "sub_principles": {
+    "en": [
+      "Use flexible shells or thin films in place of bulky structures",
+      "Isolate the object from its environment with a flexible membrane"
+    ],
+    "ko": [
+      "입체적인 구조 대신 유연한 막이나 얇은 필름을 쓴다",
+      "유연한 막으로 대상을 주변 환경과 격리한다"
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "cases": [
+    {
+      "domain": "electronics",
+      "en": "A part that produces bursts of heat sees sharp temperature spikes. A material placed next to it absorbs heat as it melts and holds the temperature down meanwhile.",
+      "ko": "순간적으로 열이 많이 나는 부품은 짧은 순간 온도가 치솟는다. 녹으면서 열을 흡수하는 물질을 옆에 두면 녹는 동안 온도가 크게 오르지 않는다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "medical",
+      "en": "Keeping vaccines cold on the way to places without power is hard. A box lined with packs that absorb heat while melting holds the temperature for days.",
+      "ko": "전기가 없는 곳으로 백신을 운반하면 차갑게 유지하기 어렵다. 녹으면서 열을 흡수하는 팩을 넣은 상자로 며칠 동안 온도를 지킨다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "everyday",
+      "en": "Pocket warmers that burn fuel are risky. Clicking a metal disc in a supersaturated solution starts crystallization, which gives off heat as it sets.",
+      "ko": "주머니 손난로는 불을 쓰면 위험하다. 과포화 용액 속 금속판을 딸깍 눌러 결정이 생기게 하면 굳으면서 열을 낸다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "materials",
+      "en": "A building overheats by day and cools at night. A material in the walls that melts and absorbs heat by day and sets and releases it at night evens out the temperature.",
+      "ko": "건물은 낮에는 너무 덥고 밤에는 식는다. 벽 속에 낮에 녹으며 열을 흡수하고 밤에 굳으며 열을 내놓는 물질을 넣으면 온도가 고르게 유지된다.",
+      "sub_principle": 1
+    }
+  ],
+  "examples": {
+    "en": [
+      "The cooling of an ice pack",
+      "A cooling vest that works like evaporating sweat",
+      "Splitting rock with the expansion of freezing water"
+    ],
+    "ko": [
+      "얼음팩의 냉각",
+      "땀이 증발하며 몸을 식히는 원리를 쓴 냉각 조끼",
+      "물이 얼 때의 팽창을 이용한 암석 분쇄"
+    ]
+  },
+  "id": 36,
+  "name": {
+    "en": "Phase Transitions",
+    "ko": "상전이"
+  },
+  "sub_principles": {
+    "en": [
+      "Exploit the volume change or heat release and absorption that accompany a phase change"
+    ],
+    "ko": [
+      "상 변화가 일어날 때의 부피 변화나 열의 방출·흡수를 이용한다"
+    ]
+  }
+}

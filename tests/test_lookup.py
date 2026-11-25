@@ -1,4 +1,4 @@
-"""Tests for skills/triz-analysis/scripts/lookup.py (DESIGN.md 6장).
+"""Tests for tools/lookup.py (DESIGN.md 6장).
 
 Logic tests run against a synthetic fixture: the script is copied next to a
 tiny data dir, which also proves data paths resolve relative to the script.
@@ -13,9 +13,9 @@ from pathlib import Path
 import pytest
 
 ROOT = Path(__file__).resolve().parent.parent
-SKILL = ROOT / "skills" / "triz-analysis"
-REAL_SCRIPT = SKILL / "scripts" / "lookup.py"
-REAL_DATA = SKILL / "data"
+SKILL = ROOT
+REAL_SCRIPT = ROOT / "tools" / "lookup.py"
+REAL_DATA = ROOT / "data"
 
 
 def run(script, *args):

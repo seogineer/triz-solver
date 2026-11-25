@@ -1,0 +1,55 @@
+{
+  "cases": [
+    {
+      "domain": "medical",
+      "en": "Removing internal stitches would mean another operation. Sutures that dissolve in the body over time need no removal.",
+      "ko": "몸속을 꿰맨 실을 뽑으려면 다시 수술해야 한다. 시간이 지나면 몸 안에서 녹아 없어지는 실을 쓴다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "software",
+      "en": "Data no longer in use piles up in memory and slows the program. Unused data is cleared away automatically while it runs.",
+      "ko": "다 쓴 데이터가 메모리에 남아 쌓이면 프로그램이 점점 느려진다. 더 이상 쓰이지 않는 데이터를 실행 중에 자동으로 치운다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "mechanical",
+      "en": "A grinding wheel that clogs and dulls used to need the machine stopped for dressing. Dressing the wheel lightly and continuously during grinding keeps it sharp.",
+      "ko": "연삭 숫돌 표면이 막히고 무뎌지면 기계를 멈추고 다듬어야 했다. 가공하는 동안 숫돌 표면을 계속 조금씩 다듬어 늘 날카롭게 유지한다.",
+      "sub_principle": 2
+    },
+    {
+      "domain": "materials",
+      "en": "A casting with a complex interior makes the core hard to pull out. The core is made of sand or wax and broken out or melted away after casting.",
+      "ko": "속이 복잡한 주물은 속 틀(코어)을 빼내기 어렵다. 속 모양을 모래나 왁스로 만들어 두고 주조가 끝나면 부수거나 녹여 없앤다.",
+      "sub_principle": 1
+    }
+  ],
+  "examples": {
+    "en": [
+      "A multistage rocket dropping empty stages",
+      "A capsule that dissolves once the drug is released",
+      "A mechanical pencil that feeds fresh lead as it wears"
+    ],
+    "ko": [
+      "연료를 다 쓴 뒤 분리하는 다단 로켓",
+      "시간이 지나면 녹는 캡슐 약",
+      "쓴 만큼 심이 밀려 나오는 샤프펜슬"
+    ]
+  },
+  "id": 34,
+  "name": {
+    "en": "Discarding and Recovering",
+    "ko": "폐기 및 회수"
+  },
+  "sub_principles": {
+    "en": [
+      "Discard or transform a part once it has done its job, during operation",
+      "Restore consumed parts on the spot while the system runs"
+    ],
+    "ko": [
+      "역할을 다한 부분은 작동 중에 없애거나 다른 형태로 바꾼다",
+      "소모된 부분은 작동 중에 바로 채우거나 복원한다"
+    ]
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "cases": [
+    {
+      "domain": "mechanical",
+      "en": "Cables routed outside a machine snag and wear. A hollow rotating shaft lets them run through its center.",
+      "ko": "케이블을 기계 바깥으로 돌리면 걸리고 닳는다. 회전축 가운데를 비워 그 속으로 케이블을 지나가게 한다.",
+      "sub_principle": 3
+    },
+    {
+      "domain": "electronics",
+      "en": "Tiny wireless earbuds are easy to lose and have small batteries. Storing them inside a charging case keeps them and charges them at once.",
+      "ko": "작은 무선 이어폰은 잃어버리기 쉽고 배터리도 작다. 이어폰을 충전 케이스 안에 넣게 하면 보관과 충전이 한 번에 된다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "medical",
+      "en": "Opening a blocked vessel used to need a large incision. A thin tube is pushed along the vessel and a balloon or mesh passes through it to open the blockage.",
+      "ko": "막힌 혈관을 열려면 크게 절개해야 했다. 가는 관을 혈관 속으로 밀어 넣고 그 관 속으로 풍선이나 그물망을 지나가게 해 막힌 곳을 연다.",
+      "sub_principle": 3
+    },
+    {
+      "domain": "everyday",
+      "en": "Camp cookware has many pieces and bulks up a pack. A smaller pot inside the largest, and cups and a stove inside that, pack down to the size of one pot.",
+      "ko": "캠핑 조리 도구는 가짓수가 많아 짐이 커진다. 가장 큰 냄비 안에 작은 냄비, 그 안에 컵과 버너를 차례로 넣으면 냄비 하나 부피가 된다.",
+      "sub_principle": 2
+    }
+  ],
+  "examples": {
+    "en": [
+      "Russian nesting dolls",
+      "A telescopic antenna that collapses into itself",
+      "Stackable measuring cups"
+    ],
+    "ko": [
+      "마트료시카 인형",
+      "접었다 펴는 텔레스코픽 안테나",
+      "겹쳐서 쌓아 보관하는 계량컵"
+    ]
+  },
+  "id": 7,
+  "name": {
+    "en": "Nested Doll",
+    "ko": "포개기"
+  },
+  "sub_principles": {
+    "en": [
+      "Place one object inside another",
+      "Repeat the nesting: put that object inside yet another",
+      "Let an object pass through the cavity of another"
+    ],
+    "ko": [
+      "한 대상을 다른 대상 안에 넣는다",
+      "그 대상을 다시 또 다른 대상 안에 넣는 식으로 겹쳐 넣는다",
+      "한 대상이 다른 대상의 빈 공간을 지나가게 한다"
+    ]
+  }
+}

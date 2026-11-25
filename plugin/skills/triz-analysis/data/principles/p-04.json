@@ -1,0 +1,55 @@
+{
+  "cases": [
+    {
+      "domain": "mechanical",
+      "en": "A fan with evenly spaced blades hums loudly at one pitch at certain speeds. Spacing the blades unevenly spreads the noise over many frequencies so it is less annoying.",
+      "ko": "날개 간격이 고른 팬은 특정 회전수에서 한 가지 음으로 크게 울린다. 날개 간격을 일부러 고르지 않게 배치하면 소음이 여러 주파수로 흩어져 덜 거슬린다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "software",
+      "en": "A cipher that locks and unlocks with the same key needs both sides to share a secret first, which is hard with a stranger. Making the two keys different lets the locking key be public.",
+      "ko": "잠그는 열쇠와 여는 열쇠가 같은 암호는 양쪽이 미리 비밀을 나눠 가져야 해서 처음 만나는 상대와 쓰기 어렵다. 두 열쇠를 다르게 만든 방식을 쓰면 잠그는 열쇠는 공개해도 된다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "medical",
+      "en": "A needle tip ground with a short, steep bevel needs more force to enter the skin and hurts. Grinding a longer, shallower bevel, which makes the slant more asymmetric, lets it enter with less force and less pain.",
+      "ko": "주삿바늘 끝을 짧고 가파르게 깎으면 피부를 뚫는 데 힘이 많이 들어 아프다. 비스듬한 면을 더 길고 완만하게 깎아 비대칭을 키우면 더 적은 힘으로 들어가 통증이 줄어든다.",
+      "sub_principle": 2
+    },
+    {
+      "domain": "everyday",
+      "en": "Scissors with similar finger loops tire the hand. A small thumb loop and a larger, longer loop for the other fingers spread the effort more evenly.",
+      "ko": "손잡이 고리가 비슷한 가위는 오래 쓰면 손이 아프다. 엄지 쪽 고리는 작게, 나머지 손가락 쪽 고리는 크고 길게 만들어 비대칭을 키우면 힘이 고르게 실린다.",
+      "sub_principle": 2
+    }
+  ],
+  "examples": {
+    "en": [
+      "A tire with a thicker outer sidewall",
+      "A power plug whose two pins differ in shape",
+      "A connector that only fits one way"
+    ],
+    "ko": [
+      "한쪽이 더 두꺼운 타이어 옆면",
+      "좌우 배열이 다른 전원 플러그",
+      "한쪽으로만 꽂히도록 만든 커넥터"
+    ]
+  },
+  "id": 4,
+  "name": {
+    "en": "Asymmetry",
+    "ko": "비대칭"
+  },
+  "sub_principles": {
+    "en": [
+      "Change a symmetrical shape into an asymmetrical one",
+      "If it is already asymmetrical, increase the asymmetry"
+    ],
+    "ko": [
+      "대칭인 형태를 비대칭으로 바꾼다",
+      "이미 비대칭이면 비대칭의 정도를 더 키운다"
+    ]
+  }
+}

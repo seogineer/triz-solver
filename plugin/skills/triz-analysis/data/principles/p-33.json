@@ -1,0 +1,53 @@
+{
+  "cases": [
+    {
+      "domain": "mechanical",
+      "en": "Two different metals touching in the wet make one corrode fast. Parts that touch are made of the same metal.",
+      "ko": "서로 다른 금속이 맞닿아 물기에 젖으면 한쪽이 빨리 부식된다. 맞닿는 부품을 같은 금속으로 만든다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "medical",
+      "en": "An artificial implant can trigger rejection. Tissue taken from elsewhere in the patient's own body is grafted instead.",
+      "ko": "몸에 넣는 인공 재료는 거부 반응을 일으킬 수 있다. 환자 자신의 다른 부위 조직을 떼어 옮겨 심는다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "electronics",
+      "en": "Chip and board expand by different amounts, so solder joints crack with every temperature swing. A board material that expands like the chip is used.",
+      "ko": "칩과 기판의 열팽창 정도가 달라 온도가 바뀔 때마다 납땜이 갈라진다. 칩과 팽창 정도가 비슷한 기판 재료를 쓴다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "software",
+      "en": "Front end and server each writing the same validation rules in different languages end up disagreeing. One shared rule definition is used on both sides.",
+      "ko": "화면 쪽과 서버 쪽이 서로 다른 언어로 같은 입력 검사 규칙을 따로 만들면 결과가 어긋난다. 같은 규칙 코드를 양쪽에서 함께 쓴다.",
+      "sub_principle": 1
+    }
+  ],
+  "examples": {
+    "en": [
+      "Welding two parts of the same metal",
+      "An edible ice-cream cone cup",
+      "A bottle and cap made from the same plastic"
+    ],
+    "ko": [
+      "같은 금속끼리 용접하는 접합",
+      "먹을 수 있는 아이스크림 콘 컵",
+      "같은 소재로 만든 병과 병뚜껑"
+    ]
+  },
+  "id": 33,
+  "name": {
+    "en": "Homogeneity",
+    "ko": "동질성"
+  },
+  "sub_principles": {
+    "en": [
+      "Make objects that interact from the same material, or one with very similar properties"
+    ],
+    "ko": [
+      "서로 상호작용하는 대상들을 같은 재료나 성질이 가까운 재료로 만든다"
+    ]
+  }
+}

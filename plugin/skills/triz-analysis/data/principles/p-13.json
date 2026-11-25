@@ -1,0 +1,57 @@
+{
+  "cases": [
+    {
+      "domain": "software",
+      "en": "An app that keeps asking the server for news floods it with useless requests. Turning it round, the server tells the app only when there is news.",
+      "ko": "앱이 새 소식이 있는지 서버에 계속 물으면 쓸데없는 요청이 쏟아진다. 반대로 서버가 새 소식이 생겼을 때만 앱에 알려 주게 한다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "mechanical",
+      "en": "Walking round a large structure with a welding torch means awkward positions and uneven welds. Fixing the torch and turning the structure on a rotating fixture keeps the weld in the easy position.",
+      "ko": "큰 구조물을 용접하려고 사람이 용접기를 들고 돌면 자세가 나빠지고 품질이 들쭉날쭉하다. 용접기는 고정하고 구조물을 회전 받침에 올려 돌리면 늘 편한 자세로 용접한다.",
+      "sub_principle": 2
+    },
+    {
+      "domain": "materials",
+      "en": "Pouring molten metal in from the top of a mold drags in bubbles and dross. Filling the mold from the bottom upward lets the dross float to the top.",
+      "ko": "쇳물을 거푸집 위에서 부으면 거품과 찌꺼기가 함께 섞여 들어간다. 거푸집 아래쪽에서 쇳물을 밀어 올려 채우면 찌꺼기가 위로 떠 빠진다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "everyday",
+      "en": "Sauce settles at the bottom of the bottle and needs shaking out. A bottle designed to stand on its cap keeps the contents at the opening.",
+      "ko": "소스 병은 내용물이 바닥에 가라앉아 흔들어야 나온다. 뚜껑이 아래로 가게 세워 두는 병으로 만들면 내용물이 늘 입구 쪽에 모여 있다.",
+      "sub_principle": 3
+    }
+  ],
+  "examples": {
+    "en": [
+      "A treadmill where the belt moves instead of the person",
+      "A lathe that spins the part instead of the tool",
+      "A dish rack that dries plates upside down"
+    ],
+    "ko": [
+      "사람이 걷는 대신 바닥이 움직이는 러닝머신",
+      "부품을 고정하고 공구가 도는 대신 부품을 회전시키는 선반",
+      "그릇을 엎어서 말리는 식기 건조대"
+    ]
+  },
+  "id": 13,
+  "name": {
+    "en": "The Other Way Round (Inversion)",
+    "ko": "역발상"
+  },
+  "sub_principles": {
+    "en": [
+      "Do the opposite of the action the problem calls for",
+      "Fix the part that used to move and move the part that used to be fixed",
+      "Turn the object upside down"
+    ],
+    "ko": [
+      "문제에서 요구하는 동작 대신 그 반대의 동작을 한다",
+      "움직이던 부분을 고정하고 고정돼 있던 부분을 움직이게 한다",
+      "대상을 뒤집는다"
+    ]
+  }
+}

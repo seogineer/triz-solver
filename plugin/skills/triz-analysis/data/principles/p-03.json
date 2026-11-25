@@ -1,0 +1,57 @@
+{
+  "cases": [
+    {
+      "domain": "mechanical",
+      "en": "A gear hardened all through cracks under shock, and a soft one wears its teeth quickly. Hardening only the tooth surface and leaving the core tough resists both wear and shock.",
+      "ko": "기어 전체를 단단하게 열처리하면 충격에 깨지기 쉽고, 무르게 두면 이가 빨리 닳는다. 이의 표면만 굳히고 속은 질기게 두면 마모와 충격을 함께 견딘다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "electronics",
+      "en": "Cooling a whole phone evenly would make it heavy and thick. Heat-spreading sheets and metal plates go only around the hottest chip, and the rest stays light.",
+      "ko": "휴대전화 전체를 고르게 식히려 하면 무겁고 두꺼워진다. 가장 뜨거운 칩 둘레에만 방열 시트와 금속판을 몰아 두고 나머지는 가볍게 둔다.",
+      "sub_principle": 3
+    },
+    {
+      "domain": "software",
+      "en": "Keeping all data in fast memory is costly, and keeping it all on cheap storage is slow. Frequently used data stays in fast memory while rarely used data moves to cheap storage.",
+      "ko": "모든 데이터를 빠른 메모리에 두면 비싸고, 모두 싼 저장장치에 두면 느리다. 자주 쓰는 데이터만 빠른 메모리에 두고 드물게 쓰는 데이터는 싼 저장장치로 옮긴다.",
+      "sub_principle": 3
+    },
+    {
+      "domain": "medical",
+      "en": "A dressing made of one material sticks to the wound and peels off at the edges. A non-stick pad in the middle over the wound and an adhesive border give each region its own job.",
+      "ko": "붕대 전체가 같은 재질이면 상처에는 달라붙고 가장자리는 쉽게 떨어진다. 상처에 닿는 가운데는 달라붙지 않는 패드로, 가장자리는 접착면으로 만든다.",
+      "sub_principle": 2
+    }
+  ],
+  "examples": {
+    "en": [
+      "A tool with a non-slip rubber grip only where the hand goes",
+      "A running-shoe sole whose cushioning density varies by zone",
+      "A refrigerator that keeps each compartment at its own temperature"
+    ],
+    "ko": [
+      "손잡이만 미끄럼 방지 고무로 처리한 공구",
+      "부위마다 쿠션 밀도가 다른 러닝화 밑창",
+      "칸마다 온도를 달리 유지하는 냉장고"
+    ]
+  },
+  "id": 3,
+  "name": {
+    "en": "Local Quality",
+    "ko": "국소적 품질"
+  },
+  "sub_principles": {
+    "en": [
+      "Replace a uniform structure with one that differs from region to region",
+      "Let each region of the object take a different function",
+      "Place each region in the conditions best suited to its role"
+    ],
+    "ko": [
+      "균일한 구조를 부분마다 다른 구조로 바꾼다",
+      "대상의 각 부분이 서로 다른 기능을 맡게 한다",
+      "각 부분을 그 역할에 가장 알맞은 조건에 둔다"
+    ]
+  }
+}

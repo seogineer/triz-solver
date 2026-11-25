@@ -1,0 +1,55 @@
+{
+  "cases": [
+    {
+      "domain": "software",
+      "en": "Building a page on every request makes responses slow. Pages that are viewed often are built in advance and served at once.",
+      "ko": "요청이 올 때마다 페이지를 만들면 응답이 느리다. 자주 보는 페이지를 미리 만들어 두면 요청이 오자마자 보여 줄 수 있다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "mechanical",
+      "en": "A machine sits idle while tools are found and changed. Loading the next jobs' tools into the changer in order lets it swap them at once.",
+      "ko": "공구를 찾아 바꾸는 동안 기계가 멈춰 있다. 다음 작업에 쓸 공구를 교환 장치에 순서대로 미리 꽂아 두면 바로 바꿔 끼운다.",
+      "sub_principle": 2
+    },
+    {
+      "domain": "medical",
+      "en": "Someone in cardiac arrest needs CPR and a defibrillator's analysis within minutes. Placing automatic defibrillators in busy public places in advance puts one within reach.",
+      "ko": "심장이 멈춘 사람은 몇 분 안에 심폐소생술과 제세동기 분석을 받아야 한다. 사람이 많이 오가는 곳에 자동 제세동기를 미리 두어 바로 쓸 수 있게 한다.",
+      "sub_principle": 2
+    },
+    {
+      "domain": "materials",
+      "en": "Applying glue at every use is fiddly and uneven. Tape with adhesive already applied and covered by a release liner just needs peeling and pressing.",
+      "ko": "붙일 때마다 접착제를 바르면 번거롭고 양이 들쭉날쭉하다. 테이프에 접착제를 미리 발라 두고 떼는 종이로 덮으면 떼어 붙이기만 하면 된다.",
+      "sub_principle": 1
+    }
+  ],
+  "examples": {
+    "en": [
+      "Wrapping paper with a pre-cut tear line",
+      "A surgical tray with instruments laid out in order of use",
+      "A pre-filled disposable syringe"
+    ],
+    "ko": [
+      "미리 절취선을 넣은 포장지",
+      "수술 도구를 사용 순서대로 미리 배열한 트레이",
+      "약이 미리 채워진 일회용 주사기"
+    ]
+  },
+  "id": 10,
+  "name": {
+    "en": "Preliminary Action",
+    "ko": "사전 조치"
+  },
+  "sub_principles": {
+    "en": [
+      "Carry out the needed change fully or partly before it is required",
+      "Position objects ahead of time so they act instantly from the most convenient place"
+    ],
+    "ko": [
+      "필요한 변화를 필요한 때보다 먼저 전부 또는 일부 수행해 둔다",
+      "필요한 순간 지체 없이 작동하도록 대상을 미리 가장 편한 자리에 둔다"
+    ]
+  }
+}

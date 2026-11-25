@@ -1,0 +1,57 @@
+{
+  "cases": [
+    {
+      "domain": "electronics",
+      "en": "Adding storage cells side by side makes the chip larger. Stacking cells in dozens of vertical layers holds more in the same area.",
+      "ko": "저장 셀을 평면으로만 늘리면 칩이 커진다. 셀을 수직으로 수십 층 쌓아 같은 면적에 더 많이 담는다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "medical",
+      "en": "In a patient with severe lung injury lying on their back, the rear part of the lungs gets little air. Turning the patient face down spreads the air more evenly through the lungs.",
+      "ko": "급성 호흡곤란 증후군처럼 폐가 크게 상한 환자는 등을 대고 누우면 폐 뒤쪽에 공기가 잘 들어가지 않는다. 환자를 엎드린 자세로 돌려 눕히면 공기가 폐 전체로 더 고르게 퍼진다.",
+      "sub_principle": 2
+    },
+    {
+      "domain": "mechanical",
+      "en": "Long stock laid flat takes up floor space and is hard to pull out. Vertical racks store it on end, holding more in a small area and releasing one piece at a time.",
+      "ko": "긴 자재를 눕혀 쌓으면 바닥을 많이 차지하고 꺼내기 어렵다. 세워서 보관하는 수직 선반을 쓰면 좁은 곳에 많이 두고 하나씩 꺼낸다.",
+      "sub_principle": 2
+    },
+    {
+      "domain": "everyday",
+      "en": "A floor mat used to be thrown out once one face wore. Making both faces usable lets it be flipped and used again.",
+      "ko": "바닥 매트는 한 면이 닳으면 버려야 했다. 앞뒤 양면을 모두 쓸 수 있게 만들면 뒤집어 한 번 더 쓴다.",
+      "sub_principle": 3
+    }
+  ],
+  "examples": {
+    "en": [
+      "A multi-storey car park",
+      "A multilayer circuit board",
+      "A wheelbarrow tipped to dump its load"
+    ],
+    "ko": [
+      "다층 주차장",
+      "여러 층으로 만든 회로 기판",
+      "기울여서 내용물을 쏟는 손수레"
+    ]
+  },
+  "id": 17,
+  "name": {
+    "en": "Another Dimension",
+    "ko": "다른 차원으로"
+  },
+  "sub_principles": {
+    "en": [
+      "Move from a single line to layers, or from 1-D to 2-D or 3-D movement",
+      "Tilt the object or lay it on its side",
+      "Use the reverse side or a neighbouring face of the object"
+    ],
+    "ko": [
+      "한 줄 배열 대신 여러 층으로 쌓거나 2·3차원으로 움직이게 한다",
+      "대상을 기울이거나 옆으로 눕힌다",
+      "대상의 반대편이나 이웃한 면을 활용한다"
+    ]
+  }
+}

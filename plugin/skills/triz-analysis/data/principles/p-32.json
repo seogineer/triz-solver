@@ -1,0 +1,59 @@
+{
+  "cases": [
+    {
+      "domain": "software",
+      "en": "Warnings get lost among other log lines. Coloring them by severity makes them stand out at a glance.",
+      "ko": "경고 메시지가 다른 기록과 섞여 눈에 띄지 않는다. 심각도에 따라 색을 달리해 한눈에 구분하게 한다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "medical",
+      "en": "During surgery, the border between tumor and healthy tissue is hard to see. A fluorescent agent that binds to the tumor lights it up under a special light.",
+      "ko": "수술 중 암 조직과 정상 조직의 경계가 잘 보이지 않는다. 암 조직에 붙는 형광 물질을 넣고 특수한 빛을 비추면 경계가 드러난다.",
+      "sub_principle": 4
+    },
+    {
+      "domain": "mechanical",
+      "en": "Fine cracks in a metal surface are hard to see. A penetrating dye is applied and wiped off, and a developer then shows color only where the cracks are.",
+      "ko": "금속 표면의 미세한 균열은 눈으로 찾기 어렵다. 스며드는 색소를 바르고 닦아 낸 뒤 현상액을 뿌리면 균열 자리만 색이 드러난다.",
+      "sub_principle": 3
+    },
+    {
+      "domain": "everyday",
+      "en": "Covering a window needs curtains or blinds. Glass whose transparency changes with a switch gives privacy at the flick of a switch.",
+      "ko": "창문을 가리려면 커튼이나 블라인드를 달아야 한다. 스위치로 투명도를 바꾸는 유리를 쓰면 스위치 하나로 가린다.",
+      "sub_principle": 2
+    }
+  ],
+  "examples": {
+    "en": [
+      "A baby bottle that changes color when too hot",
+      "Lenses that darken in sunlight",
+      "Fluorescent dye for locating a leak"
+    ],
+    "ko": [
+      "뜨거우면 색이 변하는 젖병",
+      "햇빛에 따라 어두워지는 렌즈",
+      "누출 위치를 찾기 위한 형광 염료"
+    ]
+  },
+  "id": 32,
+  "name": {
+    "en": "Color Changes",
+    "ko": "색상 변화"
+  },
+  "sub_principles": {
+    "en": [
+      "Change the color of the object or its surroundings",
+      "Change how transparent the object is",
+      "Add dyes or additives to make a hard-to-see object visible",
+      "Mark the object with luminescent or fluorescent tags"
+    ],
+    "ko": [
+      "대상이나 주변의 색을 바꾼다",
+      "대상의 투명도를 바꾼다",
+      "색소나 첨가제로 관찰하기 어려운 대상을 잘 보이게 한다",
+      "형광 표지 등으로 대상에 표시를 남긴다"
+    ]
+  }
+}

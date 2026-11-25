@@ -1,0 +1,55 @@
+{
+  "cases": [
+    {
+      "domain": "software",
+      "en": "When a server program hangs, the service is down until someone notices and restarts it. A separate watchdog process that keeps checking the program's health restarts it automatically when something is wrong.",
+      "ko": "서버 프로그램이 멈추면 사람이 알아채 다시 켤 때까지 서비스가 끊긴다. 별도의 감시 프로세스가 프로그램의 상태를 계속 점검해 이상하면 자동으로 다시 시작하게 한다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "mechanical",
+      "en": "Bearings needed oiling by hand at intervals. A bearing made of porous metal soaked in oil releases its own lubricant as it turns.",
+      "ko": "베어링에 사람이 주기적으로 기름을 넣어야 했다. 기름을 머금은 다공질 금속으로 베어링을 만들면 돌면서 스스로 기름을 내놓는다.",
+      "sub_principle": 1
+    },
+    {
+      "domain": "electronics",
+      "en": "Wiring or battery-powering every sensor is impractical. Harvesting power from nearby vibration or temperature differences lets each sensor run by itself.",
+      "ko": "센서마다 전선이나 배터리를 연결하기 어렵다. 주변의 진동이나 온도 차이에서 전기를 얻어 스스로 작동하게 한다.",
+      "sub_principle": 2
+    },
+    {
+      "domain": "everyday",
+      "en": "Scrubbing baked-on grease from an oven is a chore. An oven that heats itself very high turns the residue to ash, which just wipes away.",
+      "ko": "오븐 안쪽에 눌어붙은 기름때를 닦기 번거롭다. 오븐이 아주 높은 온도로 스스로 달궈 찌꺼기를 재로 태우게 하면 재만 닦아 내면 된다.",
+      "sub_principle": 1
+    }
+  ],
+  "examples": {
+    "en": [
+      "A coating that heals its own scratches",
+      "A street lamp powered by its own solar panel",
+      "A heat exchanger that preheats with surplus heat"
+    ],
+    "ko": [
+      "긁힘을 스스로 메우는 코팅",
+      "자체 태양광 패널로 켜지는 가로등",
+      "남는 열로 예열하는 열교환기"
+    ]
+  },
+  "id": 25,
+  "name": {
+    "en": "Self-Service",
+    "ko": "셀프서비스"
+  },
+  "sub_principles": {
+    "en": [
+      "Make the object serve and maintain itself",
+      "Use waste material or waste energy"
+    ],
+    "ko": [
+      "대상이 스스로 자신을 돕고 보수하거나 서비스하게 한다",
+      "버려지는 물질이나 에너지를 활용한다"
+    ]
+  }
+}
