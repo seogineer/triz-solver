@@ -240,8 +240,7 @@
     ],
     "stated_separations": [
       "time",
-      "condition",
-      "system"
+      "condition"
     ],
     "skill_used": true,
     "file_reads": 6,
@@ -750,8 +749,7 @@
     ],
     "stated_separations": [
       "space",
-      "system",
-      "time"
+      "system"
     ],
     "skill_used": true,
     "file_reads": 5,
@@ -958,8 +956,7 @@
     ],
     "stated_separations": [
       "condition",
-      "time",
-      "system"
+      "time"
     ],
     "skill_used": true,
     "file_reads": 6,

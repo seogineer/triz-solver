@@ -1,4 +1,4 @@
-"""Tests for skills/triz-analysis/scripts/lookup.py (DESIGN.md 6장).
+"""Tests for tools/lookup.py (DESIGN.md 6장).
 
 Logic tests run against a synthetic fixture: the script is copied next to a
 tiny data dir, which also proves data paths resolve relative to the script.

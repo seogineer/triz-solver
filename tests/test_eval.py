@@ -441,6 +441,22 @@ def test_stated_separations_reads_chosen_rows():
     assert run_blind.stated_separations(text) == ["time", "system", "direction"]
 
 
+def test_stated_separations_ignores_negated_choices():
+    text = """| 유형 | P | 반대 P | 판단 |
+| --- | --- | --- | --- |
+| 공간 | a | b | 이번에는 선택하지 않음 |
+| 시간 | a | b | 미선택 |
+| 관계 | a | b | 선택 안 함 |
+| 방향 | a | b | not selected |
+| Separation in space | a | b | not adopted |
+| Separation in time | a | b | unselected |
+| Separation in relation | a | b | deselected |
+| 시스템 수준 | a | b | 선택 |
+"""
+    assert run_blind.stated_separations(text) == ["system"]
+    assert run_blind.stated_separations("| 시간 | a | b | 선택 안정적 |\n| 공간 | a | b | 선택 안 B |") == ["time", "space"]
+
+
 def test_score_physical_hit_needs_a_stated_choice():
     """Reading the separation file is not a choice: only the answer's chosen types count."""
     cases = [{"id": "P1", "expected_separation": ["time"]}]
@@ -474,6 +490,7 @@ def test_score_reports_ranking_match_rate():
     out = score_mod.score(cases, results, matrix=fake_matrix, ranking=lambda i, w: [(35, 2), (8, 1)])
     assert [r["ranking_match"] for r in out["rows"]] == [True, False, None]
     assert out["ranking_checked"] == 2 and out["ranking_match_rate"] == 0.5
+    assert out["ranking_unchecked"] == ["C"]
 
 
 def test_parse_answer_ranking_feeds_ranking_match():

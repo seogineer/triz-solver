@@ -58,7 +58,10 @@ _SEP_NAMES = (("space", r"공간|space"), ("time", r"시간|time"),
               ("condition", r"관계|조건|relation|condition"), ("direction", r"방향|direction"),
               ("system", r"시스템|system"))
 _CHOSEN = re.compile(r"선택|채택|select|chosen|adopt", re.I)
-_REJECTED = re.compile(r"제외|기각|reject|not select|excluded", re.I)
+_REJECTED = re.compile(
+    r"제외|기각|reject|not select|not chosen|not adopt|not picked|unselect|deselect"
+    r"|excluded|미선택|미채택"
+    r"|(?:선택|채택)\s*(?:하지|않|못|안\s*(?:함|됨|한|했|돼))|(?:선택|채택)\s*되지", re.I)
 
 
 def stated_separations(text):

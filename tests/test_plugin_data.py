@@ -120,3 +120,22 @@ def test_unverified_and_missing_rows_mapping(tmp_path):
     assert row12["cells"] == {}
     assert row12["improve"] == 12
     assert len(list((out / "matrix").glob("row-*.json"))) == 39
+
+
+def test_unverified_cell_ships_no_values():
+    """A disputed cell is listed in `unverified` and carries no principle numbers."""
+    mod = load_builder()
+    real_load = mod.load
+
+    def patched(name):
+        data = real_load(name)
+        if name == "contradiction-matrix.json":
+            data = dict(data, unverified_cells=["1-3"])
+        return data
+
+    mod.load = patched
+    row = json.loads(mod.build_files()["matrix/row-01.json"])
+    assert real_load("contradiction-matrix.json")["cells"]["1-3"]   # the real cell has values
+    assert row["unverified"] == [3]
+    assert "3" not in row["cells"]
+    assert "5" in row["cells"]                                    # other cells stay

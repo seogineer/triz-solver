@@ -136,8 +136,7 @@
     ],
     "stated_separations": [
       "condition",
-      "space",
-      "system"
+      "space"
     ],
     "skill_used": true,
     "file_reads": 6,
@@ -449,10 +448,7 @@
     ],
     "stated_separations": [
       "space",
-      "time",
-      "condition",
-      "direction",
-      "system"
+      "time"
     ],
     "skill_used": true,
     "file_reads": 6,
@@ -556,10 +552,7 @@
     ],
     "stated_separations": [
       "condition",
-      "time",
-      "space",
-      "direction",
-      "system"
+      "time"
     ],
     "skill_used": true,
     "file_reads": 6,
@@ -905,9 +898,7 @@
     ],
     "stated_separations": [
       "time",
-      "space",
-      "condition",
-      "system"
+      "space"
     ],
     "skill_used": true,
     "file_reads": 6,

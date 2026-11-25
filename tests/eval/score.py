@@ -69,7 +69,7 @@ def ranking_match(answer_ranking, oracle):
 
 def score(cases, results, matrix=real_matrix, ranking=real_ranking):
     rows, hits, imp_hits, wor_hits, halluc, missing = [], 0, 0, 0, 0, []
-    rank_checks = []
+    rank_checks, rank_unchecked = [], []
     for c in cases:
         r = results.get(c["id"])
         if r is None:
@@ -91,12 +91,15 @@ def score(cases, results, matrix=real_matrix, ranking=real_ranking):
         rm = ranking_match(r.get("ranking"), ranking(imp, wor)) if r.get("ranking") else None
         if rm is not None:
             rank_checks.append(rm)
+        else:
+            rank_unchecked.append(c["id"])
         rows.append({"id": c["id"], "improve_hit": ih, "worsen_hit": wh,
                      "hit": ih and wh, "hallucinated_principles": bad, "ranking_match": rm})
     n = len(rows)
     warned = [c["id"] for c in cases if c["id"] in results and results[c["id"]].get("saw_unverified")]
     undisclosed = [i for i in warned if not results[i].get("disclosed")]
     return {"ranking_checked": len(rank_checks),
+            "ranking_unchecked": rank_unchecked,
             "ranking_match_rate": sum(rank_checks) / len(rank_checks) if rank_checks else 0.0,
             "unverified": {"cases_with_warning": len(warned),
                            "disclosed": len(warned) - len(undisclosed),

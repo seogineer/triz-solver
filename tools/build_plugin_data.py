@@ -58,6 +58,7 @@ def build_files():
     for key in matrix.get("unverified_cells", []):
         improve, worsen = (int(x) for x in key.split("-"))
         unverified[improve].append(worsen)
+        rows[improve].pop(str(worsen), None)   # a disputed cell ships no values
 
     for i in range(1, size + 1):
         row = {"improve": i, "name": names[i], "cells": rows[i]}

@@ -78,7 +78,7 @@ v0.1은 기술적 모순 흐름 1개만 완성하고, 물리적 모순과 인터
 flowchart LR
     U[사용자 입력] --> S[SKILL.md<br/>워크플로우]
     S --> R[references/<br/>파라미터 정의]
-    S --> L[scripts/lookup.py]
+    S --> L[tools/lookup.py 대신 data/ 파일 직접 읽기, 12장]
     L --> D[(data/*.json)]
     L --> S
     S --> O[분석 결과 출력]
@@ -244,7 +244,7 @@ flowchart TD
 
 ## 6. 스크립트 인터페이스
 
-`scripts/lookup.py`는 표준 라이브러리만 사용하는 단일 CLI이며, 모든 출력은 stdout JSON, 오류는 stderr JSON + 종료 코드로 반환한다. 데이터 경로는 스크립트 위치 기준 상대 경로(`../data/`)로 해석해 설치 위치와 무관하게 동작한다.
+(v0.4: 플러그인에서 제거되어 `tools/lookup.py`는 개발용 oracle이다. 12장 참고.) `lookup.py`는 표준 라이브러리만 사용하는 단일 CLI이며, 모든 출력은 stdout JSON, 오류는 stderr JSON + 종료 코드로 반환한다. 데이터 경로는 스크립트 위치 기준 상대 경로(`../data/`)로 해석해 설치 위치와 무관하게 동작한다.
 
 ### 6.1 서브커맨드
 
@@ -421,8 +421,8 @@ triz-solver/
 
 ### 8.4 배포 절차
 
-1. `claude plugin validate .`로 매니페스트·frontmatter 검증
-2. `claude --plugin-dir .`로 로컬 설치 테스트
+1. `claude plugin validate plugin`으로 매니페스트·frontmatter 검증
+2. `claude --plugin-dir plugin`으로 로컬 설치 테스트
 3. 플러그인 전용 신규 GitHub 공개 저장소 생성(기존 Next.js 저장소와 분리), `v0.1.0` 태그
 4. 설치 안내: `/plugin marketplace add <owner>/triz-solver` → `/plugin install triz-solver@triz-solver`
 5. v0.2 안정화 후 Console 조직으로 공식 Plugin Directory 제출
@@ -484,7 +484,7 @@ jobs:
         with: { python-version: "3.9" }
       - run: pip install pytest
       - run: pytest tests/
-      - run: python skills/triz-analysis/scripts/lookup.py validate
+      - run: python tools/lookup.py validate
 ```
 
 매니페스트 검증(`claude plugin validate`)은 CI 러너에 Claude Code 설치가 필요하므로 v0.1에서는 릴리스 전 로컬 체크리스트로 수행한다.
@@ -579,7 +579,7 @@ LLM이 파일 전체(행렬 67KB, 원리 109KB)를 읽으면 컨텍스트가 크
 - `matrix/row-NN.json`: `{"improve": N, "name": {ko,en}, "cells": {"<악화 번호>": [원리 번호, ...]}}`. 키가 없으면 그 조합은 행렬에 원리가 없다. 같은 파라미터 조합(대각선)도 키가 없다. 추측해서 채우지 않는다.
 - `principles/p-NN.json`: 원본 `inventive-principles.json`의 `principles[]` 원소 1개를 그대로 담는다(`id`, `name`, `sub_principles`, `cases`).
 - `parameters.json`, `separation-principles.json`: 원본을 그대로 복사한다.
-- 원본의 `missing_rows`·`unverified_cells`는 현재 비어 있다. 비어 있지 않게 되면 행 파일에 `"unverified": [악화 번호, ...]`로 싣고 SKILL.md가 그 조합을 비었다고 취급한다. 빌드 스크립트가 이 매핑을 구현하고 테스트한다.
+- 원본의 `missing_rows`·`unverified_cells`는 현재 비어 있다. 비어 있지 않게 되면 행 파일에 `"unverified": [악화 번호, ...]`로 싣고 `cells`에서는 그 셀의 값을 뺀다(빌드가 강제한다). SKILL.md는 키가 없을 때 `unverified`를 먼저 확인해 미확정 셀과 빈 셀을 구분한다. `missing_rows`는 행 파일에 표시가 없고 `cells`가 빈 객체가 된다. 빌드 스크립트가 이 매핑을 구현하고 테스트한다.
 - 빌드 결과는 결정적이어야 한다(키 정렬, UTF-8, 끝 줄바꿈). 같은 입력은 같은 바이트를 만든다.
 
 ### 12.4 SKILL.md 변경
